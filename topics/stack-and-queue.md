@@ -94,6 +94,29 @@ When simulating pairwise interactions/collisions on a 1D line:
 3. **Collision Loop**: When encountering an object moving backward/leftward, iteratively resolve collisions against the stack top based on comparison rules (health, mass, momentum) until the incoming object is destroyed, eliminates the top, or eliminates both.
 4. **Order Preservation**: Mutate the original properties (health/status) in-place and extract survivors in the original $0..N-1$ sequence.
 
+### Pattern F: Index-Boundary Stack for Longest Valid Substrings
+```cpp
+int longestValidParentheses(const string& s) {
+    stack<int> st;
+    st.push(-1); // Sentinel boundary
+    int maxLen = 0;
+
+    for (int i = 0; i < static_cast<int>(s.length()); ++i) {
+        if (s[i] == '(') {
+            st.push(i);
+        } else {
+            st.pop();
+            if (st.empty()) {
+                st.push(i); // Reset base boundary
+            } else {
+                maxLen = max(maxLen, i - st.top());
+            }
+        }
+    }
+    return maxLen;
+}
+```
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -109,7 +132,9 @@ When simulating pairwise interactions/collisions on a 1D line:
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 32 | [Longest Valid Parentheses](../solutions/0032-longest-valid-parentheses/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0032-longest-valid-parentheses/solution.cpp) |
 | 2751 | [Robot Collisions](../solutions/2751-robot-collisions/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2751-robot-collisions/solution.cpp) |
 | 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
+
 
 
