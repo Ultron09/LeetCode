@@ -100,6 +100,14 @@ When range updates apply periodic stride-$k$ operations (e.g. arithmetic progres
 2. **Large $k \ge B$**: Apply brute force directly in $\mathcal{O}(N/k) \le \mathcal{O}(\sqrt{N})$ per query.
 3. **Small $k < B$**: Group queries by $k$. Maintain a modular difference array `diff[idx]` updated at $l$ with $v$ and at $last + k$ with $v^{-1} \pmod M$. Propagate prefix products across each residue class modulo $k$ in $\mathcal{O}(N)$ time per small $k$.
 
+### Pattern F: Grid Cut Partitioning with Connectivity-Preserving Discounting
+When finding 1D cuts (horizontal/vertical) across a 2D matrix to balance partition sums with optional single-cell discounting:
+1. **Transposition for Orientation Reuse**: Evaluate vertical cuts by transposing the grid and running the horizontal cut subroutine.
+2. **Dynamic Frequency Sweeping**: Maintain `topCount` and `bottomCount` frequency maps, shifting one row/column per step in $\mathcal{O}(M \cdot N)$ total time.
+3. **Geometric Connectivity Rules for Rectangle Single-Cell Removal**:
+   - $1 \times C$ or $R \times 1$: Only the two boundary endpoints maintain connectivity.
+   - $R \ge 2 \text{ and } C \ge 2$: Any single cell removal preserves full 4-directional connectivity.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -128,7 +136,9 @@ When range updates apply periodic stride-$k$ operations (e.g. arithmetic progres
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 3548 | [Equal Sum Grid Partition II](../solutions/3548-equal-sum-grid-partition-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/3548-equal-sum-grid-partition-ii/solution.cpp) |
 | 3655 | [XOR After Range Multiplication Queries II](../solutions/3655-xor-after-range-multiplication-queries-ii/README.md) | `Hard` | $\mathcal{O}((N + Q)\sqrt{N})$ | $\mathcal{O}(N + Q)$ | [C++](../solutions/3655-xor-after-range-multiplication-queries-ii/solution.cpp) |
 | 3739 | [Count Subarrays With Majority Element II](../solutions/3739-count-subarrays-with-majority-element-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3739-count-subarrays-with-majority-element-ii/solution.cpp) |
+
 
 
