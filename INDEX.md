@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **34** | 0 | 0 | 34 |
+| **35** | 0 | 0 | 35 |
 
 ---
 
@@ -17,6 +17,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | # | Title | Difficulty | Primary Topic | Time Complexity | Space Complexity | Solution | Notes |
 | :---: | :--- | :---: | :--- | :---: | :---: | :--- | :---: | :--- |
 <!-- PROBLEMS_TABLE_START -->
+| 0004 | [Median of Two Sorted Arrays](solutions/0004-median-of-two-sorted-arrays/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log(\min(M, N)))$ | $\mathcal{O}(1)$ | [C++](solutions/0004-median-of-two-sorted-arrays/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
