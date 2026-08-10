@@ -86,6 +86,13 @@ int minMeetingRooms(vector<vector<int>>& intervals) {
 }
 ```
 
+### Pattern D: Dynamic Gap Maintenance with Segment Tree & Balanced BST
+When intervals/gaps are dynamically split by inserting obstacles and queried for maximum gap sizes in a prefix $[0, x]$:
+1. Maintain obstacle positions in an ordered set (`std::set<int>`).
+2. Maintain the preceding gap $p - \text{prev}(p)$ for each obstacle $p$ in a Point-Update Range-Maximum Segment Tree.
+3. On obstacle insertion at $x$: update gap at $x$ ($x - prev$) and gap at next obstacle ($next - x$).
+4. On query $[0, x]$: find largest obstacle $p \le x$; maximum gap is $\max(\text{SegmentTree.query}(0, p), x - p)$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -93,6 +100,7 @@ int minMeetingRooms(vector<vector<int>>& intervals) {
 1. **Inclusive vs Exclusive Endpoints**: Pay attention to whether $[1, 2]$ and $[2, 3]$ count as overlapping (e.g. `start <= prevEnd` vs `start < prevEnd`).
 2. **Unsorted Inputs**: Never assume intervals are pre-sorted unless guaranteed by constraints.
 3. **Empty Input**: Always check `intervals.empty()`.
+4. **Partial Prefix Interval**: In dynamic gap queries up to $x$, don't forget the partial gap between the last obstacle $p \le x$ and $x$ ($x - p$).
 
 ---
 
@@ -100,4 +108,5 @@ int minMeetingRooms(vector<vector<int>>& intervals) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-<!-- Problems will be added here -->
+| 3161 | [Block Placement Queries](../solutions/3161-block-placement-queries/README.md) | `Hard` | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3161-block-placement-queries/solution.cpp) |
+
