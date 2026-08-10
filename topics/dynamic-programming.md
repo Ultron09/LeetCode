@@ -207,6 +207,7 @@ When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 10 | [Regular Expression Matching](../solutions/0010-regular-expression-matching/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0010-regular-expression-matching/solution.cpp) |
 | 44 | [Wildcard Matching](../solutions/0044-wildcard-matching/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ worst / $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0044-wildcard-matching/solution.cpp) |
+| 87 | [Scramble String](../solutions/0087-scramble-string/README.md) | `Hard` | $\mathcal{O}(N^4)$ | $\mathcal{O}(N^3)$ | [C++](../solutions/0087-scramble-string/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
@@ -219,6 +220,7 @@ When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
 | 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 
