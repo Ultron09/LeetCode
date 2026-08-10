@@ -91,6 +91,15 @@ To count pairs $(a, b)$ with exact $\text{GCD}(a, b) = g$ across an array with v
    - Subtract counts of pairs whose GCD is a larger multiple of $g$: $\text{gcdCounts}[g] = \text{pairs} - \sum_{k=2}^{\lfloor M/g \rfloor} \text{gcdCounts}[k \cdot g]$.
 3. Harmonic series complexity: $\sum_{g=1}^M \frac{M}{g} = \mathcal{O}(M \log M)$. Prefix sums over `gcdCounts` enable binary search queries in $\mathcal{O}(\log M)$.
 
+### Pattern F: Global Affine Transformation with Modular Inverse
+To support sequence-wide additions, multiplications, and appends in $\mathcal{O}(1) / \mathcal{O}(\log M)$ per operation:
+1. **Global Linear Function**: Maintain $f(x) = (a \cdot x + b) \pmod M$ representing the cumulative transformation applied to all existing values.
+2. **Operations**:
+   - `addAll(inc)`: $b = (b + inc) \pmod M$.
+   - `multAll(m)`: $a = (a \cdot m) \pmod M, \quad b = (b \cdot m) \pmod M$.
+3. **Inverse Insertion**: When appending $val$, store raw value $x = (val - b) \cdot a^{-1} \pmod M$, where $a^{-1} = a^{M-2} \pmod M$ via Fermat's Little Theorem.
+4. **Point Query**: $getIndex(idx) = (a \cdot arr[idx] + b) \pmod M$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -107,6 +116,7 @@ To count pairs $(a, b)$ with exact $\text{GCD}(a, b) = g$ across an array with v
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |

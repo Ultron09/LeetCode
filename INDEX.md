@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **33** | 0 | 0 | 33 |
+| **34** | 0 | 0 | 34 |
 
 ---
 
@@ -23,6 +23,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1345 | [Jump Game IV](solutions/1345-jump-game-iv/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/1345-jump-game-iv/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 1406 | [Stone Game III](solutions/1406-stone-game-iii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/1406-stone-game-iii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 1622 | [Fancy Sequence](solutions/1622-fancy-sequence/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](solutions/1622-fancy-sequence/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 1840 | [Maximum Building Height](solutions/1840-maximum-building-height/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](solutions/1840-maximum-building-height/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 2463 | [Minimum Total Distance Traveled](solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](solutions/2463-minimum-total-distance-traveled/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
