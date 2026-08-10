@@ -97,7 +97,12 @@ When positions must satisfy Lipschitz/slope constraints (e.g. $|h_i - h_{i+1}| \
 When tasks require a minimum initial threshold $minimum_i$ and consume $actual_i$:
 1. Use an exchange argument on adjacent tasks $A$ and $B$: doing $A$ before $B$ is better if and only if $(minimum_A - actual_A) \ge (minimum_B - actual_B)$.
 2. Sort tasks in descending order of $(minimum_i - actual_i)$.
-3. Perform a single-pass simulation to calculate the minimum initial energy required to prevent energy dropping below zero during any step.
+### Pattern G: Constrained String Generation with Priority Placement & Rightmost Breaking
+When constructing a lexicographically minimal string satisfying equality and inequality substring constraints:
+1. **Mandatory Placements**: Fix all mandatory equality constraints ('T'). Contradictions immediately imply infeasibility.
+2. **Minimal Default Fill**: Populate all unconstrained positions with the minimal character (`'a'`).
+3. **Rightmost Breaking**: For any violated inequality constraint ('F') where a substring matches the forbidden pattern, break the match by modifying the rightmost unconstrained position in that window to the next available character (`'b'`), minimizing lexicographical penalty.
+4. **Validation**: Run a final verification pass to ensure no later modifications violated earlier constraints.
 
 ---
 
@@ -117,6 +122,8 @@ When tasks require a minimum initial threshold $minimum_i$ and consume $actual_i
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
+| 3474 | [Lexicographically Smallest Generated String](../solutions/3474-lexicographically-smallest-generated-string/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3474-lexicographically-smallest-generated-string/solution.cpp) |
+
 
 
 
