@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **24** | 0 | 0 | 24 |
+| **25** | 0 | 0 | 25 |
 
 ---
 
@@ -30,6 +30,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 3312 | [Sorted GCD Pair Queries](solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](solutions/3312-sorted-gcd-pair-queries/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3348 | [Smallest Divisible Digit Product II](solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
+| 3464 | [Maximize the Distance Between Points on a Square](solutions/3464-maximize-the-distance-between-points-on-a-square/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(N \log N \log(\text{side}))$ | $\mathcal{O}(N)$ | [C++](solutions/3464-maximize-the-distance-between-points-on-a-square/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 3501 | [Maximize Active Section with Trade II](solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 3518 | [Smallest Palindromic Rearrangement II](solutions/3518-smallest-palindromic-rearrangement-ii/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N \log K)$ | $\mathcal{O}(N)$ | [C++](solutions/3518-smallest-palindromic-rearrangement-ii/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 3534 | [Path Existence Queries in a Graph II](solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |

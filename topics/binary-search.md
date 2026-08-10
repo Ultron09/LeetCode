@@ -106,6 +106,13 @@ When finding the minimum element in a rotated sorted array with duplicates:
 3. If `nums[mid] < nums[right]`: right half is sorted $\to$ `right = mid`.
 4. If `nums[mid] == nums[right]`: ambiguous inflection point $\to$ safely decrement `right--` ($\mathcal{O}(\log N)$ average, $\mathcal{O}(N)$ worst).
 
+### Pattern F: Search on Answer with Circular Perimeter Linearization & Greedy Selection
+When maximizing the minimum distance among $k$ points on a circular boundary (e.g. square perimeter):
+1. **Linearize 2D Boundary to 1D**: Map $(x, y) \to pos \in [0, 4 \times side)$.
+2. **Binary Search on Feasible Distance**: Search for optimal minimum distance $D \in [1, side]$.
+3. **Pigeonhole Pruning**: Test candidate starting points within $[pos[0], pos[0] + P/k]$.
+4. **Greedy Jumps with `std::lower_bound`**: Select $k - 1$ subsequent points on the doubled array $pos + P$ in $\mathcal{O}(k \log N)$ time.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -124,7 +131,9 @@ When finding the minimum element in a rotated sorted array with duplicates:
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 154 | [Find Minimum in Rotated Sorted Array II](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
+| 3464 | [Maximize the Distance Between Points on a Square](../solutions/3464-maximize-the-distance-between-points-on-a-square/README.md) | `Hard` | $\mathcal{O}(N \log N \log(\text{side}))$ | $\mathcal{O}(N)$ | [C++](../solutions/3464-maximize-the-distance-between-points-on-a-square/solution.cpp) |
 | 3501 | [Maximize Active Section with Trade II](../solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
+
 
 
