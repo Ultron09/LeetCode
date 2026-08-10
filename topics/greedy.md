@@ -108,7 +108,11 @@ When constructing a lexicographically minimal string satisfying equality and ine
 When formatting text into justified fixed-width lines:
 1. **Greedy Fitting**: Pack as many words as fit within `maxWidth` such that word lengths plus mandatory single-space separators $\le \text{maxWidth}$.
 2. **Left-Justification Exception**: If the line contains a single word or is the last line of text, space words with 1 space and right-pad remaining spaces.
-3. **Balanced Space Apportionment**: For standard lines with $G$ gaps and $S$ total spaces, distribute $\lfloor S/G \rfloor$ spaces per gap, adding $+1$ extra space to the leftmost $(S \bmod G)$ gaps.
+### Pattern I: Two-Pass Bidirectional Neighbor Satisfaction
+When an element's value must strictly exceed both its left and right neighbors subject to rating inequalities:
+1. **Left-to-Right Pass**: Initialize all elements to baseline minimum (e.g. 1) and increment $A[i] = A[i - 1] + 1$ whenever $R[i] > R[i - 1]$.
+2. **Right-to-Left Pass**: Update $A[i] = \max(A[i], A[i + 1] + 1)$ whenever $R[i] > R[i + 1]$.
+3. The $\max$ operator maintains the previously satisfied left-neighbor condition while strictly enforcing the right-neighbor condition in $\mathcal{O}(N)$ time.
 
 ---
 
@@ -126,10 +130,12 @@ When formatting text into justified fixed-width lines:
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 68 | [Text Justification](../solutions/0068-text-justification/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\text{maxWidth})$ | [C++](../solutions/0068-text-justification/solution.cpp) |
+| 135 | [Candy](../solutions/0135-candy/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0135-candy/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
 | 3474 | [Lexicographically Smallest Generated String](../solutions/3474-lexicographically-smallest-generated-string/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3474-lexicographically-smallest-generated-string/solution.cpp) |
+
 
 
 
