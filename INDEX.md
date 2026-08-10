@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **40** | 0 | 0 | 40 |
+| **41** | 0 | 0 | 41 |
 
 ---
 
@@ -21,6 +21,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0010 | [Regular Expression Matching](solutions/0010-regular-expression-matching/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](solutions/0010-regular-expression-matching/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0023 | [Merge k Sorted Lists](solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | [Linked List](topics/linked-list.md) | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](solutions/0023-merge-k-sorted-lists/solution.cpp) | [Notes](topics/linked-list.md#solved-problems) |
 | 0025 | [Reverse Nodes in k-Group](solutions/0025-reverse-nodes-in-k-group/README.md) | `Hard` | [Linked List](topics/linked-list.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0025-reverse-nodes-in-k-group/solution.cpp) | [Notes](topics/linked-list.md#solved-problems) |
+| 0030 | [Substring with Concatenation of All Words](solutions/0030-substring-with-concatenation-of-all-words/README.md) | `Hard` | [Sliding Window](topics/sliding-window.md) | $\mathcal{O}(N \cdot L)$ | $\mathcal{O}(K \cdot L)$ | [C++](solutions/0030-substring-with-concatenation-of-all-words/solution.cpp) | [Notes](topics/sliding-window.md#solved-problems) |
 | 0041 | [First Missing Positive](solutions/0041-first-missing-positive/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0041-first-missing-positive/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0042 | [Trapping Rain Water](solutions/0042-trapping-rain-water/README.md) | `Hard` | [Two Pointers](topics/two-pointers.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0042-trapping-rain-water/solution.cpp) | [Notes](topics/two-pointers.md#solved-problems) |
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |

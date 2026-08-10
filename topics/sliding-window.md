@@ -104,6 +104,48 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
     }
     return result;
 }
+### Pattern D: Multi-Offset Phased Sliding Window (Word Concatenation)
+When searching for permutations of fixed-length $L$ words:
+1. Run $L$ separate sliding windows starting at offsets $0, 1, \dots, L - 1$.
+2. Step forward in increments of $L$, parsing string tokens in $\mathcal{O}(1)$ via `std::string_view`.
+3. Track current word frequency in `windowCount`, shrinking `left += L` whenever frequency exceeds target `wordCount`.
+
+```cpp
+vector<int> findSubstring(string s, vector<string>& words) {
+    vector<int> result;
+    if (s.empty() || words.empty()) return result;
+    int wordLen = words[0].size(), numWords = words.size();
+    int sLen = s.size(), totalLen = wordLen * numWords;
+    if (sLen < totalLen) return result;
+
+    unordered_map<string_view, int> wordCount;
+    for (const string& w : words) wordCount[w]++;
+    string_view sv(s);
+
+    for (int i = 0; i < wordLen; ++i) {
+        int left = i, count = 0;
+        unordered_map<string_view, int> windowCount;
+        for (int right = i; right <= sLen - wordLen; right += wordLen) {
+            string_view sub = sv.substr(right, wordLen);
+            auto it = wordCount.find(sub);
+            if (it != wordCount.end()) {
+                windowCount[sub]++;
+                count++;
+                while (windowCount[sub] > it->second) {
+                    windowCount[sv.substr(left, wordLen)]--;
+                    count--;
+                    left += wordLen;
+                }
+                if (count == numWords) result.push_back(left);
+            } else {
+                windowCount.clear();
+                count = 0;
+                left = right + wordLen;
+            }
+        }
+    }
+    return result;
+}
 ```
 
 ---
@@ -120,4 +162,5 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-<!-- Problems will be added here -->
+| 30 | [Substring with Concatenation of All Words](../solutions/0030-substring-with-concatenation-of-all-words/README.md) | `Hard` | $\mathcal{O}(N \cdot L)$ | $\mathcal{O}(K \cdot L)$ | [C++](../solutions/0030-substring-with-concatenation-of-all-words/solution.cpp) |
+
