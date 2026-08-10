@@ -1,0 +1,36 @@
+# C++ Compiled Binaries and Objects
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.pdb
+*.ilk
+
+# Build directories
+build/
+bin/
+out/
+dist/
+cmake-build-*/
+.cache/
+
+# IDE and Editor Files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs and Scratch
+*.log
+scratch/
+tmp/
