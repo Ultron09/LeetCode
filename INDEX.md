@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **21** | 0 | 0 | 21 |
+| **22** | 0 | 0 | 22 |
 
 ---
 
@@ -17,6 +17,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | # | Title | Difficulty | Primary Topic | Time Complexity | Space Complexity | Solution | Notes |
 | :---: | :--- | :---: | :--- | :---: | :---: | :---: | :--- |
 <!-- PROBLEMS_TABLE_START -->
+| 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1345 | [Jump Game IV](solutions/1345-jump-game-iv/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/1345-jump-game-iv/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |

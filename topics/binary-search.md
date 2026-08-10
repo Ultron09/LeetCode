@@ -99,6 +99,13 @@ When range queries $[L, R]$ operate on run-length encoded or grouped blocks (e.g
 - `last = upper_bound(blockStarts.begin(), blockStarts.end(), R) - blockStarts.begin() - 1`
 Boundary blocks $[first]$ and $[last]$ are clamped to $[L, R]$, while fully contained interior blocks $[first+1, last-2]$ are queried in $\mathcal{O}(1)$ via a precomputed Sparse Table or Segment Tree.
 
+### Pattern E: Binary Search in Rotated Sorted Array with Duplicates
+When finding the minimum element in a rotated sorted array with duplicates:
+1. Compare `nums[mid]` against `nums[right]`.
+2. If `nums[mid] > nums[right]`: pivot is to the right $\to$ `left = mid + 1`.
+3. If `nums[mid] < nums[right]`: right half is sorted $\to$ `right = mid`.
+4. If `nums[mid] == nums[right]`: ambiguous inflection point $\to$ safely decrement `right--` ($\mathcal{O}(\log N)$ average, $\mathcal{O}(N)$ worst).
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -107,7 +114,7 @@ Boundary blocks $[first]$ and $[last]$ are clamped to $[L, R]$, while fully cont
 2. **Off-by-One in Boundary Conditions**:
    - `while (low <= high)` requires `low = mid + 1` and `high = mid - 1`.
    - `while (low < high)` requires `right = mid` or `left = mid + 1`.
-3. **Duplicates in Rotated Array**: If `nums[left] == nums[mid] == nums[right]`, we cannot determine which half is sorted; we must shrink bounds with `left++` and `right--` ($\mathcal{O}(N)$ worst-case).
+3. **Duplicates in Rotated Array**: If `nums[left] == nums[mid] == nums[right]`, we cannot determine which half is sorted; we must shrink bounds with `right--` ($\mathcal{O}(N)$ worst-case).
 
 ---
 
@@ -115,7 +122,9 @@ Boundary blocks $[first]$ and $[last]$ are clamped to $[L, R]$, while fully cont
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 154 | [Find Minimum in Rotated Sorted Array II](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3501 | [Maximize Active Section with Trade II](../solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
+
 

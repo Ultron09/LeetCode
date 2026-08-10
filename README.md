@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **20** | 0 | 0 | 20 |
+| **22** | 0 | 0 | 22 |
 
 ---
 
@@ -29,12 +29,12 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 1 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 0 | [Explore Notes](topics/sliding-window.md) |
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 1 | [Explore Notes](topics/stack-and-queue.md) |
-| **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 3 | [Explore Notes](topics/binary-search.md) |
+| **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 4 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 0 | [Explore Notes](topics/linked-list.md) |
 | **Trees & BST** | DFS/BFS Traversals, Lowest Common Ancestor, Tree DP | 2 | [Explore Notes](topics/trees.md) |
 | **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 1 | [Explore Notes](topics/heaps-and-priority-queues.md) |
 | **Backtracking** | Permutations, Combinations, Subsets, Pruning | 0 | [Explore Notes](topics/backtracking.md) |
-| **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 2 | [Explore Notes](topics/graphs.md) |
+| **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 3 | [Explore Notes](topics/graphs.md) |
 | **Dynamic Programming** | 1D/2D DP, Knapsack, LCS/LIS, Interval DP, Bitmask DP | 7 | [Explore Notes](topics/dynamic-programming.md) |
 | **Greedy** | Activity Selection, Jump Game, Huffman Coding | 2 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 1 | [Explore Notes](topics/intervals.md) |
