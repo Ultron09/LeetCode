@@ -93,6 +93,13 @@ When answering many path queries on a general tree of size $N$:
 2. For query $(u, v)$, equalize depths, lift simultaneously to find $\text{LCA}(u, v)$ in $\mathcal{O}(\log N)$.
 3. Path length $d = \text{depth}[u] + \text{depth}[v] - 2 \cdot \text{depth}[\text{LCA}(u, v)]$.
 
+### Pattern E: Trie / Suffix Tree with Node-Augmented Metadata
+When matching longest common suffixes/prefixes with multi-criterion tiebreaking:
+1. Reverse strings to transform suffix matching into prefix matching on a Trie.
+2. Augment each `TrieNode` with optimal subtree properties (e.g. `minLen`, `bestIdx`).
+3. During insertion in natural index order, update node metadata with strict comparison (`len < node->minLen`) to automatically break ties toward earlier indices.
+4. Answer queries by single-pass traversal down the Trie in $\mathcal{O}(|query|)$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -107,5 +114,7 @@ When answering many path queries on a general tree of size $N$:
 ## 📋 4. Solved Problems
 
 | # | Title | Difficulty | Time | Space | Solution Link |
-| :---: | :--- | :---: | :---: | :--- | :--- |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+| 3093 | [Longest Common Suffix Queries](../solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](../solutions/3093-longest-common-suffix-queries/solution.cpp) |
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
+
