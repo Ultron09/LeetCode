@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **45** | 0 | 0 | 45 |
+| **46** | 0 | 0 | 46 |
 
 ---
 
@@ -28,6 +28,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0042 | [Trapping Rain Water](solutions/0042-trapping-rain-water/README.md) | `Hard` | [Two Pointers](topics/two-pointers.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0042-trapping-rain-water/solution.cpp) | [Notes](topics/two-pointers.md#solved-problems) |
 | 0044 | [Wildcard Matching](solutions/0044-wildcard-matching/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N)$ worst / $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](solutions/0044-wildcard-matching/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0051 | [N-Queens](solutions/0051-n-queens/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(N!)$ | $\mathcal{O}(N^2)$ | [C++](solutions/0051-n-queens/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
+| 0052 | [N-Queens II](solutions/0052-n-queens-ii/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](solutions/0052-n-queens-ii/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

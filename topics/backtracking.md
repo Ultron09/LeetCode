@@ -167,5 +167,7 @@ void solveNQueens(int r, int n, int cols, int diag1, int diag2, vector<string>& 
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 37 | [Sudoku Solver](../solutions/0037-sudoku-solver/README.md) | `Hard` | $\mathcal{O}(9^M)$ (MRV pruned) | $\mathcal{O}(1)$ | [C++](../solutions/0037-sudoku-solver/solution.cpp) |
 | 51 | [N-Queens](../solutions/0051-n-queens/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0051-n-queens/solution.cpp) |
+| 52 | [N-Queens II](../solutions/0052-n-queens-ii/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](../solutions/0052-n-queens-ii/solution.cpp) |
+
 
 
