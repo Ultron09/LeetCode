@@ -173,7 +173,15 @@ When reconstructing strings from Longest Common Prefix (LCP) relation matrices:
 2. **Component Bounds**: If the number of disjoint equivalence classes exceeds 26, the configuration is impossible.
 3. **Bottom-Up DP Verification**: Validate the reconstructed candidate using the standard suffix recurrence:
    $$dp[i][j] = (word[i] == word[j]) \, ? \, (1 + dp[i+1][j+1]) : 0$$
-   Confirm $dp[i][j] == LCP[i][j]$ for all $0 \le i, j < N$ in $\mathcal{O}(N^2)$ time.
+### Pattern P: Regular Expression Matching & Wildcard Transition DP
+When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
+1. **State Definition**: $dp[i][j]$ indicates whether $s[0..i-1]$ matches $p[0..j-1]$.
+2. **Empty String Base Initialization**: If $p[j-1] == '*' $, $dp[0][j] = dp[0][j-2]$ (matching 0 instances).
+3. **Transitions**:
+   - Single character match (`p[j-1] == s[i-1]` or `p[j-1] == '.'`): $dp[i][j] = dp[i-1][j-1]$.
+   - Star wildcard (`p[j-1] == '*'`):
+     - Zero match of $p[j-2]$: $dp[i][j] = dp[i][j-2]$.
+     - One or more match: If $p[j-2]$ matches $s[i-1]$, $dp[i][j] = dp[i][j] \lor dp[i-1][j]$.
 
 ---
 
@@ -192,6 +200,7 @@ When reconstructing strings from Longest Common Prefix (LCP) relation matrices:
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 10 | [Regular Expression Matching](../solutions/0010-regular-expression-matching/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0010-regular-expression-matching/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |

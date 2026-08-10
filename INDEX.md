@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **35** | 0 | 0 | 35 |
+| **36** | 0 | 0 | 36 |
 
 ---
 
@@ -18,6 +18,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | :---: | :--- | :---: | :--- | :---: | :---: | :--- | :---: | :--- |
 <!-- PROBLEMS_TABLE_START -->
 | 0004 | [Median of Two Sorted Arrays](solutions/0004-median-of-two-sorted-arrays/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log(\min(M, N)))$ | $\mathcal{O}(1)$ | [C++](solutions/0004-median-of-two-sorted-arrays/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
+| 0010 | [Regular Expression Matching](solutions/0010-regular-expression-matching/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](solutions/0010-regular-expression-matching/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
