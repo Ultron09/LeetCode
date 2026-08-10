@@ -85,6 +85,52 @@ void generatePermutations(vector<int>& nums, vector<bool>& used, vector<int>& cu
 }
 ```
 
+### Pattern D: Constraint Satisfaction with MRV & Bitmasks (Sudoku Solver)
+When solving exact constraint grid problems:
+1. **Bitmask Lookup**: Maintain bitmasks for each row, column, and subgrid to query candidate validity in $\mathcal{O}(1)$.
+2. **Minimum Remaining Values (MRV)**: At each step, select the unassigned cell with the fewest available candidate options (`__builtin_popcount`). This drastically reduces the branching factor.
+3. **Fail-Fast Pruning**: If any empty cell has 0 available candidates, immediately backtrack.
+
+```cpp
+bool solveSudoku(vector<vector<char>>& board, int rowMask[9], int colMask[9], int boxMask[9]) {
+    int minChoices = 10, bestR = -1, bestC = -1, bestCand = 0;
+
+    for (int r = 0; r < 9; ++r) {
+        for (int c = 0; c < 9; ++c) {
+            if (board[r][c] == '.') {
+                int used = rowMask[r] | colMask[c] | boxMask[(r / 3) * 3 + (c / 3)];
+                int cand = (~used) & 0x1FF;
+                int count = __builtin_popcount(cand);
+                if (count == 0) return false;
+                if (count < minChoices) {
+                    minChoices = count;
+                    bestR = r; bestC = c; bestCand = cand;
+                    if (count == 1) break;
+                }
+            }
+        }
+        if (minChoices == 1) break;
+    }
+    if (bestR == -1) return true; // Solved
+
+    int b = (bestR / 3) * 3 + (bestC / 3);
+    int cand = bestCand;
+    while (cand > 0) {
+        int lsb = cand & -cand;
+        int digit = __builtin_ctz(lsb);
+        board[bestR][bestC] = '1' + digit;
+        rowMask[bestR] |= lsb; colMask[bestC] |= lsb; boxMask[b] |= lsb;
+
+        if (solveSudoku(board, rowMask, colMask, boxMask)) return true;
+
+        board[bestR][bestC] = '.';
+        rowMask[bestR] ^= lsb; colMask[bestC] ^= lsb; boxMask[b] ^= lsb;
+        cand -= lsb;
+    }
+    return false;
+}
+```
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -99,4 +145,5 @@ void generatePermutations(vector<int>& nums, vector<bool>& used, vector<int>& cu
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-<!-- Problems will be added here -->
+| 37 | [Sudoku Solver](../solutions/0037-sudoku-solver/README.md) | `Hard` | $\mathcal{O}(9^M)$ (MRV pruned) | $\mathcal{O}(1)$ | [C++](../solutions/0037-sudoku-solver/solution.cpp) |
+
