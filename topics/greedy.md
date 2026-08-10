@@ -93,12 +93,18 @@ When positions must satisfy Lipschitz/slope constraints (e.g. $|h_i - h_{i+1}| \
 3. **Right-to-Left Pass**: Propagate growth limits backward: $h_i = \min(h_i, h_{i+1} + (x_{i+1} - x_i))$.
 4. **Triangular Peak**: Between adjacent tight bounds $(x_1, h_1)$ and $(x_2, h_2)$, the peak height is $\lfloor \frac{(x_2 - x_1) + h_1 + h_2}{2} \rfloor$.
 
+### Pattern F: Exchange Argument for Energy/Buffer Preservation
+When tasks require a minimum initial threshold $minimum_i$ and consume $actual_i$:
+1. Use an exchange argument on adjacent tasks $A$ and $B$: doing $A$ before $B$ is better if and only if $(minimum_A - actual_A) \ge (minimum_B - actual_B)$.
+2. Sort tasks in descending order of $(minimum_i - actual_i)$.
+3. Perform a single-pass simulation to calculate the minimum initial energy required to prevent energy dropping below zero during any step.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
 
 1. **Greedy Fallacy**: Ensure greedy choice property actually holds (e.g. standard 0/1 knapsack cannot be solved greedily, it requires DP).
-2. **Sorting Criteria**: Choosing whether to sort by start time, end time, or value ratio is crucial.
+2. **Sorting Criteria**: Choosing whether to sort by start time, end time, or value ratio is crucial. Always verify with an exchange argument.
 3. **Empty Input / Single Element**: Always verify behavior for $N = 0$ or $N = 1$.
 4. **Unrelaxed Restrictions**: Calculating peaks on loose/unrelaxed restrictions overestimates peak height. Always perform two-pass relaxation first.
 
@@ -108,7 +114,9 @@ When positions must satisfy Lipschitz/slope constraints (e.g. $|h_i - h_{i+1}| \
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
+
 
 

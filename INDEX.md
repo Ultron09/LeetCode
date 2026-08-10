@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **22** | 0 | 0 | 22 |
+| **23** | 0 | 0 | 23 |
 
 ---
 
@@ -22,6 +22,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1345 | [Jump Game IV](solutions/1345-jump-game-iv/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/1345-jump-game-iv/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 1406 | [Stone Game III](solutions/1406-stone-game-iii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/1406-stone-game-iii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 1665 | [Minimum Initial Energy to Finish Tasks](solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 1840 | [Maximum Building Height](solutions/1840-maximum-building-height/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](solutions/1840-maximum-building-height/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 3093 | [Longest Common Suffix Queries](solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](solutions/3093-longest-common-suffix-queries/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
 | 3161 | [Block Placement Queries](solutions/3161-block-placement-queries/README.md) | `Hard` | [Intervals](topics/intervals.md) | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](solutions/3161-block-placement-queries/solution.cpp) | [Notes](topics/intervals.md#solved-problems) |
