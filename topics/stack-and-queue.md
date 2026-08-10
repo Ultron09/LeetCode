@@ -133,8 +133,10 @@ int longestValidParentheses(const string& s) {
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 32 | [Longest Valid Parentheses](../solutions/0032-longest-valid-parentheses/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0032-longest-valid-parentheses/solution.cpp) |
+| 84 | [Largest Rectangle in Histogram](../solutions/0084-largest-rectangle-in-histogram/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0084-largest-rectangle-in-histogram/solution.cpp) |
 | 2751 | [Robot Collisions](../solutions/2751-robot-collisions/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2751-robot-collisions/solution.cpp) |
 | 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
+
 
 
 
