@@ -8,14 +8,14 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **23** | 0 | 0 | 23 |
+| **24** | 0 | 0 | 24 |
 
 ---
 
 ## 🗂️ Problem Catalog
 
 | # | Title | Difficulty | Primary Topic | Time Complexity | Space Complexity | Solution | Notes |
-| :---: | :--- | :---: | :--- | :---: | :---: | :---: | :--- |
+| :---: | :--- | :---: | :--- | :---: | :---: | :--- | :--- |
 <!-- PROBLEMS_TABLE_START -->
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
@@ -26,6 +26,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 1840 | [Maximum Building Height](solutions/1840-maximum-building-height/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](solutions/1840-maximum-building-height/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 3093 | [Longest Common Suffix Queries](solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](solutions/3093-longest-common-suffix-queries/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
 | 3161 | [Block Placement Queries](solutions/3161-block-placement-queries/README.md) | `Hard` | [Intervals](topics/intervals.md) | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](solutions/3161-block-placement-queries/solution.cpp) | [Notes](topics/intervals.md#solved-problems) |
+| 3225 | [Maximum Score From Grid Operations](solutions/3225-maximum-score-from-grid-operations/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](solutions/3225-maximum-score-from-grid-operations/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3312 | [Sorted GCD Pair Queries](solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](solutions/3312-sorted-gcd-pair-queries/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3348 | [Smallest Divisible Digit Product II](solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
