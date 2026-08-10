@@ -109,6 +109,13 @@ To compute the $k^{\text{th}}$ lexicographical permutation of $\{1, \dots, n\}$ 
    - Extract `numbers[idx]` and remove it from the list.
    - Update $k \leftarrow k \bmod \text{fact}$ and $\text{fact} \leftarrow \text{fact} / i$.
 
+### Pattern H: Deterministic Finite State Machine for Number Parsing
+Maintain boolean flags `seenDigit`, `seenDot`, `seenExponent` to validate numerical formats in $\mathcal{O}(N)$ time and $\mathcal{O}(1)$ space:
+1. `+`/`-`: Permitted only at index 0 or immediately after `e`/`E`.
+2. `.`: Permitted at most once and never after `e`/`E`.
+3. `e`/`E`: Permitted only if preceded by digits and never repeated; resets `seenDigit = false` requiring subsequent digits.
+4. Terminal state: Requires `seenDigit == true`.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -126,6 +133,7 @@ To compute the $k^{\text{th}}$ lexicographical permutation of $\{1, \dots, n\}$ 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 60 | [Permutation Sequence](../solutions/0060-permutation-sequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0060-permutation-sequence/solution.cpp) |
+| 65 | [Valid Number](../solutions/0065-valid-number/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0065-valid-number/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
@@ -134,6 +142,7 @@ To compute the $k^{\text{th}}$ lexicographical permutation of $\{1, \dots, n\}$ 
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 
