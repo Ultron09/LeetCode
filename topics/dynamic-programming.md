@@ -151,6 +151,13 @@ When grid operations define vertical column profile heights and adjacent columns
 2. Precompute prefix and suffix maximums over the previous column's height $k$ to avoid $\mathcal{O}(n)$ inner enumeration.
 3. Transition in $\mathcal{O}(1)$ time per state, reducing the global complexity from $\mathcal{O}(n^4)$ to $\mathcal{O}(n^3)$.
 
+### Pattern L: 1D Continuous Matching DP with Capacity Allocations
+When assigning 1D objects (e.g. robots) to servicing hubs (e.g. factories) with capacities:
+1. **Non-Crossing Monotonicity**: Sort both objects and hubs by 1D coordinates so that relative order is strictly preserved.
+2. **State & Transition**: Let $dp[i]$ be the minimum cost to service the first $i$ objects. For each hub $(pos, limit)$, branch over assigning $k \in [1, \min(limit, n - i)]$ contiguous objects:
+   $$next\_dp[i + k] = \min(next\_dp[i + k], \, dp[i] + \sum_{j=i}^{i+k-1} |obj[j] - pos|)$$
+3. **Space Optimization**: Maintain a 1D rolling array reducing space from $\mathcal{O}(N \cdot M)$ to $\mathcal{O}(N)$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -171,11 +178,13 @@ When grid operations define vertical column profile heights and adjacent columns
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
 | 1406 | [Stone Game III](../solutions/1406-stone-game-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1406-stone-game-iii/solution.cpp) |
+| 2463 | [Minimum Total Distance Traveled](../solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](../solutions/2463-minimum-total-distance-traveled/solution.cpp) |
 | 3225 | [Maximum Score From Grid Operations](../solutions/3225-maximum-score-from-grid-operations/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/3225-maximum-score-from-grid-operations/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
 | 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 
