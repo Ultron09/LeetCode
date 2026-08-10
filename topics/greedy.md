@@ -104,6 +104,12 @@ When constructing a lexicographically minimal string satisfying equality and ine
 3. **Rightmost Breaking**: For any violated inequality constraint ('F') where a substring matches the forbidden pattern, break the match by modifying the rightmost unconstrained position in that window to the next available character (`'b'`), minimizing lexicographical penalty.
 4. **Validation**: Run a final verification pass to ensure no later modifications violated earlier constraints.
 
+### Pattern H: Greedy Line Packing & Balanced Space Apportionment
+When formatting text into justified fixed-width lines:
+1. **Greedy Fitting**: Pack as many words as fit within `maxWidth` such that word lengths plus mandatory single-space separators $\le \text{maxWidth}$.
+2. **Left-Justification Exception**: If the line contains a single word or is the last line of text, space words with 1 space and right-pad remaining spaces.
+3. **Balanced Space Apportionment**: For standard lines with $G$ gaps and $S$ total spaces, distribute $\lfloor S/G \rfloor$ spaces per gap, adding $+1$ extra space to the leftmost $(S \bmod G)$ gaps.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -119,10 +125,12 @@ When constructing a lexicographically minimal string satisfying equality and ine
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 68 | [Text Justification](../solutions/0068-text-justification/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\text{maxWidth})$ | [C++](../solutions/0068-text-justification/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
 | 3474 | [Lexicographically Smallest Generated String](../solutions/3474-lexicographically-smallest-generated-string/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3474-lexicographically-smallest-generated-string/solution.cpp) |
+
 
 
 
