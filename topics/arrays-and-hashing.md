@@ -108,6 +108,12 @@ When finding 1D cuts (horizontal/vertical) across a 2D matrix to balance partiti
    - $1 \times C$ or $R \times 1$: Only the two boundary endpoints maintain connectivity.
    - $R \ge 2 \text{ and } C \ge 2$: Any single cell removal preserves full 4-directional connectivity.
 
+### Pattern G: In-Place Cycle Sort & Self-Hashing
+To find the smallest missing positive integer in $[1, N + 1]$ with $\mathcal{O}(1)$ auxiliary space:
+1. **Pigeonhole Target Range**: The missing positive must fall within $[1, N + 1]$.
+2. **Cycle Sort Invariant**: For each index $i$, repeatedly swap `nums[i]` with `nums[nums[i] - 1]` while `1 <= nums[i] <= N` and `nums[nums[i] - 1] != nums[i]`.
+3. **Linear Scan**: The first index $i$ where `nums[i] != i + 1` identifies the missing positive $i + 1$. If all match, return $N + 1$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -136,9 +142,11 @@ When finding 1D cuts (horizontal/vertical) across a 2D matrix to balance partiti
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 41 | [First Missing Positive](../solutions/0041-first-missing-positive/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0041-first-missing-positive/solution.cpp) |
 | 3548 | [Equal Sum Grid Partition II](../solutions/3548-equal-sum-grid-partition-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/3548-equal-sum-grid-partition-ii/solution.cpp) |
 | 3655 | [XOR After Range Multiplication Queries II](../solutions/3655-xor-after-range-multiplication-queries-ii/README.md) | `Hard` | $\mathcal{O}((N + Q)\sqrt{N})$ | $\mathcal{O}(N + Q)$ | [C++](../solutions/3655-xor-after-range-multiplication-queries-ii/solution.cpp) |
 | 3739 | [Count Subarrays With Majority Element II](../solutions/3739-count-subarrays-with-majority-element-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3739-count-subarrays-with-majority-element-ii/solution.cpp) |
+
 
 
 
