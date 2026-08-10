@@ -94,6 +94,12 @@ To count subarrays satisfying majority/balance conditions (e.g. target element c
 3. Since $s[r+1] = s[r] \pm 1$, the count of previous prefix sums strictly less than $s[r+1]$ changes by only one bucket (`pre[s[r]]` or `pre[s[r+1]]`).
 4. Maintain `presum` incrementally in $\mathcal{O}(1)$ time with an array `pre[2*N + 1]` shifted by $N$, achieving an optimal $\mathcal{O}(N)$ runtime overall.
 
+### Pattern E: Square Root Decomposition with Multiplicative Difference Arrays
+When range updates apply periodic stride-$k$ operations (e.g. arithmetic progressions $l + c \cdot k \le r$):
+1. **Threshold Split**: Partition step size $k$ with threshold $B = \lfloor \sqrt{N} \rfloor$.
+2. **Large $k \ge B$**: Apply brute force directly in $\mathcal{O}(N/k) \le \mathcal{O}(\sqrt{N})$ per query.
+3. **Small $k < B$**: Group queries by $k$. Maintain a modular difference array `diff[idx]` updated at $l$ with $v$ and at $last + k$ with $v^{-1} \pmod M$. Propagate prefix products across each residue class modulo $k$ in $\mathcal{O}(N)$ time per small $k$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -122,5 +128,7 @@ To count subarrays satisfying majority/balance conditions (e.g. target element c
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 3655 | [XOR After Range Multiplication Queries II](../solutions/3655-xor-after-range-multiplication-queries-ii/README.md) | `Hard` | $\mathcal{O}((N + Q)\sqrt{N})$ | $\mathcal{O}(N + Q)$ | [C++](../solutions/3655-xor-after-range-multiplication-queries-ii/solution.cpp) |
 | 3739 | [Count Subarrays With Majority Element II](../solutions/3739-count-subarrays-with-majority-element-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3739-count-subarrays-with-majority-element-ii/solution.cpp) |
+
 

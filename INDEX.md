@@ -8,14 +8,14 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **27** | 0 | 0 | 27 |
+| **28** | 0 | 0 | 28 |
 
 ---
 
 ## 🗂️ Problem Catalog
 
 | # | Title | Difficulty | Primary Topic | Time Complexity | Space Complexity | Solution | Notes |
-| :---: | :--- | :---: | :--- | :---: | :---: | :--- | :--- |
+| :---: | :--- | :---: | :--- | :---: | :---: | :--- | :---: | :--- |
 <!-- PROBLEMS_TABLE_START -->
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
@@ -39,6 +39,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 3559 | [Number of Ways to Assign Edge Weights II](solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
 | 3614 | [Process String with Special Operations II](solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/3614-process-string-with-special-operations-ii/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 3620 | [Network Recovery Pathways](solutions/3620-network-recovery-pathways/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](solutions/3620-network-recovery-pathways/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
+| 3655 | [XOR After Range Multiplication Queries II](solutions/3655-xor-after-range-multiplication-queries-ii/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}((N + Q)\sqrt{N})$ | $\mathcal{O}(N + Q)$ | [C++](solutions/3655-xor-after-range-multiplication-queries-ii/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 3691 | [Maximum Total Subarray Value II](solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | [Heaps / Priority Queue](topics/heaps-and-priority-queues.md) | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3691-maximum-total-subarray-value-ii/solution.cpp) | [Notes](topics/heaps-and-priority-queues.md#solved-problems) |
 | 3699 | [Number of ZigZag Arrays I](solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](solutions/3699-number-of-zigzag-arrays-i/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3700 | [Number of ZigZag Arrays II](solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
