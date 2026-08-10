@@ -100,6 +100,15 @@ To support sequence-wide additions, multiplications, and appends in $\mathcal{O}
 3. **Inverse Insertion**: When appending $val$, store raw value $x = (val - b) \cdot a^{-1} \pmod M$, where $a^{-1} = a^{M-2} \pmod M$ via Fermat's Little Theorem.
 4. **Point Query**: $getIndex(idx) = (a \cdot arr[idx] + b) \pmod M$.
 
+### Pattern G: Factoradic Decomposition / Direct Permutation Rank Decoding
+To compute the $k^{\text{th}}$ lexicographical permutation of $\{1, \dots, n\}$ directly in $\mathcal{O}(n^2)$ without generating permutations:
+1. Precompute factorials $(n - 1)!, (n - 2)!, \dots, 1!$.
+2. Convert $k$ to 0-based: $k \leftarrow k - 1$.
+3. At each step $i \in [n - 1 \dots 1]$:
+   - Index of chosen digit: `idx = k / fact`.
+   - Extract `numbers[idx]` and remove it from the list.
+   - Update $k \leftarrow k \bmod \text{fact}$ and $\text{fact} \leftarrow \text{fact} / i$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -116,6 +125,7 @@ To support sequence-wide additions, multiplications, and appends in $\mathcal{O}
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 60 | [Permutation Sequence](../solutions/0060-permutation-sequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0060-permutation-sequence/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
@@ -124,5 +134,6 @@ To support sequence-wide additions, multiplications, and appends in $\mathcal{O}
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
