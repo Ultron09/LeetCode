@@ -126,6 +126,12 @@ To maximize the minimum edge-cost along a path from source to target subject to 
 2. In the `check(X)` predicate, filter edges to only include $\text{cost} \ge X$ and enforce vertex validity (e.g. `online[v] == true`).
 3. Run Dijkstra's algorithm to find the minimum path sum from source to target. If $\text{dist}[\text{target}] \le k$, search higher; else search lower.
 
+### Pattern F: BFS Shortest Path with Equivalence Class Clearing
+When nodes can jump to any other node with an identical attribute (teleport / clique edges):
+1. Index all nodes by attribute into a hash map `valToIndices`.
+2. Run standard layer-by-layer BFS for unweighted shortest paths.
+3. Upon expanding the neighbors of value $V$, immediately erase $V$ from the map (`valToIndices.erase(it)`) to prevent quadratic edge re-traversals, ensuring strict $\mathcal{O}(V + E)$ linear time.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -135,6 +141,7 @@ To maximize the minimum edge-cost along a path from source to target subject to 
 3. **Negative Cycles**: Dijkstra fails with negative edge weights; use Bellman-Ford or Floyd-Warshall instead.
 4. **Disconnected Graph Queries**: In binary lifting queries, if $\text{jump}[\text{start}][\text{maxLevel} - 1] < \text{target}$, return $-1$.
 5. **Path Weight Overflow**: Accumulating path weights up to $5 \times 10^{13}$ requires `long long` for distance tables and priority queues.
+6. **Clique Edge Reprocessing**: Forgetting to clear equivalence class adjacency lists causes TLE ($\mathcal{O}(N^2)$).
 
 ---
 
@@ -142,7 +149,9 @@ To maximize the minimum edge-cost along a path from source to target subject to 
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 1345 | [Jump Game IV](../solutions/1345-jump-game-iv/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1345-jump-game-iv/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
+
 
 
