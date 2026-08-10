@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **19** | 0 | 0 | 19 |
+| **20** | 0 | 0 | 20 |
 
 ---
 
@@ -18,6 +18,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | :---: | :--- | :---: | :--- | :---: | :---: | :---: | :--- |
 <!-- PROBLEMS_TABLE_START -->
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1406 | [Stone Game III](solutions/1406-stone-game-iii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/1406-stone-game-iii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1840 | [Maximum Building Height](solutions/1840-maximum-building-height/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](solutions/1840-maximum-building-height/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 3093 | [Longest Common Suffix Queries](solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](solutions/3093-longest-common-suffix-queries/solution.cpp) | [Notes](topics/trees.md#solved-problems) |

@@ -139,6 +139,12 @@ When summing localized structural scores (e.g. peaks, valleys, digit counts) acr
 2. Use memoized DFS over state `(pos, prev, curr)` with `isLimit` and `isLeading` flags.
 3. Propagate pairs `(subCount, subSum)`: when a local condition is met (e.g. $curr$ is a peak), directly add `subCount` to the accumulated sum since all downstream numbers receive $+1$ score.
 
+### Pattern J: DAG Longest Path via DFS + Memoization (Bounded Jumps / Decreasing Walks)
+When finding the longest valid traversal in an array where transitions are strictly bounded (distance $d$) and monotonic (height strictly decreases):
+1. **DAG Property**: Because transitions move strictly to smaller values ($arr[j] < arr[i]$), cycles are impossible.
+2. **Top-Down Memoized DFS**: Compute $\text{dp}[i] = 1 + \max_{j} \text{dp}[j]$ by scanning both left and right directions up to $d$ steps.
+3. **Obstacle Pruning**: Immediately terminate directional scans as soon as an intermediate element blocks the path ($arr[j] \ge arr[i]$).
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -157,6 +163,7 @@ When summing localized structural scores (e.g. peaks, valleys, digit counts) acr
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
+| 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
 | 1406 | [Stone Game III](../solutions/1406-stone-game-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1406-stone-game-iii/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
 | 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
