@@ -98,7 +98,11 @@ When matching longest common suffixes/prefixes with multi-criterion tiebreaking:
 1. Reverse strings to transform suffix matching into prefix matching on a Trie.
 2. Augment each `TrieNode` with optimal subtree properties (e.g. `minLen`, `bestIdx`).
 3. During insertion in natural index order, update node metadata with strict comparison (`len < node->minLen`) to automatically break ties toward earlier indices.
-4. Answer queries by single-pass traversal down the Trie in $\mathcal{O}(|query|)$.
+### Pattern F: Post-Order Tree DP (Max Branch Gain & Apex Path)
+When finding the maximum path sum across any simple path in a binary tree:
+1. **Branch Gain ($\text{gain}(u)$)**: Maximum gain from $u$ extending downward: $u.\text{val} + \max(0, \max(\text{leftGain}, \text{rightGain}))$.
+2. **Apex Path Sum**: Path turning at $u$: $u.\text{val} + \max(0, \text{leftGain}) + \max(0, \text{rightGain})$.
+3. Update global maximum across all nodes in $\mathcal{O}(N)$ post-order traversal.
 
 ---
 
@@ -108,6 +112,7 @@ When matching longest common suffixes/prefixes with multi-criterion tiebreaking:
 2. **BST Validation**: Validating BST cannot just check if `root->left->val < root->val`. The left subtree must be strictly less than `root->val` for ALL nodes. Always pass valid interval ranges `(low, high)` using `long long`.
 3. **Empty Trees**: Always handle `root == nullptr` as the first base case.
 4. **Log Table Size**: For $N \le 10^5$, $\lceil \log_2(10^5) \rceil = 17$, use table size $18$.
+5. **All-Negative Node Trees**: Initialize global maxima to `INT_MIN` so single least-negative node values are picked correctly.
 
 ---
 
@@ -115,6 +120,8 @@ When matching longest common suffixes/prefixes with multi-criterion tiebreaking:
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 124 | [Binary Tree Maximum Path Sum](../solutions/0124-binary-tree-maximum-path-sum/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | [C++](../solutions/0124-binary-tree-maximum-path-sum/solution.cpp) |
 | 3093 | [Longest Common Suffix Queries](../solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](../solutions/3093-longest-common-suffix-queries/solution.cpp) |
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
+
 
