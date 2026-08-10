@@ -87,13 +87,12 @@ int largestRectangleArea(vector<int>& heights) {
 }
 ```
 
-### Pattern D: Virtual Sequence Coordinate Backtracking / Backward Index Tracing
-When sequences undergo exponential growth (duplications), reversals, and edits:
-1. **Forward Pass**: Track the exact length $L[i]$ after each step without constructing the massive string.
-2. **Backward Pass**: Start from target index $k < L[N-1]$ and reverse the coordinate operations:
-   - Duplication ($k \ge \text{prev\_len}$): $k \leftarrow k - \text{prev\_len}$.
-   - Reversal: $k \leftarrow \text{prev\_len} - 1 - k$.
-   - Appended char ($k == \text{prev\_len}$): return character $c$.
+### Pattern E: Collision Resolution Simulation with Stack & Original Index Mapping
+When simulating pairwise interactions/collisions on a 1D line:
+1. **Spatial Sorting**: Sort object indices by their 1D spatial coordinates while preserving original index access.
+2. **Directional Stack**: Maintain a stack of objects moving in the forward/rightward direction.
+3. **Collision Loop**: When encountering an object moving backward/leftward, iteratively resolve collisions against the stack top based on comparison rules (health, mass, momentum) until the incoming object is destroyed, eliminates the top, or eliminates both.
+4. **Order Preservation**: Mutate the original properties (health/status) in-place and extract survivors in the original $0..N-1$ sequence.
 
 ---
 
@@ -110,5 +109,7 @@ When sequences undergo exponential growth (duplications), reversals, and edits:
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 2751 | [Robot Collisions](../solutions/2751-robot-collisions/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2751-robot-collisions/solution.cpp) |
 | 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
+
 

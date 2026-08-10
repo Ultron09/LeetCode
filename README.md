@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **29** | 0 | 0 | 29 |
+| **30** | 0 | 0 | 30 |
 
 ---
 
@@ -28,7 +28,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 2 | [Explore Notes](topics/arrays-and-hashing.md) |
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 1 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 0 | [Explore Notes](topics/sliding-window.md) |
-| **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 1 | [Explore Notes](topics/stack-and-queue.md) |
+| **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 2 | [Explore Notes](topics/stack-and-queue.md) |
 | **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 5 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 0 | [Explore Notes](topics/linked-list.md) |
 | **Trees & BST** | DFS/BFS Traversals, Lowest Common Ancestor, Tree DP | 2 | [Explore Notes](topics/trees.md) |
