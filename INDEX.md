@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **56** | 0 | 0 | 56 |
+| **57** | 0 | 0 | 57 |
 
 ---
 
@@ -39,6 +39,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0115 | [Distinct Subsequences](solutions/0115-distinct-subsequences/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(N)$ | [C++](solutions/0115-distinct-subsequences/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0123 | [Best Time to Buy and Sell Stock III](solutions/0123-best-time-to-buy-and-sell-stock-iii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0123-best-time-to-buy-and-sell-stock-iii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0124 | [Binary Tree Maximum Path Sum](solutions/0124-binary-tree-maximum-path-sum/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | [C++](solutions/0124-binary-tree-maximum-path-sum/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
+| 0126 | [Word Ladder II](solutions/0126-word-ladder-ii/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N \cdot L \cdot 26 + K \cdot L)$ | $\mathcal{O}(N \cdot L)$ | [C++](solutions/0126-word-ladder-ii/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
