@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **15** | 0 | 0 | 15 |
+| **17** | 0 | 0 | 17 |
 
 ---
 
@@ -29,9 +29,11 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 3559 | [Number of Ways to Assign Edge Weights II](solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
 | 3614 | [Process String with Special Operations II](solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/3614-process-string-with-special-operations-ii/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 3620 | [Network Recovery Pathways](solutions/3620-network-recovery-pathways/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](solutions/3620-network-recovery-pathways/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
+| 3691 | [Maximum Total Subarray Value II](solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | [Heaps / Priority Queue](topics/heaps-and-priority-queues.md) | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3691-maximum-total-subarray-value-ii/solution.cpp) | [Notes](topics/heaps-and-priority-queues.md#solved-problems) |
 | 3699 | [Number of ZigZag Arrays I](solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](solutions/3699-number-of-zigzag-arrays-i/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3700 | [Number of ZigZag Arrays II](solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3739 | [Count Subarrays With Majority Element II](solutions/3739-count-subarrays-with-majority-element-ii/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/3739-count-subarrays-with-majority-element-ii/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
+| 3753 | [Total Waviness of Numbers in Range II](solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 <!-- PROBLEMS_TABLE_END -->
 
 ---

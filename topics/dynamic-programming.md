@@ -133,6 +133,12 @@ When transitions are linear and $N$ is up to $10^9$ with state size $S \le 150$:
 2. Compute $T^{N - \text{base}}$ via binary matrix exponentiation in $\mathcal{O}(S^3 \log N)$ time.
 3. Multiply the powered matrix by the initial base state vector $V_{\text{base}}$ to obtain final answer in logarithmic time.
 
+### Pattern I: Digit DP with Count & Contribution Sum Propagation
+When summing localized structural scores (e.g. peaks, valleys, digit counts) across a large numerical range $[num_1, num_2]$:
+1. Decompose range into $\text{solve}(num_2) - \text{solve}(num_1 - 1)$.
+2. Use memoized DFS over state `(pos, prev, curr)` with `isLimit` and `isLeading` flags.
+3. Propagate pairs `(subCount, subSum)`: when a local condition is met (e.g. $curr$ is a peak), directly add `subCount` to the accumulated sum since all downstream numbers receive $+1$ score.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -142,6 +148,7 @@ When transitions are linear and $N$ is up to $10^9$ with state size $S \le 150$:
 3. **Off-by-One in DP Table Sizes**: Allocate size `N + 1` when `dp[0]` represents the empty string/prefix.
 4. **Unreachable Cells in Multi-Criteria DP**: Guard against propagating from unreachable cells (e.g. `score == -1`); skip them when computing neighbor transitions.
 5. **Matrix Multiplication Cache Ordering**: Always use $(i, k, j)$ loop order with `if (A[i][k] == 0) continue;` to maximize L1/L2 cache hits.
+6. **Digit DP Leading Zero Mapping**: Map uninitialized digits ($-1$) to index $0$ in fixed memoization tables, or leave them uncached until the first non-zero digit is placed.
 
 ---
 
@@ -154,6 +161,8 @@ When transitions are linear and $N$ is up to $10^9$ with state size $S \le 150$:
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
 | 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
+| 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 

@@ -100,6 +100,13 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
 }
 ```
 
+### Pattern D: K-Way Top Element Extraction on Monotonic Intervals via RMQ Heap
+When extracting top-K elements across multidimensional structures with monotonic properties (e.g. subarray range differences):
+1. Precompute $\mathcal{O}(1)$ Range Queries (Sparse Table for min/max).
+2. Exploit monotonicity: for fixed $l$, $V(l, r)$ is non-decreasing with $r \implies$ optimal right bound starts at $r = n - 1$.
+3. Seed Max-Heap with $(V(l, n - 1), l, n - 1)$ for all $l \in [0, n - 1]$.
+4. Greedily pop top element, accumulate, and push $(V(l, r - 1), l, r - 1)$ in $\mathcal{O}(\log N)$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -107,6 +114,7 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
 1. **Min-Heap Comparator Inversion**: In `std::priority_queue`, `std::greater<T>` produces a **min-heap** (contrary to `std::sort` where `greater` produces descending order).
 2. **Empty Heap Access**: Calling `.top()` or `.pop()` on an empty `priority_queue` causes undefined behavior / crash.
 3. **Floating Point Division in Median**: Always cast sums to `double` before dividing by `2.0`.
+4. **Total Sum Overflow**: Summing $K$ values each up to $10^9$ requires `long long` for accumulators.
 
 ---
 
@@ -114,4 +122,5 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-<!-- Problems will be added here -->
+| 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
+
