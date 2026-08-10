@@ -158,6 +158,12 @@ When assigning 1D objects (e.g. robots) to servicing hubs (e.g. factories) with 
    $$next\_dp[i + k] = \min(next\_dp[i + k], \, dp[i] + \sum_{j=i}^{i+k-1} |obj[j] - pos|)$$
 3. **Space Optimization**: Maintain a 1D rolling array reducing space from $\mathcal{O}(N \cdot M)$ to $\mathcal{O}(N)$.
 
+### Pattern M: Multi-Agent State Compression DP (Free / Implicit Pointer Tracking)
+When coordinating two active agents/fingers typing a sequential string:
+1. **Implicit Location**: At step $i$, one agent is guaranteed to be at `word[i - 1]`.
+2. **Reduced State Space**: Only track the position of the *other* agent `other` $\in [0, \Sigma) \cup \{\text{UNPLACED}\}$, reducing the DP from $\mathcal{O}(N \cdot \Sigma^2)$ to $\mathcal{O}(N \cdot \Sigma)$ time and $\mathcal{O}(\Sigma)$ space.
+3. **Branching**: Either advance the active agent from `word[i-1]` to `word[i]` or switch to the other agent (swapping roles).
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -176,6 +182,7 @@ When assigning 1D objects (e.g. robots) to servicing hubs (e.g. factories) with 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
+| 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
 | 1406 | [Stone Game III](../solutions/1406-stone-game-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1406-stone-game-iii/solution.cpp) |
 | 2463 | [Minimum Total Distance Traveled](../solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](../solutions/2463-minimum-total-distance-traveled/solution.cpp) |
@@ -184,6 +191,7 @@ When assigning 1D objects (e.g. robots) to servicing hubs (e.g. factories) with 
 | 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 
