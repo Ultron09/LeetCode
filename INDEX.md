@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **31** | 0 | 0 | 31 |
+| **32** | 0 | 0 | 32 |
 
 ---
 
@@ -26,6 +26,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 1665 | [Minimum Initial Energy to Finish Tasks](solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 1840 | [Maximum Building Height](solutions/1840-maximum-building-height/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](solutions/1840-maximum-building-height/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 2463 | [Minimum Total Distance Traveled](solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](solutions/2463-minimum-total-distance-traveled/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 2573 | [Find the String with LCP](solutions/2573-find-the-string-with-lcp/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/2573-find-the-string-with-lcp/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 2751 | [Robot Collisions](solutions/2751-robot-collisions/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/2751-robot-collisions/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 3093 | [Longest Common Suffix Queries](solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](solutions/3093-longest-common-suffix-queries/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
 | 3161 | [Block Placement Queries](solutions/3161-block-placement-queries/README.md) | `Hard` | [Intervals](topics/intervals.md) | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](solutions/3161-block-placement-queries/solution.cpp) | [Notes](topics/intervals.md#solved-problems) |

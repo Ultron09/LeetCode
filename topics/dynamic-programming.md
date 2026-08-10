@@ -167,7 +167,13 @@ When selecting 1D directional actions (e.g. shooting left/right with obstacles):
 1. **Spatial Ordering**: Sort all active agents and static targets along the 1D axis.
 2. **State Definition**: Let `dp[0]` and `dp[1]` track the maximum covered targets up to agent $i$ with agent $i$ acting LEFT vs RIGHT.
 3. **Overlapping Gap Bounding**: If agent $i-1$ shoots RIGHT and agent $i$ shoots LEFT into the shared interval $(r_{i-1}, r_i)$, their union coverage cannot exceed the total targets present in that interval:
-   $$next\_dp[0] = \max(dp[0] + left_i, \, dp[1] - right_{i-1} + \min(right_{i-1} + left_i, \, num\_between))$$
+### Pattern O: Suffix LCP Matrix Reconstruction & Bottom-Up DP Validation
+When reconstructing strings from Longest Common Prefix (LCP) relation matrices:
+1. **Character Propagation**: If $LCP[i][j] > 0$, characters at $i$ and $j$ must be equal ($word[i] == word[j]$). Greedily assign the lowest available letter from `'a'` to `'z'`.
+2. **Component Bounds**: If the number of disjoint equivalence classes exceeds 26, the configuration is impossible.
+3. **Bottom-Up DP Verification**: Validate the reconstructed candidate using the standard suffix recurrence:
+   $$dp[i][j] = (word[i] == word[j]) \, ? \, (1 + dp[i+1][j+1]) : 0$$
+   Confirm $dp[i][j] == LCP[i][j]$ for all $0 \le i, j < N$ in $\mathcal{O}(N^2)$ time.
 
 ---
 
@@ -191,6 +197,7 @@ When selecting 1D directional actions (e.g. shooting left/right with obstacles):
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
 | 1406 | [Stone Game III](../solutions/1406-stone-game-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1406-stone-game-iii/solution.cpp) |
 | 2463 | [Minimum Total Distance Traveled](../solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](../solutions/2463-minimum-total-distance-traveled/solution.cpp) |
+| 2573 | [Find the String with LCP](../solutions/2573-find-the-string-with-lcp/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/2573-find-the-string-with-lcp/solution.cpp) |
 | 3225 | [Maximum Score From Grid Operations](../solutions/3225-maximum-score-from-grid-operations/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/3225-maximum-score-from-grid-operations/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
 | 3661 | [Maximum Walls Destroyed by Robots](../solutions/3661-maximum-walls-destroyed-by-robots/README.md) | `Hard` | $\mathcal{O}((N + M) \log M + N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3661-maximum-walls-destroyed-by-robots/solution.cpp) |
