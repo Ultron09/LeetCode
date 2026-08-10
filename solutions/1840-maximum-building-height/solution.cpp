@@ -17,7 +17,7 @@ using namespace std;
 
 class Solution {
 public:
-    int maxBuildingHeight(int n, vector<vector<int>>& restrictions) {
+    int maxBuilding(int n, vector<vector<int>>& restrictions) {
         // 1. Add boundary condition: building 1 must have height 0
         restrictions.push_back({1, 0});
 
@@ -54,6 +54,11 @@ public:
 
         return maxHeight;
     }
+
+    // Alias for backward compatibility
+    int maxBuildingHeight(int n, vector<vector<int>>& restrictions) {
+        return maxBuilding(n, restrictions);
+    }
 };
 
 // ==========================================
@@ -68,7 +73,7 @@ int main() {
         int n = 5;
         vector<vector<int>> restrictions = {{2, 1}, {4, 1}};
         int expected = 2;
-        assert(solver.maxBuildingHeight(n, restrictions) == expected);
+        assert(solver.maxBuilding(n, restrictions) == expected);
         cout << "Test 1 Passed!" << endl;
     }
 
@@ -77,7 +82,7 @@ int main() {
         int n = 6;
         vector<vector<int>> restrictions = {};
         int expected = 5;
-        assert(solver.maxBuildingHeight(n, restrictions) == expected);
+        assert(solver.maxBuilding(n, restrictions) == expected);
         cout << "Test 2 Passed!" << endl;
     }
 
@@ -86,7 +91,7 @@ int main() {
         int n = 10;
         vector<vector<int>> restrictions = {{5, 3}, {2, 5}, {7, 4}, {10, 3}};
         int expected = 5;
-        assert(solver.maxBuildingHeight(n, restrictions) == expected);
+        assert(solver.maxBuilding(n, restrictions) == expected);
         cout << "Test 3 Passed!" << endl;
     }
 

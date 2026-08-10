@@ -87,6 +87,12 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 }
 ```
 
+### Pattern D: Binary Lifting for LCA & Tree Path Distances
+When answering many path queries on a general tree of size $N$:
+1. Precompute depths and $2^k$-th ancestors with BFS/DFS: $\text{up}[k][u] = \text{up}[k - 1][\text{up}[k - 1][u]]$.
+2. For query $(u, v)$, equalize depths, lift simultaneously to find $\text{LCA}(u, v)$ in $\mathcal{O}(\log N)$.
+3. Path length $d = \text{depth}[u] + \text{depth}[v] - 2 \cdot \text{depth}[\text{LCA}(u, v)]$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -94,6 +100,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 1. **Skewed Trees & Recursion Depth**: For degenerate linked-list trees, recursive DFS uses $\mathcal{O}(N)$ stack space and can cause stack overflow.
 2. **BST Validation**: Validating BST cannot just check if `root->left->val < root->val`. The left subtree must be strictly less than `root->val` for ALL nodes. Always pass valid interval ranges `(low, high)` using `long long`.
 3. **Empty Trees**: Always handle `root == nullptr` as the first base case.
+4. **Log Table Size**: For $N \le 10^5$, $\lceil \log_2(10^5) \rceil = 17$, use table size $18$.
 
 ---
 
@@ -101,4 +108,4 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :--- | :--- |
-<!-- Problems will be added here -->
+| 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |

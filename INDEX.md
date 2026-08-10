@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **13** | 0 | 0 | 13 |
+| **15** | 0 | 0 | 15 |
 
 ---
 
@@ -26,6 +26,8 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 3501 | [Maximize Active Section with Trade II](solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 3518 | [Smallest Palindromic Rearrangement II](solutions/3518-smallest-palindromic-rearrangement-ii/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N \log K)$ | $\mathcal{O}(N)$ | [C++](solutions/3518-smallest-palindromic-rearrangement-ii/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 3534 | [Path Existence Queries in a Graph II](solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
+| 3559 | [Number of Ways to Assign Edge Weights II](solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
+| 3614 | [Process String with Special Operations II](solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/3614-process-string-with-special-operations-ii/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 3620 | [Network Recovery Pathways](solutions/3620-network-recovery-pathways/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](solutions/3620-network-recovery-pathways/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 3699 | [Number of ZigZag Arrays I](solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](solutions/3699-number-of-zigzag-arrays-i/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3700 | [Number of ZigZag Arrays II](solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

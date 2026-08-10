@@ -87,6 +87,14 @@ int largestRectangleArea(vector<int>& heights) {
 }
 ```
 
+### Pattern D: Virtual Sequence Coordinate Backtracking / Backward Index Tracing
+When sequences undergo exponential growth (duplications), reversals, and edits:
+1. **Forward Pass**: Track the exact length $L[i]$ after each step without constructing the massive string.
+2. **Backward Pass**: Start from target index $k < L[N-1]$ and reverse the coordinate operations:
+   - Duplication ($k \ge \text{prev\_len}$): $k \leftarrow k - \text{prev\_len}$.
+   - Reversal: $k \leftarrow \text{prev\_len} - 1 - k$.
+   - Appended char ($k == \text{prev\_len}$): return character $c$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -94,6 +102,7 @@ int largestRectangleArea(vector<int>& heights) {
 1. **Calling `st.top()` or `st.pop()` on Empty Stack**: Always check `!st.empty()` before reading `top()` or popping to prevent runtime segmentation faults.
 2. **Sentinel / Dummy Values**: In monotonic stack problems (e.g. histogram), adding a sentinel value `0` at the end ensures all elements are flushed from the stack.
 3. **Duplicate Values in Monotonic Stack**: Pay close attention to whether the condition requires strict inequality (`>`) or non-strict (`>=`) based on how duplicates must be handled.
+4. **Coordinate Overflow**: When lengths grow up to $10^{15}$, always use `long long` for all index and length operations.
 
 ---
 
@@ -101,4 +110,5 @@ int largestRectangleArea(vector<int>& heights) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-<!-- Problems will be added here -->
+| 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
+
