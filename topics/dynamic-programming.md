@@ -127,6 +127,12 @@ When simultaneously optimizing a value (e.g. max path sum) and counting the numb
   2. Sum `path_count` of all neighbors whose value equals `max_val` modulo $10^9 + 7$.
   3. Set `dp[r][c] = {max_val + grid[r][c], total_ways}`.
 
+### Pattern H: Matrix Exponentiation DP (Linear Transitions with Huge $N$)
+When transitions are linear and $N$ is up to $10^9$ with state size $S \le 150$:
+1. Formulate transition matrix $T$ such that $V_{k+1} = T \times V_k$.
+2. Compute $T^{N - \text{base}}$ via binary matrix exponentiation in $\mathcal{O}(S^3 \log N)$ time.
+3. Multiply the powered matrix by the initial base state vector $V_{\text{base}}$ to obtain final answer in logarithmic time.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -135,6 +141,7 @@ When simultaneously optimizing a value (e.g. max path sum) and counting the numb
 2. **0/1 Knapsack Order**: In 1D space-optimized 0/1 knapsack, traverse capacities backwards (`for (int w = W; w >= weight; --w)`) to avoid reusing the same item.
 3. **Off-by-One in DP Table Sizes**: Allocate size `N + 1` when `dp[0]` represents the empty string/prefix.
 4. **Unreachable Cells in Multi-Criteria DP**: Guard against propagating from unreachable cells (e.g. `score == -1`); skip them when computing neighbor transitions.
+5. **Matrix Multiplication Cache Ordering**: Always use $(i, k, j)$ loop order with `if (A[i][k] == 0) continue;` to maximize L1/L2 cache hits.
 
 ---
 
@@ -145,5 +152,8 @@ When simultaneously optimizing a value (e.g. max path sum) and counting the numb
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1406 | [Stone Game III](../solutions/1406-stone-game-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1406-stone-game-iii/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
+| 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
+| 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
+
 
 

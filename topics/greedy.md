@@ -86,6 +86,13 @@ Used when finding the smallest valid sequence/number $\ge \text{num}$ subject to
 2. Increment the pivot digit $D > \text{num}[i]$.
 3. Greedily construct the lexicographically smallest valid suffix of remaining length $L$ by selecting the smallest feasible digit $d \in [1, 9]$ at each step.
 
+### Pattern E: Two-Pass Constraint Relaxation & Triangular Peak Optimization
+When positions must satisfy Lipschitz/slope constraints (e.g. $|h_i - h_{i+1}| \le 1$) alongside discrete upper bounds:
+1. Sort restrictions by index and add boundary conditions $(1, 0)$ and $(n, n - 1)$.
+2. **Left-to-Right Pass**: Propagate growth limits forward: $h_i = \min(h_i, h_{i-1} + (x_i - x_{i-1}))$.
+3. **Right-to-Left Pass**: Propagate growth limits backward: $h_i = \min(h_i, h_{i+1} + (x_{i+1} - x_i))$.
+4. **Triangular Peak**: Between adjacent tight bounds $(x_1, h_1)$ and $(x_2, h_2)$, the peak height is $\lfloor \frac{(x_2 - x_1) + h_1 + h_2}{2} \rfloor$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -93,6 +100,7 @@ Used when finding the smallest valid sequence/number $\ge \text{num}$ subject to
 1. **Greedy Fallacy**: Ensure greedy choice property actually holds (e.g. standard 0/1 knapsack cannot be solved greedily, it requires DP).
 2. **Sorting Criteria**: Choosing whether to sort by start time, end time, or value ratio is crucial.
 3. **Empty Input / Single Element**: Always verify behavior for $N = 0$ or $N = 1$.
+4. **Unrelaxed Restrictions**: Calculating peaks on loose/unrelaxed restrictions overestimates peak height. Always perform two-pass relaxation first.
 
 ---
 
@@ -100,5 +108,7 @@ Used when finding the smallest valid sequence/number $\ge \text{num}$ subject to
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
+
 

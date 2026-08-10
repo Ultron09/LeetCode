@@ -87,10 +87,34 @@ int maxSubArray(vector<int>& nums) {
        size_t operator()(const pair<int, int>& p) const {
            return hash<int>()(p.first) ^ (hash<int>()(p.second) << 1);
        }
+### Pattern D: Transformed Prefix Sum with Incremental Frequency Maintenance
+To count subarrays satisfying majority/balance conditions (e.g. target element count $>$ remaining elements):
+1. Transform elements: target $\to +1$, other $\to -1$.
+2. Condition simplifies to prefix sum inequality: $s[l] < s[r+1]$.
+3. Since $s[r+1] = s[r] \pm 1$, the count of previous prefix sums strictly less than $s[r+1]$ changes by only one bucket (`pre[s[r]]` or `pre[s[r+1]]`).
+4. Maintain `presum` incrementally in $\mathcal{O}(1)$ time with an array `pre[2*N + 1]` shifted by $N$, achieving an optimal $\mathcal{O}(N)$ runtime overall.
+
+---
+
+## ⚠️ 3. Common Pitfalls & Edge Cases
+
+1. **Unordered Map Rehashing Overheads**: `std::unordered_map` can degrade to $\mathcal{O}(N^2)$ due to hash collisions. Use `custom_hash` or static arrays:
+   ```cpp
+   struct custom_hash {
+       static uint64_t splitmix64(uint64_t x) {
+           x += 0x9e3779b97f4a7c15;
+           x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+           x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+           return x ^ (x >> 31);
+       }
+       size_t operator()(uint64_t x) const {
+           static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
+           return splitmix64(x + FIXED_RANDOM);
+       }
    };
    ```
-2. **Integer Overflow in Prefix Sums**: When summing large values (e.g. array of $10^5$ elements each up to $10^9$), use `long long` for prefix totals.
-3. **Empty / Single Element Arrays**: Always guard against empty inputs.
+2. **Integer Overflow in Prefix Sums & Combinatorics**: When counting total valid subarrays ($N \le 10^5$), the total count can reach $\approx 5 \times 10^9$. Always use `long long` for accumulators.
+3. **Negative Indexing in Shifted Arrays**: When using static frequency tables for values in $[-N, N]$, always offset by $N$ (`table[val + N]`).
 
 ---
 
@@ -98,4 +122,5 @@ int maxSubArray(vector<int>& nums) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-<!-- Problems will be added here -->
+| 3739 | [Count Subarrays With Majority Element II](../solutions/3739-count-subarrays-with-majority-element-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3739-count-subarrays-with-majority-element-ii/solution.cpp) |
+

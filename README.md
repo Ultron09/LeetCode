@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **8** | 0 | 0 | 8 |
+| **13** | 0 | 0 | 13 |
 
 ---
 
@@ -25,21 +25,21 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Topic | Key Concepts | Solved Count | Link |
 | :--- | :--- | :---: | :---: |
-| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 0 | [Explore Notes](topics/arrays-and-hashing.md) |
+| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 1 | [Explore Notes](topics/arrays-and-hashing.md) |
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 1 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 0 | [Explore Notes](topics/sliding-window.md) |
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 0 | [Explore Notes](topics/stack-and-queue.md) |
-| **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 2 | [Explore Notes](topics/binary-search.md) |
+| **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 3 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 0 | [Explore Notes](topics/linked-list.md) |
 | **Trees & BST** | DFS/BFS Traversals, Lowest Common Ancestor, Tree DP | 0 | [Explore Notes](topics/trees.md) |
 | **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 0 | [Explore Notes](topics/heaps-and-priority-queues.md) |
 | **Backtracking** | Permutations, Combinations, Subsets, Pruning | 0 | [Explore Notes](topics/backtracking.md) |
-| **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 1 | [Explore Notes](topics/graphs.md) |
-| **Dynamic Programming** | 1D/2D DP, Knapsack, LCS/LIS, Interval DP, Bitmask DP | 3 | [Explore Notes](topics/dynamic-programming.md) |
-| **Greedy** | Activity Selection, Jump Game, Huffman Coding | 1 | [Explore Notes](topics/greedy.md) |
+| **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 2 | [Explore Notes](topics/graphs.md) |
+| **Dynamic Programming** | 1D/2D DP, Knapsack, LCS/LIS, Interval DP, Bitmask DP | 5 | [Explore Notes](topics/dynamic-programming.md) |
+| **Greedy** | Activity Selection, Jump Game, Huffman Coding | 2 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 0 | [Explore Notes](topics/intervals.md) |
 | **Bit Manipulation** | XOR properties, Bitmasks, Power of 2 checks | 0 | [Explore Notes](topics/bit-manipulation.md) |
-| **Math & Geometry** | Sieve of Eratosthenes, GCD/LCM, Fast Exponentiation | 3 | [Explore Notes](topics/math-and-geometry.md) |
+| **Math & Geometry** | Sieve of Eratosthenes, GCD/LCM, Fast Exponentiation | 5 | [Explore Notes](topics/math-and-geometry.md) |
 
 ---
 
