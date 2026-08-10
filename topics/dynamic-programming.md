@@ -183,6 +183,11 @@ When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
      - Zero match of $p[j-2]$: $dp[i][j] = dp[i][j-2]$.
      - One or more match: If $p[j-2]$ matches $s[i-1]$, $dp[i][j] = dp[i][j] \lor dp[i-1][j]$.
 
+### Pattern Q: Wildcard String Matching (DP & Greedy Two-Pointer)
+1. **Dynamic Programming**:
+   $$\text{dp}[i][j] = \begin{cases} \text{dp}[i-1][j-1] & \text{if } p[j-1] \in \{'?', s[i-1]\} \\ \text{dp}[i-1][j] \lor \text{dp}[i][j-1] & \text{if } p[j-1] == '*' \end{cases}$$
+2. **Greedy Optimization**: Because `'*'` matches any character sequence, maintaining the most recent `starIdx` and `sTmpIdx` allows matching with $\mathcal{O}(1)$ auxiliary space and linear average runtime.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -201,6 +206,7 @@ When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 10 | [Regular Expression Matching](../solutions/0010-regular-expression-matching/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0010-regular-expression-matching/solution.cpp) |
+| 44 | [Wildcard Matching](../solutions/0044-wildcard-matching/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ worst / $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0044-wildcard-matching/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
