@@ -94,6 +94,34 @@ ListNode *detectCycle(ListNode *head) {
 }
 ```
 
+### Pattern D: Merge K Sorted Lists (Min-Heap / Divide and Conquer)
+```cpp
+struct Compare {
+    bool operator()(const ListNode* a, const ListNode* b) const {
+        return a->val > b->val;
+    }
+};
+
+ListNode* mergeKLists(vector<ListNode*>& lists) {
+    priority_queue<ListNode*, vector<ListNode*>, Compare> minHeap;
+    for (ListNode* head : lists) {
+        if (head) minHeap.push(head);
+    }
+
+    ListNode dummy(0);
+    ListNode* tail = &dummy;
+
+    while (!minHeap.empty()) {
+        ListNode* node = minHeap.top();
+        minHeap.pop();
+        tail->next = node;
+        tail = tail->next;
+        if (node->next) minHeap.push(node->next);
+    }
+    return dummy.next;
+}
+```
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -108,4 +136,5 @@ ListNode *detectCycle(ListNode *head) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-<!-- Problems will be added here -->
+| 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
+

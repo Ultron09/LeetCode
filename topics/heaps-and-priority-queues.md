@@ -122,5 +122,7 @@ When extracting top-K elements across multidimensional structures with monotonic
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
 | 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
+
 
