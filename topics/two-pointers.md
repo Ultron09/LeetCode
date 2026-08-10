@@ -85,6 +85,27 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 }
 ```
 
+### Pattern D: Converging Pointers with Running Min-Max Boundaries (Trapping Rain Water)
+```cpp
+int trap(vector<int>& height) {
+    int left = 0, right = static_cast<int>(height.size()) - 1;
+    int leftMax = 0, rightMax = 0, water = 0;
+
+    while (left < right) {
+        if (height[left] < height[right]) {
+            if (height[left] >= leftMax) leftMax = height[left];
+            else water += leftMax - height[left];
+            left++;
+        } else {
+            if (height[right] >= rightMax) rightMax = height[right];
+            else water += rightMax - height[right];
+            right--;
+        }
+    }
+    return water;
+}
+```
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -99,4 +120,6 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 42 | [Trapping Rain Water](../solutions/0042-trapping-rain-water/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0042-trapping-rain-water/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
+
