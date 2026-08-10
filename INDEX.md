@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **49** | 0 | 0 | 49 |
+| **50** | 0 | 0 | 50 |
 
 ---
 
@@ -32,6 +32,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0060 | [Permutation Sequence](solutions/0060-permutation-sequence/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](solutions/0060-permutation-sequence/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0065 | [Valid Number](solutions/0065-valid-number/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0065-valid-number/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0068 | [Text Justification](solutions/0068-text-justification/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N)$ | $\mathcal{O}(\text{maxWidth})$ | [C++](solutions/0068-text-justification/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
+| 0076 | [Minimum Window Substring](solutions/0076-minimum-window-substring/README.md) | `Hard` | [Sliding Window](topics/sliding-window.md) | $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](solutions/0076-minimum-window-substring/solution.cpp) | [Notes](topics/sliding-window.md#solved-problems) |
 | 0154 | [Find Minimum in Rotated Sorted Array II](solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

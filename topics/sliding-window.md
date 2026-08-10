@@ -163,4 +163,6 @@ vector<int> findSubstring(string s, vector<string>& words) {
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 30 | [Substring with Concatenation of All Words](../solutions/0030-substring-with-concatenation-of-all-words/README.md) | `Hard` | $\mathcal{O}(N \cdot L)$ | $\mathcal{O}(K \cdot L)$ | [C++](../solutions/0030-substring-with-concatenation-of-all-words/solution.cpp) |
+| 76 | [Minimum Window Substring](../solutions/0076-minimum-window-substring/README.md) | `Hard` | $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0076-minimum-window-substring/solution.cpp) |
+
 
