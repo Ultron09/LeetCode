@@ -131,6 +131,26 @@ bool solveSudoku(vector<vector<char>>& board, int rowMask[9], int colMask[9], in
 }
 ```
 
+### Pattern E: Diagonal Bitmask Tracking (N-Queens)
+Track safe queen placements across columns, main diagonals ($r - c + n - 1$), and anti-diagonals ($r + c$) via integer bitmasks in $\mathcal{O}(1)$ time:
+```cpp
+void solveNQueens(int r, int n, int cols, int diag1, int diag2, vector<string>& board, vector<vector<string>>& res) {
+    if (r == n) {
+        res.push_back(board);
+        return;
+    }
+    for (int c = 0; c < n; ++c) {
+        int d1 = r - c + n - 1;
+        int d2 = r + c;
+        if (!(cols & (1 << c)) && !(diag1 & (1 << d1)) && !(diag2 & (1 << d2))) {
+            board[r][c] = 'Q';
+            solveNQueens(r + 1, n, cols | (1 << c), diag1 | (1 << d1), diag2 | (1 << d2), board, res);
+            board[r][c] = '.';
+        }
+    }
+}
+```
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -146,4 +166,6 @@ bool solveSudoku(vector<vector<char>>& board, int rowMask[9], int colMask[9], in
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 37 | [Sudoku Solver](../solutions/0037-sudoku-solver/README.md) | `Hard` | $\mathcal{O}(9^M)$ (MRV pruned) | $\mathcal{O}(1)$ | [C++](../solutions/0037-sudoku-solver/solution.cpp) |
+| 51 | [N-Queens](../solutions/0051-n-queens/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0051-n-queens/solution.cpp) |
+
 
