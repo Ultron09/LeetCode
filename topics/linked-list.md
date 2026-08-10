@@ -120,6 +120,43 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
     }
     return dummy.next;
 }
+### Pattern E: In-Place k-Group Reversal
+```cpp
+ListNode* reverseKGroup(ListNode* head, int k) {
+    if (!head || k <= 1) return head;
+    ListNode dummy(0);
+    dummy.next = head;
+    ListNode* groupPrev = &dummy;
+
+    auto getKth = [](ListNode* curr, int k) {
+        while (curr && k > 0) {
+            curr = curr->next;
+            k--;
+        }
+        return curr;
+    };
+
+    while (true) {
+        ListNode* kth = getKth(groupPrev, k);
+        if (!kth) break;
+        ListNode* groupNext = kth->next;
+
+        // In-place group reversal
+        ListNode* prev = groupNext;
+        ListNode* curr = groupPrev->next;
+        while (curr != groupNext) {
+            ListNode* tmp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = tmp;
+        }
+
+        ListNode* newGroupEnd = groupPrev->next;
+        groupPrev->next = kth;
+        groupPrev = newGroupEnd;
+    }
+    return dummy.next;
+}
 ```
 
 ---
@@ -137,4 +174,6 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
+| 25 | [Reverse Nodes in k-Group](../solutions/0025-reverse-nodes-in-k-group/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0025-reverse-nodes-in-k-group/solution.cpp) |
+
 
