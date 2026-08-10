@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **28** | 0 | 0 | 28 |
+| **29** | 0 | 0 | 29 |
 
 ---
 
@@ -40,6 +40,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 3614 | [Process String with Special Operations II](solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/3614-process-string-with-special-operations-ii/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 3620 | [Network Recovery Pathways](solutions/3620-network-recovery-pathways/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](solutions/3620-network-recovery-pathways/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 3655 | [XOR After Range Multiplication Queries II](solutions/3655-xor-after-range-multiplication-queries-ii/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}((N + Q)\sqrt{N})$ | $\mathcal{O}(N + Q)$ | [C++](solutions/3655-xor-after-range-multiplication-queries-ii/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
+| 3661 | [Maximum Walls Destroyed by Robots](solutions/3661-maximum-walls-destroyed-by-robots/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}((N + M) \log M + N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/3661-maximum-walls-destroyed-by-robots/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3691 | [Maximum Total Subarray Value II](solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | [Heaps / Priority Queue](topics/heaps-and-priority-queues.md) | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](solutions/3691-maximum-total-subarray-value-ii/solution.cpp) | [Notes](topics/heaps-and-priority-queues.md#solved-problems) |
 | 3699 | [Number of ZigZag Arrays I](solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](solutions/3699-number-of-zigzag-arrays-i/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 3700 | [Number of ZigZag Arrays II](solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

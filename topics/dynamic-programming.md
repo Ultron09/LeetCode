@@ -162,7 +162,12 @@ When assigning 1D objects (e.g. robots) to servicing hubs (e.g. factories) with 
 When coordinating two active agents/fingers typing a sequential string:
 1. **Implicit Location**: At step $i$, one agent is guaranteed to be at `word[i - 1]`.
 2. **Reduced State Space**: Only track the position of the *other* agent `other` $\in [0, \Sigma) \cup \{\text{UNPLACED}\}$, reducing the DP from $\mathcal{O}(N \cdot \Sigma^2)$ to $\mathcal{O}(N \cdot \Sigma)$ time and $\mathcal{O}(\Sigma)$ space.
-3. **Branching**: Either advance the active agent from `word[i-1]` to `word[i]` or switch to the other agent (swapping roles).
+### Pattern N: 1D Directional Coverage DP with Overlapping Segment Bounding
+When selecting 1D directional actions (e.g. shooting left/right with obstacles):
+1. **Spatial Ordering**: Sort all active agents and static targets along the 1D axis.
+2. **State Definition**: Let `dp[0]` and `dp[1]` track the maximum covered targets up to agent $i$ with agent $i$ acting LEFT vs RIGHT.
+3. **Overlapping Gap Bounding**: If agent $i-1$ shoots RIGHT and agent $i$ shoots LEFT into the shared interval $(r_{i-1}, r_i)$, their union coverage cannot exceed the total targets present in that interval:
+   $$next\_dp[0] = \max(dp[0] + left_i, \, dp[1] - right_{i-1} + \min(right_{i-1} + left_i, \, num\_between))$$
 
 ---
 
@@ -188,6 +193,7 @@ When coordinating two active agents/fingers typing a sequential string:
 | 2463 | [Minimum Total Distance Traveled](../solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](../solutions/2463-minimum-total-distance-traveled/solution.cpp) |
 | 3225 | [Maximum Score From Grid Operations](../solutions/3225-maximum-score-from-grid-operations/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/3225-maximum-score-from-grid-operations/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
+| 3661 | [Maximum Walls Destroyed by Robots](../solutions/3661-maximum-walls-destroyed-by-robots/README.md) | `Hard` | $\mathcal{O}((N + M) \log M + N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3661-maximum-walls-destroyed-by-robots/solution.cpp) |
 | 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
