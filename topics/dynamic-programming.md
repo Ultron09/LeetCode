@@ -232,6 +232,14 @@ When matching a target string $s_2$ as a subsequence inside an $n_1$-times repea
    - Execute the remaining tail iterations ($< |s_2|$) linearly.
 4. **Complexity**: $\mathcal{O}(|s_1| \cdot |s_2|)$ time and $\mathcal{O}(|s_2|)$ space.
 
+### Pattern X: Length-Ordered Incremental Vocabulary Word Break DP
+When identifying composite/concatenated strings formed by at least two shorter elements in a dictionary:
+1. **Length-Ascending Sort**: Sort dictionary words by length so all candidate sub-words are evaluated and cached before evaluating longer words.
+2. **Word Break DP Check**: For word $W$ of length $L$, define `dp[i]` = whether prefix $W[0 \dots i-1]$ can be formed by cached words:
+   $$\text{dp}[i] = \text{true} \quad \text{if } \exists j < i : \text{dp}[j] \land W[j \dots i-1] \in \text{wordSet}$$
+3. **Incremental Insertion**: If `dp[L] == true`, mark $W$ as concatenated. Always insert $W$ into `wordSet` afterward.
+4. **Complexity**: $\mathcal{O}(N \log N + N \cdot L^3)$ time, $\mathcal{O}(\sum |W_i|)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -263,6 +271,7 @@ When matching a target string $s_2$ as a subsequence inside an $n_1$-times repea
 | 403 | [Frog Jump](../solutions/0403-frog-jump/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0403-frog-jump/solution.cpp) |
 | 446 | [Arithmetic Slices II - Subsequence](../solutions/0446-arithmetic-slices-ii-subsequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0446-arithmetic-slices-ii-subsequence/solution.cpp) |
 | 466 | [Count The Repetitions](../solutions/0466-count-the-repetitions/README.md) | `Hard` | $\mathcal{O}(\|s_1\| \cdot \|s_2\|)$ | $\mathcal{O}(\|s_2\|)$ | [C++](../solutions/0466-count-the-repetitions/solution.cpp) |
+| 472 | [Concatenated Words](../solutions/0472-concatenated-words/README.md) | `Hard` | $\mathcal{O}(N \log N + N \cdot L^3)$ | $\mathcal{O}(\sum \|W_i\|)$ | [C++](../solutions/0472-concatenated-words/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
