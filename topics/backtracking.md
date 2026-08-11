@@ -147,9 +147,11 @@ void solveNQueens(int r, int n, int cols, int diag1, int diag2, vector<string>& 
             solveNQueens(r + 1, n, cols | (1 << c), diag1 | (1 << d1), diag2 | (1 << d2), board, res);
             board[r][c] = '.';
         }
-    }
-}
-```
+### Pattern F: Suffix Memoization Backtracking (Word Break II)
+When enumerating all valid multi-word segmentations or partitions of a string:
+1. Cache the complete list of valid suffix combinations at index `start` in `unordered_map<int, vector<string>> memo`.
+2. For each valid prefix $s[\text{start} \dots \text{end} - 1] \in \text{dict}$, recurse on $\text{end}$ and combine the prefix with all returned suffix solutions.
+3. Memoization prevents exponential recomputation of overlapping suffix subproblems.
 
 ---
 
@@ -168,6 +170,8 @@ void solveNQueens(int r, int n, int cols, int diag1, int diag2, vector<string>& 
 | 37 | [Sudoku Solver](../solutions/0037-sudoku-solver/README.md) | `Hard` | $\mathcal{O}(9^M)$ (MRV pruned) | $\mathcal{O}(1)$ | [C++](../solutions/0037-sudoku-solver/solution.cpp) |
 | 51 | [N-Queens](../solutions/0051-n-queens/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0051-n-queens/solution.cpp) |
 | 52 | [N-Queens II](../solutions/0052-n-queens-ii/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](../solutions/0052-n-queens-ii/solution.cpp) |
+| 140 | [Word Break II](../solutions/0140-word-break-ii/README.md) | `Hard` | $\mathcal{O}(2^N + N^2 + W)$ | $\mathcal{O}(2^N \cdot N + W)$ | [C++](../solutions/0140-word-break-ii/solution.cpp) |
+
 
 
 
