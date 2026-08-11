@@ -121,6 +121,16 @@ When extending the contiguous range of formable subset sums $[1, \text{miss} - 1
 3. **Greedy Patching on Discontinuity**: If $\text{nums}[i] > \text{miss}$ (or input exhausted), patch $\text{miss}$ itself to double coverage to $[1, 2 \cdot \text{miss} - 1]$ ($\text{miss} \gets 2 \cdot \text{miss}, \text{patches} \gets \text{patches} + 1$).
 4. **Complexity**: Since reach doubles on each patch, at most $\mathcal{O}(\log n)$ patches occur $\implies \mathcal{O}(M + \log n)$ time, $\mathcal{O}(1)$ space.
 
+### Pattern K: Multi-Constraint Edit Distance with Priority Deletion Allocation (Strong Password Checker)
+When editing a sequence subject to simultaneous length bounds $[L_{\min}, L_{\max}]$, character set coverage, and maximum run limits ($\le 2$):
+1. **Regime 1 ($N < L_{\min}$)**: Inserts dominate; each insert simultaneously increases length, supplies missing character categories, and breaks runs $\implies \max(L_{\min} - N, \text{missingTypes})$.
+2. **Regime 2 ($L_{\min} \le N \le L_{\max}$)**: Replacements dominate; each replacement simultaneously breaks a run and supplies missing categories $\implies \max(\sum \lfloor L_i / 3 \rfloor, \text{missingTypes})$.
+3. **Regime 3 ($N > L_{\max}$)**: $D = N - L_{\max}$ deletions are mandatory. Greedily prioritize deletions that save the most replacements per unit cost:
+   - $L_i \pmod 3 == 0$: 1 deletion saves 1 replacement.
+   - $L_i \pmod 3 == 1$: 2 deletions save 1 replacement.
+   - $L_i \ge 3$: 3 deletions save 1 replacement.
+   - Final cost: $D + \max(\text{remainingReplacements}, \text{missingTypes})$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -140,6 +150,7 @@ When extending the contiguous range of formable subset sums $[1, \text{miss} - 1
 | 68 | [Text Justification](../solutions/0068-text-justification/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\text{maxWidth})$ | [C++](../solutions/0068-text-justification/solution.cpp) |
 | 135 | [Candy](../solutions/0135-candy/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0135-candy/solution.cpp) |
 | 330 | [Patching Array](../solutions/0330-patching-array/README.md) | `Hard` | $\mathcal{O}(M + \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0330-patching-array/solution.cpp) |
+| 420 | [Strong Password Checker](../solutions/0420-strong-password-checker/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0420-strong-password-checker/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
