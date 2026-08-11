@@ -114,6 +114,15 @@ When computing the continuous upper envelope / contour of overlapping intervals 
 3. Maintain active heights in an ordered `std::multiset<int> active = {0}` (or max-heap with delayed deletion).
 4. Emit key points $[x, \max(\text{active})]$ whenever the maximum active height strictly changes.
 
+### Pattern F: 2D Inward Boundary Shrink / Minimax Spillway Heap (Trapping Rain Water II)
+When determining the bounding envelope / bottleneck water level across escape paths in a 2D terrain:
+1. **Perimeter Initialization**: Push all $2(m + n) - 4$ perimeter boundary cells $(h, r, c)$ into a Min-Heap and mark them visited.
+2. **Min-Heap Extraction**: Pop the lowest active boundary cell $(h, r, c)$. This cell is guaranteed to be the lowest escape spillway for its unvisited interior neighbors.
+3. **Neighbor Evaluation & Effective Height Propagation**:
+   - For each unvisited neighbor $(nr, nc)$, trapped water volume is $\max(0, h - \text{heightMap}[nr][nc])$.
+   - Push $(nr, nc)$ into the Min-Heap with updated effective boundary height $\max(h, \text{heightMap}[nr][nc])$.
+4. Solves 2D minimax bottleneck path problems in $\mathcal{O}(M \cdot N \log(M \cdot N))$ time with $\mathcal{O}(M \cdot N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -132,6 +141,7 @@ When computing the continuous upper envelope / contour of overlapping intervals 
 | 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
 | 218 | [The Skyline Problem](../solutions/0218-the-skyline-problem/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0218-the-skyline-problem/solution.cpp) |
 | 295 | [Find Median from Data Stream](../solutions/0295-find-median-from-data-stream/README.md) | `Hard` | $\mathcal{O}(\log N) \text{ add}, \mathcal{O}(1) \text{ query}$ | $\mathcal{O}(N)$ | [C++](../solutions/0295-find-median-from-data-stream/solution.cpp) |
+| 407 | [Trapping Rain Water II](../solutions/0407-trapping-rain-water-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \log(M \cdot N))$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0407-trapping-rain-water-ii/solution.cpp) |
 | 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
 
 

@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **93** | 0 | 0 | 93 |
+| **94** | 0 | 0 | 94 |
 
 ---
 
@@ -75,6 +75,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0381 | [Insert Delete GetRandom O(1) - Duplicates allowed](solutions/0381-insert-delete-getrandom-o1-duplicates-allowed/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(1)$ avg | $\mathcal{O}(N)$ | [C++](solutions/0381-insert-delete-getrandom-o1-duplicates-allowed/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0391 | [Perfect Rectangle](solutions/0391-perfect-rectangle/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0391-perfect-rectangle/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0403 | [Frog Jump](solutions/0403-frog-jump/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/0403-frog-jump/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 0407 | [Trapping Rain Water II](solutions/0407-trapping-rain-water-ii/README.md) | `Hard` | [Heaps / Priority Queue](topics/heaps-and-priority-queues.md) | $\mathcal{O}(M \cdot N \log(M \cdot N))$ | $\mathcal{O}(M \cdot N)$ | [C++](solutions/0407-trapping-rain-water-ii/solution.cpp) | [Notes](topics/heaps-and-priority-queues.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
