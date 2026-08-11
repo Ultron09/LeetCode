@@ -126,6 +126,13 @@ To find the minimum element or rotation pivot when the array contains duplicate 
    - If `nums[mid] == nums[right]`: Ambiguity exists due to duplicates; safely eliminate the redundant boundary element without missing the minimum $\implies \text{right} = \text{right} - 1$.
 3. Average time complexity is $\mathcal{O}(\log N)$, degrading to $\mathcal{O}(N)$ in the worst case when all elements are identical.
 
+### Pattern I: Divide-and-Conquer Range Sum Counting with Monotonic Two-Pointer Windowing
+When counting index pairs $(i, j)$ with $i < j$ satisfying range bounds on prefix sums ($\text{lower} \le P[j] - P[i] \le \text{upper} \iff P[j] - \text{upper} \le P[i] \le P[j] - \text{lower}$):
+1. **Divide & Conquer on Prefix Sums**: Recursively divide the prefix array into $[ \text{left}, \text{mid} ]$ and $[ \text{mid} + 1, \text{right} ]$, sorting each half during the merge step.
+2. **Monotonic Window Traversal**: For each $j \in [\text{mid} + 1, \text{right}]$, both target bounds $[P[j] - \text{upper}, P[j] - \text{lower}]$ increase monotonically.
+3. **Linear Cross-Counting**: Advance two non-resetting pointers `low_ptr` and `high_ptr` through the sorted left half in $\mathcal{O}(\text{right} - \text{left} + 1)$ time.
+4. **Merge**: In-place / buffer merge maintains sorted order for the parent recursion frame, achieving optimal $\mathcal{O}(N \log N)$ total time without coordinate compression overhead.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -135,6 +142,7 @@ To find the minimum element or rotation pivot when the array contains duplicate 
    - `while (low <= high)` requires `low = mid + 1` and `high = mid - 1`.
    - `while (low < high)` requires `right = mid` or `left = mid + 1`.
 3. **Duplicates in Rotated Array**: If `nums[left] == nums[mid] == nums[right]`, we cannot determine which half is sorted; we must shrink bounds with `right--` ($\mathcal{O}(N)$ worst-case).
+4. **64-bit Range Queries on Prefix Sums**: When calculating $P[j] - \text{upper}$, 32-bit values can overflow; always use `long long` for prefix sums and interval checks.
 
 ---
 
@@ -145,11 +153,8 @@ To find the minimum element or rotation pivot when the array contains duplicate 
 | 4 | [Median of Two Sorted Arrays](../solutions/0004-median-of-two-sorted-arrays/README.md) | `Hard` | $\mathcal{O}(\log(\min(M, N)))$ | $\mathcal{O}(1)$ | [C++](../solutions/0004-median-of-two-sorted-arrays/solution.cpp) |
 | 154 | [Find Minimum in Rotated Sorted Array II](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) |
 | 315 | [Count of Smaller Numbers After Self](../solutions/0315-count-of-smaller-numbers-after-self/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0315-count-of-smaller-numbers-after-self/solution.cpp) |
+| 327 | [Count of Range Sum](../solutions/0327-count-of-range-sum/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0327-count-of-range-sum/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3464 | [Maximize the Distance Between Points on a Square](../solutions/3464-maximize-the-distance-between-points-on-a-square/README.md) | `Hard` | $\mathcal{O}(N \log N \log(\text{side}))$ | $\mathcal{O}(N)$ | [C++](../solutions/3464-maximize-the-distance-between-points-on-a-square/solution.cpp) |
 | 3501 | [Maximize Active Section with Trade II](../solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
-
-
-
-
