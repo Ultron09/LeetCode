@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **95** | 0 | 0 | 95 |
+| **96** | 1 | 0 | 95 |
 
 ---
 
@@ -88,6 +88,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 2463 | [Minimum Total Distance Traveled](solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](solutions/2463-minimum-total-distance-traveled/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 2573 | [Find the String with LCP](solutions/2573-find-the-string-with-lcp/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/2573-find-the-string-with-lcp/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 2751 | [Robot Collisions](solutions/2751-robot-collisions/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/2751-robot-collisions/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
+| 2996 | [Smallest Missing Integer Greater Than Sequential Prefix Sum](solutions/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/README.md) | `Easy` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 3093 | [Longest Common Suffix Queries](solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](solutions/3093-longest-common-suffix-queries/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
 | 3161 | [Block Placement Queries](solutions/3161-block-placement-queries/README.md) | `Hard` | [Intervals](topics/intervals.md) | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](solutions/3161-block-placement-queries/solution.cpp) | [Notes](topics/intervals.md#solved-problems) |
 | 3225 | [Maximum Score From Grid Operations](solutions/3225-maximum-score-from-grid-operations/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](solutions/3225-maximum-score-from-grid-operations/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
