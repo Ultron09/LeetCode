@@ -162,6 +162,13 @@ When checking if two elements within index difference $K$ have value difference 
 3. Check if current bucket `bId`, `bId - 1`, or `bId + 1` contains a valid candidate.
 4. Maintain a sliding window of at most $K$ elements by deleting `getBucketId(nums[i - K])` when advancing. Time complexity is $\mathcal{O}(N)$ average vs $\mathcal{O}(N \log K)$ with ordered sets.
 
+### Pattern G: Dual Heaps with Lazy Deletion (Sliding Window Median)
+When tracking running medians or quantiles across a sliding window of size $k$:
+1. **Dual Heap Partitioning**: Split elements into max-heap `small` (size $\lceil k / 2 \rceil$) and min-heap `large` (size $\lfloor k / 2 \rfloor$).
+2. **Lazy Deletion via Delayed Map**: Record outgoing elements in `delayed[val]++` and prune invalid heap tops upon access.
+3. **Size Rebalancing**: Keep active logical counters `smallSize` and `largeSize`, shifting top elements across heaps to restore balance.
+4. **Complexity**: $\mathcal{O}(N \log k)$ time and $\mathcal{O}(N)$ space ($\mathcal{O}(k)$ average).
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -181,6 +188,7 @@ When checking if two elements within index difference $K$ have value difference 
 | 214 | [Shortest Palindrome](../solutions/0214-shortest-palindrome/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0214-shortest-palindrome/solution.cpp) |
 | 220 | [Contains Duplicate III](../solutions/0220-contains-duplicate-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\min(N, K))$ | [C++](../solutions/0220-contains-duplicate-iii/solution.cpp) |
 | 239 | [Sliding Window Maximum](../solutions/0239-sliding-window-maximum/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(K)$ | [C++](../solutions/0239-sliding-window-maximum/solution.cpp) |
+| 480 | [Sliding Window Median](../solutions/0480-sliding-window-median/README.md) | `Hard` | $\mathcal{O}(N \log k)$ | $\mathcal{O}(N)$ | [C++](../solutions/0480-sliding-window-median/solution.cpp) |
 
 
 
