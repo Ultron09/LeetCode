@@ -70,6 +70,14 @@ void iterateSubsets(int n) {
 }
 ```
 
+### Pattern D: Binary Digit DP with Fibonacci State Space (Non-negative Integers without Consecutive Ones)
+When counting binary configurations $\le N$ satisfying local bit transitions (such as no consecutive ones `"11"`):
+1. **Fibonacci Recurrence**: Number of valid $k$-bit strings satisfies $f[k] = f[k-1] + f[k-2]$ with $f[0] = 1, f[1] = 2$.
+2. **MSB-to-LSB Prefix Branching**:
+   - On bit $k$ where $(n \& (1 \ll k)) \ne 0$, taking branch $0$ allows any valid $k$-bit suffix $\implies \text{ans} += f[k]$.
+   - Taking branch $1$ matches the prefix. If `prevBit == 1`, break immediately (illegal prefix extension).
+3. **Complexity**: $\mathcal{O}(\log N)$ time and $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -84,4 +92,4 @@ void iterateSubsets(int n) {
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :--- | :--- |
-<!-- Problems will be added here -->
+| 600 | [Non-negative Integers without Consecutive Ones](../solutions/0600-non-negative-integers-without-consecutive-ones/README.md) | `Hard` | $\mathcal{O}(\log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0600-non-negative-integers-without-consecutive-ones/solution.cpp) |
