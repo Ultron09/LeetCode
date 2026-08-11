@@ -166,6 +166,14 @@ When finding the minimal integer base $k \ge 2$ such that $n = \sum_{i=0}^{m-1} 
 3. **Horner's Method with Overflow Guard**: Evaluate $\sum_{i=0}^{m-1} k^i$ in $\mathcal{O}(m)$ time with early break `sum > (n - 1) / k`.
 4. **Complexity**: $\mathcal{O}((\log_2 n)^2)$ time and $\mathcal{O}(1)$ space.
 
+### Pattern Q: Nearest Palindrome Construction via 5-Candidate Family Generation
+When finding the numerically closest non-self palindrome to a number $N$ with $L$ digits:
+1. **Candidate 1–3 (Prefix Reflection)**: Extract prefix of length $\lceil L / 2 \rceil$. Generate palindromes from $\text{prefix} - 1$, $\text{prefix}$, and $\text{prefix} + 1$ by mirroring.
+2. **Candidate 4 (Lower Order Boundary)**: $10^{L-1} - 1$ (e.g. `99...9`).
+3. **Candidate 5 (Upper Order Boundary)**: $10^L + 1$ (e.g. `100...001`).
+4. **Disqualification & Tie-Breaking**: Exclude candidate if equal to $N$; select minimal $|C - N|$ with smaller value on ties.
+5. **Complexity**: $\mathcal{O}(L)$ time and $\mathcal{O}(L)$ space ($L \le 18$).
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -192,6 +200,7 @@ When finding the minimal integer base $k \ge 2$ such that $n = \sum_{i=0}^{m-1} 
 | 458 | [Poor Pigs](../solutions/0458-poor-pigs/README.md) | `Hard` | $\mathcal{O}(\log_{T+1} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0458-poor-pigs/solution.cpp) |
 | 479 | [Largest Palindrome Product](../solutions/0479-largest-palindrome-product/README.md) | `Hard` | $\mathcal{O}(10^N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0479-largest-palindrome-product/solution.cpp) |
 | 483 | [Smallest Good Base](../solutions/0483-smallest-good-base/README.md) | `Hard` | $\mathcal{O}((\log_2 N)^2)$ | $\mathcal{O}(1)$ | [C++](../solutions/0483-smallest-good-base/solution.cpp) |
+| 564 | [Find the Closest Palindrome](../solutions/0564-find-the-closest-palindrome/README.md) | `Hard` | $\mathcal{O}(L)$ | $\mathcal{O}(L)$ | [C++](../solutions/0564-find-the-closest-palindrome/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
