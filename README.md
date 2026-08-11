@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **67** | 0 | 0 | 67 |
+| **68** | 0 | 0 | 68 |
 
 ---
 
@@ -32,7 +32,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 6 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 2 | [Explore Notes](topics/linked-list.md) |
 | **Trees & BST** | DFS/BFS Traversals, Lowest Common Ancestor, Tree DP | 3 | [Explore Notes](topics/trees.md) |
-| **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 2 | [Explore Notes](topics/heaps-and-priority-queues.md) |
+| **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 3 | [Explore Notes](topics/heaps-and-priority-queues.md) |
 | **Backtracking** | Permutations, Combinations, Subsets, Pruning | 5 | [Explore Notes](topics/backtracking.md) |
 | **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 5 | [Explore Notes](topics/graphs.md) |
 | **Dynamic Programming** | 1D/2D DP, Knapsack, LCS/LIS, Interval DP, Bitmask DP | 20 | [Explore Notes](topics/dynamic-programming.md) |

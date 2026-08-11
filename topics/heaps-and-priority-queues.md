@@ -107,6 +107,13 @@ When extracting top-K elements across multidimensional structures with monotonic
 3. Seed Max-Heap with $(V(l, n - 1), l, n - 1)$ for all $l \in [0, n - 1]$.
 4. Greedily pop top element, accumulate, and push $(V(l, r - 1), l, r - 1)$ in $\mathcal{O}(\log N)$.
 
+### Pattern E: Line Sweep with Multiset / Heap (The Skyline Problem)
+When computing the continuous upper envelope / contour of overlapping intervals with heights:
+1. Deconstruct each rectangle $[L, R, H]$ into two signed boundary events: `(L, -H)` (enter) and `(R, +H)` (leave).
+2. Sort events with `std::pair<int, int>` $(x, h)$ to naturally prioritize higher starts and process starts before ends at identical $x$.
+3. Maintain active heights in an ordered `std::multiset<int> active = {0}` (or max-heap with delayed deletion).
+4. Emit key points $[x, \max(\text{active})]$ whenever the maximum active height strictly changes.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -123,6 +130,8 @@ When extracting top-K elements across multidimensional structures with monotonic
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
+| 218 | [The Skyline Problem](../solutions/0218-the-skyline-problem/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0218-the-skyline-problem/solution.cpp) |
 | 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
+
 
 

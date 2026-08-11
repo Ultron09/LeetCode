@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **67** | 0 | 0 | 67 |
+| **68** | 0 | 0 | 68 |
 
 ---
 
@@ -51,6 +51,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0188 | [Best Time to Buy and Sell Stock IV](solutions/0188-best-time-to-buy-and-sell-stock-iv/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot k)$ | $\mathcal{O}(k)$ | [C++](solutions/0188-best-time-to-buy-and-sell-stock-iv/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0212 | [Word Search II](solutions/0212-word-search-ii/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(M \cdot N \cdot 3^L + W \cdot L)$ | $\mathcal{O}(W \cdot L)$ | [C++](solutions/0212-word-search-ii/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 0214 | [Shortest Palindrome](solutions/0214-shortest-palindrome/README.md) | `Hard` | [Sliding Window](topics/sliding-window.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0214-shortest-palindrome/solution.cpp) | [Notes](topics/sliding-window.md#solved-problems) |
+| 0218 | [The Skyline Problem](solutions/0218-the-skyline-problem/README.md) | `Hard` | [Heaps & Priority Queues](topics/heaps-and-priority-queues.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0218-the-skyline-problem/solution.cpp) | [Notes](topics/heaps-and-priority-queues.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
