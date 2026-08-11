@@ -126,11 +126,13 @@ To maximize the minimum edge-cost along a path from source to target subject to 
 2. In the `check(X)` predicate, filter edges to only include $\text{cost} \ge X$ and enforce vertex validity (e.g. `online[v] == true`).
 3. Run Dijkstra's algorithm to find the minimum path sum from source to target. If $\text{dist}[\text{target}] \le k$, search higher; else search lower.
 
-### Pattern G: BFS Shortest Path DAG + Backtracking
-When finding **all** shortest transformation sequences or paths between source and destination in an unweighted graph:
-1. **BFS Stage**: Construct a parent DAG where $u \in \text{parents}[v]$ iff $\text{dist}[v] == \text{dist}[u] + 1$.
-2. Stop BFS after the level containing the destination has finished.
-3. **DFS Stage**: Backtrack from destination to source along the parent DAG to reconstruct all optimal paths in reverse.
+### Pattern H: Hierholzer's Algorithm for Eulerian Paths & Circuits
+When an itinerary/path must traverse every directed edge in a multigraph exactly once:
+1. **Adjacency Min-Heaps**: Store outgoing neighbors in a min-heap `unordered_map<string, priority_queue<string, vector<string>, greater<string>>>` to greedily evaluate lexicographically smaller destinations first.
+2. **Post-Order DFS (Hierholzer's)**:
+   - From vertex $u$, while $u$ has outgoing edges $(u, v)$, pop the smallest destination $v$ and recurse `dfs(v)`.
+   - When $u$ runs out of outgoing edges (dead end reached or subcycle completed), push $u$ onto the `itinerary` sequence.
+3. **Eulerian Reversal**: Reversing the post-order sequence splices subcycles into the master Eulerian path, resolving dead ends without backtracking in $\mathcal{O}(E \log E)$ time.
 
 ---
 
@@ -142,6 +144,7 @@ When finding **all** shortest transformation sequences or paths between source a
 4. **Disconnected Graph Queries**: In binary lifting queries, if $\text{jump}[\text{start}][\text{maxLevel} - 1] < \text{target}$, return $-1$.
 5. **Path Weight Overflow**: Accumulating path weights up to $5 \times 10^{13}$ requires `long long` for distance tables and priority queues.
 6. **Clique Edge Reprocessing**: Forgetting to clear equivalence class adjacency lists causes TLE ($\mathcal{O}(N^2)$).
+7. **Eulerian Path Premature Dead Ends**: Greedy forward traversal without post-order splicing gets trapped in nodes with zero out-degree. Always use Hierholzer's post-order DFS.
 
 ---
 
@@ -151,6 +154,7 @@ When finding **all** shortest transformation sequences or paths between source a
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 126 | [Word Ladder II](../solutions/0126-word-ladder-ii/README.md) | `Hard` | $\mathcal{O}(N \cdot L \cdot 26 + K \cdot L)$ | $\mathcal{O}(N \cdot L)$ | [C++](../solutions/0126-word-ladder-ii/solution.cpp) |
 | 127 | [Word Ladder](../solutions/0127-word-ladder/README.md) | `Hard` | $\mathcal{O}(N \cdot L \cdot 26)$ | $\mathcal{O}(N \cdot L)$ | [C++](../solutions/0127-word-ladder/solution.cpp) |
+| 332 | [Reconstruct Itinerary](../solutions/0332-reconstruct-itinerary/README.md) | `Hard` | $\mathcal{O}(E \log E)$ | $\mathcal{O}(V + E)$ | [C++](../solutions/0332-reconstruct-itinerary/solution.cpp) |
 | 1345 | [Jump Game IV](../solutions/1345-jump-game-iv/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1345-jump-game-iv/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
