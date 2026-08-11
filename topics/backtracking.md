@@ -166,6 +166,15 @@ When exploring combinations of binary operators with mixed precedences (`+`, `-`
    $$\text{newPrev} = \text{prevOperand} \times X$$
 3. Avoid multi-digit operands with leading zeros by breaking early if `len > 1 && num[idx] == '0'`.
 
+### Pattern I: State-Space BFS with Recursive Chain Reaction & Selective Insertion Pruning (Zuma Game)
+When finding the minimum number of actions to reduce a recursive matching string to empty:
+1. **Canonical State Encoding**: Sort available elements in hand so permutations map to identical canonical keys (`board + "#" + hand`).
+2. **Shortest-Path BFS**: Explore level-by-level so the first path reaching an empty board is guaranteed to be minimal.
+3. **Selective Insertion Pruning**:
+   - Only insert a character $c$ directly adjacent to an identical character, OR
+   - Between two identical characters (`board[i-1] == board[i] && board[i] != c`) to allow cascading split reactions.
+4. **Complexity**: $\mathcal{O}(V \cdot B \cdot H)$ time and $\mathcal{O}(V \cdot (B + H))$ space where $V$ is reachable pruned states.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -187,6 +196,7 @@ When exploring combinations of binary operators with mixed precedences (`+`, `-`
 | 212 | [Word Search II](../solutions/0212-word-search-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot 3^L + W \cdot L)$ | $\mathcal{O}(W \cdot L)$ | [C++](../solutions/0212-word-search-ii/solution.cpp) |
 | 282 | [Expression Add Operators](../solutions/0282-expression-add-operators/README.md) | `Hard` | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0282-expression-add-operators/solution.cpp) |
 | 301 | [Remove Invalid Parentheses](../solutions/0301-remove-invalid-parentheses/README.md) | `Hard` | $\mathcal{O}(2^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0301-remove-invalid-parentheses/solution.cpp) |
+| 488 | [Zuma Game](../solutions/0488-zuma-game/README.md) | `Hard` | $\mathcal{O}(V \cdot B \cdot H)$ | $\mathcal{O}(V \cdot (B + H))$ | [C++](../solutions/0488-zuma-game/solution.cpp) |
 
 
 
