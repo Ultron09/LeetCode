@@ -143,6 +143,7 @@ When evaluating arithmetic expressions with additions, subtractions, unary signs
 | 84 | [Largest Rectangle in Histogram](../solutions/0084-largest-rectangle-in-histogram/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0084-largest-rectangle-in-histogram/solution.cpp) |
 | 85 | [Maximal Rectangle](../solutions/0085-maximal-rectangle/README.md) | `Hard` | $\mathcal{O}(R \cdot C)$ | $\mathcal{O}(C)$ | [C++](../solutions/0085-maximal-rectangle/solution.cpp) |
 | 224 | [Basic Calculator](../solutions/0224-basic-calculator/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0224-basic-calculator/solution.cpp) |
+| 321 | [Create Maximum Number](../solutions/0321-create-maximum-number/README.md) | `Hard` | $\mathcal{O}(k(m + n + k^2))$ | $\mathcal{O}(k)$ | [C++](../solutions/0321-create-maximum-number/solution.cpp) |
 | 2751 | [Robot Collisions](../solutions/2751-robot-collisions/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2751-robot-collisions/solution.cpp) |
 | 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
 
