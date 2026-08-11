@@ -148,7 +148,9 @@ Achieves optimal $\mathcal{O}(\log_{10} n)$ time with $\mathcal{O}(1)$ space.
 | 65 | [Valid Number](../solutions/0065-valid-number/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0065-valid-number/solution.cpp) |
 | 149 | [Max Points on a Line](../solutions/0149-max-points-on-a-line/README.md) | `Hard` | $\mathcal{O}(N^2 \log(\max(\text{coord})))$ | $\mathcal{O}(N)$ | [C++](../solutions/0149-max-points-on-a-line/solution.cpp) |
 | 233 | [Number of Digit One](../solutions/0233-number-of-digit-one/README.md) | `Hard` | $\mathcal{O}(\log_{10} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0233-number-of-digit-one/solution.cpp) |
+| 273 | [Integer to English Words](../solutions/0273-integer-to-english-words/README.md) | `Hard` | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | [C++](../solutions/0273-integer-to-english-words/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
+
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
