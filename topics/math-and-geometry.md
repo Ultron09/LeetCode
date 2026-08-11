@@ -144,6 +144,14 @@ To verify whether $N$ axis-aligned rectangles tile a bounding rectangle exactly 
 2. **Corner Parity Theorem**: Toggle each rectangle's 4 corners in a set (insert if absent, erase if present). After all rectangles, exactly the 4 corners of the bounding box must remain.
 3. **Why This Is Sufficient**: Interior vertices of a valid tiling always have 2 or 4 rectangles meeting → even corner count → cancelled. Edge vertices (non-bounding-corner) also pair up. Only the 4 bounding corners appear exactly once.
 
+### Pattern N: Information Theory & Multi-Dimensional State Encoding (Poor Pigs)
+When determining an unknown state among $N$ candidates using $P$ parallel probes over $T$ sequential rounds:
+1. **Per-Probe State Capacity**: Over $T$ testing rounds, each probe produces $T + 1$ mutually exclusive outcomes (dies in round $1, 2, \dots, T$, or survives all rounds).
+2. **Hypercube Information Encoding**: $P$ independent probes define a $P$-dimensional state space with base $(T + 1)$, distinguishing up to $(T + 1)^P$ configurations.
+3. **Optimality Criterion**:
+   $$(T + 1)^P \ge N \implies P = \left\lceil \frac{\log N}{\log(T + 1)} \right\rceil$$
+4. **Complexity**: $\mathcal{O}(\log_{T+1} N)$ time and $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -167,6 +175,7 @@ To verify whether $N$ axis-aligned rectangles tile a bounding rectangle exactly 
 | 273 | [Integer to English Words](../solutions/0273-integer-to-english-words/README.md) | `Hard` | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | [C++](../solutions/0273-integer-to-english-words/solution.cpp) |
 | 335 | [Self Crossing](../solutions/0335-self-crossing/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0335-self-crossing/solution.cpp) |
 | 391 | [Perfect Rectangle](../solutions/0391-perfect-rectangle/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0391-perfect-rectangle/solution.cpp) |
+| 458 | [Poor Pigs](../solutions/0458-poor-pigs/README.md) | `Hard` | $\mathcal{O}(\log_{T+1} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0458-poor-pigs/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
