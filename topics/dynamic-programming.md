@@ -213,6 +213,15 @@ When simulating forward movement where the next jump step depends on previous ve
    Immediately exit with `true` as soon as $j == N - 1$.
 4. **Flat Contiguous Storage**: Allocate a 1D `vector<uint8_t> dp(N * N, 0)` for zero container allocation overhead and optimal CPU cache locality.
 
+### Pattern V: Arithmetic Subsequence DP (Difference-Map State Indexing)
+When counting subsequences with constant step differences:
+1. **State Definition**: Let `dp[i][d]` be the number of arithmetic subsequences of length $\ge 2$ ending at index $i$ with common difference $d$.
+2. **Transition**: For each pair $(j, i)$ with $j < i$ and difference $d = \text{nums}[i] - \text{nums}[j]$:
+   - Extended subsequences of length $\ge 3$: `totalCount += dp[j][d]`.
+   - Update ending count at $i$: `dp[i][d] += dp[j][d] + 1` (where $+1$ accounts for the 2-element base pair $(\text{nums}[j], \text{nums}[i])$).
+3. **Difference Overflow Protection**: Always compute $d$ using `static_cast<long long>` to avoid 32-bit signed integer overflow.
+4. **Complexity**: $\mathcal{O}(N^2)$ time and $\mathcal{O}(N^2)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -242,6 +251,7 @@ When simulating forward movement where the next jump step depends on previous ve
 | 329 | [Longest Increasing Path in a Matrix](../solutions/0329-longest-increasing-path-in-a-matrix/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0329-longest-increasing-path-in-a-matrix/solution.cpp) |
 | 354 | [Russian Doll Envelopes](../solutions/0354-russian-doll-envelopes/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0354-russian-doll-envelopes/solution.cpp) |
 | 403 | [Frog Jump](../solutions/0403-frog-jump/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0403-frog-jump/solution.cpp) |
+| 446 | [Arithmetic Slices II - Subsequence](../solutions/0446-arithmetic-slices-ii-subsequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0446-arithmetic-slices-ii-subsequence/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
