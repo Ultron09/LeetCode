@@ -131,6 +131,14 @@ When editing a sequence subject to simultaneous length bounds $[L_{\min}, L_{\ma
    - $L_i \ge 3$: 3 deletions save 1 replacement.
    - Final cost: $D + \max(\text{remainingReplacements}, \text{missingTypes})$.
 
+### Pattern L: Capital-Constrained Greedy Maximization with Monotonic Max-Heap (IPO)
+When selecting at most $k$ projects to maximize total capital where projects have activation thresholds $\text{capital}[i]$ and non-negative yields $\text{profits}[i]$:
+1. **Capital-Sorted Event Pointer**: Sort projects ascendingly by required capital.
+2. **Dynamic Affordability Heap**: Maintain a max-heap of profits for all projects with $\text{capital}[i] \le w$.
+3. **Greedy Selection**: At each round, advance the capital pointer to unlock newly affordable projects into the heap, then pop the maximum profit.
+4. **Exchange Correctness**: Taking the maximum profit strictly maximizes future capital $w$, expanding the pool of available projects monotonically.
+5. **Complexity**: $\mathcal{O}(N \log N + k \log N)$ time and $\mathcal{O}(N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -151,6 +159,7 @@ When editing a sequence subject to simultaneous length bounds $[L_{\min}, L_{\ma
 | 135 | [Candy](../solutions/0135-candy/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0135-candy/solution.cpp) |
 | 330 | [Patching Array](../solutions/0330-patching-array/README.md) | `Hard` | $\mathcal{O}(M + \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0330-patching-array/solution.cpp) |
 | 420 | [Strong Password Checker](../solutions/0420-strong-password-checker/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0420-strong-password-checker/solution.cpp) |
+| 502 | [IPO](../solutions/0502-ipo/README.md) | `Hard` | $\mathcal{O}(N \log N + k \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0502-ipo/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |

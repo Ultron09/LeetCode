@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **110** | 1 | 0 | 109 |
+| **111** | 1 | 0 | 110 |
 
 ---
 
@@ -90,6 +90,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0483 | [Smallest Good Base](solutions/0483-smallest-good-base/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}((\log_2 N)^2)$ | $\mathcal{O}(1)$ | [C++](solutions/0483-smallest-good-base/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0488 | [Zuma Game](solutions/0488-zuma-game/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(V \cdot B \cdot H)$ | $\mathcal{O}(V \cdot (B + H))$ | [C++](solutions/0488-zuma-game/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 0493 | [Reverse Pairs](solutions/0493-reverse-pairs/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0493-reverse-pairs/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
+| 0502 | [IPO](solutions/0502-ipo/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N \log N + k \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0502-ipo/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
