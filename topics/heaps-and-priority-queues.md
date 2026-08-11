@@ -143,6 +143,7 @@ When determining the bounding envelope / bottleneck water level across escape pa
 | 295 | [Find Median from Data Stream](../solutions/0295-find-median-from-data-stream/README.md) | `Hard` | $\mathcal{O}(\log N) \text{ add}, \mathcal{O}(1) \text{ query}$ | $\mathcal{O}(N)$ | [C++](../solutions/0295-find-median-from-data-stream/solution.cpp) |
 | 407 | [Trapping Rain Water II](../solutions/0407-trapping-rain-water-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \log(M \cdot N))$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0407-trapping-rain-water-ii/solution.cpp) |
 | 502 | [IPO](../solutions/0502-ipo/README.md) | `Hard` | $\mathcal{O}(N \log N + k \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0502-ipo/solution.cpp) |
+| 630 | [Course Schedule III](../solutions/0630-course-schedule-iii/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0630-course-schedule-iii/solution.cpp) |
 | 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
 
 

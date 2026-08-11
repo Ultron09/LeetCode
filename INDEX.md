@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **121** | 1 | 0 | 120 |
+| **122** | 1 | 0 | 121 |
 
 ---
 
@@ -101,6 +101,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0600 | [Non-negative Integers without Consecutive Ones](solutions/0600-non-negative-integers-without-consecutive-ones/README.md) | `Hard` | [Bit Manipulation](topics/bit-manipulation.md) | $\mathcal{O}(\log N)$ | $\mathcal{O}(1)$ | [C++](solutions/0600-non-negative-integers-without-consecutive-ones/solution.cpp) | [Notes](topics/bit-manipulation.md#solved-problems) |
 | 0601 | [Human Traffic of Stadium](solutions/0601-human-traffic-of-stadium/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [SQL / C++](solutions/0601-human-traffic-of-stadium/solution.sql) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0629 | [K Inverse Pairs Array](solutions/0629-k-inverse-pairs-array/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot K)$ | $\mathcal{O}(K)$ | [C++](solutions/0629-k-inverse-pairs-array/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 0630 | [Course Schedule III](solutions/0630-course-schedule-iii/README.md) | `Hard` | [Greedy](topics/greedy.md), [Heaps / Priority Queue](topics/heaps-and-priority-queues.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0630-course-schedule-iii/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

@@ -147,6 +147,15 @@ When equalizing distributions along a 1D line with simultaneous unit transfers:
 4. **Global Minimum**: $\max_{i} (\max(|\text{balance}[i]|, \text{arr}[i] - \text{target}))$.
 5. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(1)$ space.
 
+### Pattern N: Earliest Deadline First with Regret-Based Max-Heap Duration Replacement (Course Schedule III)
+When maximizing the number of scheduled jobs with durations $d_i$ and deadlines $D_i$:
+1. **Earliest Deadline First (EDF) Ordering**: Sort all jobs ascendingly by deadline $D_i$.
+2. **Greedy Inclusion**: If $\text{currentTime} + d_i \le D_i$, schedule job $i$, increment $\text{currentTime} \gets \text{currentTime} + d_i$, and push $d_i$ to a max-heap.
+3. **Regret Replacement**: If job $i$ violates its deadline but $d_i < \text{maxHeap.top()}$, replace the longest previously taken job:
+   $$\text{currentTime} \gets \text{currentTime} + d_i - \text{maxHeap.top()}$$
+   Pop the longest duration and push $d_i$. This preserves the cardinality of scheduled jobs while strictly reducing `currentTime`, creating maximal slack for subsequent jobs.
+4. **Complexity**: $\mathcal{O}(N \log N)$ time and $\mathcal{O}(N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -169,6 +178,7 @@ When equalizing distributions along a 1D line with simultaneous unit transfers:
 | 420 | [Strong Password Checker](../solutions/0420-strong-password-checker/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0420-strong-password-checker/solution.cpp) |
 | 502 | [IPO](../solutions/0502-ipo/README.md) | `Hard` | $\mathcal{O}(N \log N + k \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0502-ipo/solution.cpp) |
 | 517 | [Super Washing Machines](../solutions/0517-super-washing-machines/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0517-super-washing-machines/solution.cpp) |
+| 630 | [Course Schedule III](../solutions/0630-course-schedule-iii/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0630-course-schedule-iii/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
