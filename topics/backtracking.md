@@ -153,6 +153,13 @@ When enumerating all valid multi-word segmentations or partitions of a string:
 2. For each valid prefix $s[\text{start} \dots \text{end} - 1] \in \text{dict}$, recurse on $\text{end}$ and combine the prefix with all returned suffix solutions.
 3. Memoization prevents exponential recomputation of overlapping suffix subproblems.
 
+### Pattern G: Grid DFS with Trie Matching & In-Flight Pruning (Word Search II)
+When searching for a collection of words in a character grid:
+1. Build a Trie containing all target words.
+2. Launch DFS from each grid cell, traversing the grid and the Trie in lockstep.
+3. Mark visited cells in-place with a sentinel (e.g. `'#'`) and restore upon backtrack.
+4. **In-Flight Trie Pruning**: When a word is discovered, clear `node->word`. If the node becomes a leaf (`childCount == 0`), delete and unlink it from its parent to prune dead search branches.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -171,6 +178,8 @@ When enumerating all valid multi-word segmentations or partitions of a string:
 | 51 | [N-Queens](../solutions/0051-n-queens/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0051-n-queens/solution.cpp) |
 | 52 | [N-Queens II](../solutions/0052-n-queens-ii/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](../solutions/0052-n-queens-ii/solution.cpp) |
 | 140 | [Word Break II](../solutions/0140-word-break-ii/README.md) | `Hard` | $\mathcal{O}(2^N + N^2 + W)$ | $\mathcal{O}(2^N \cdot N + W)$ | [C++](../solutions/0140-word-break-ii/solution.cpp) |
+| 212 | [Word Search II](../solutions/0212-word-search-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot 3^L + W \cdot L)$ | $\mathcal{O}(W \cdot L)$ | [C++](../solutions/0212-word-search-ii/solution.cpp) |
+
 
 
 

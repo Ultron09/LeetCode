@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **65** | 0 | 0 | 65 |
+| **66** | 0 | 0 | 66 |
 
 ---
 
@@ -49,6 +49,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0174 | [Dungeon Game](solutions/0174-dungeon-game/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(N)$ | [C++](solutions/0174-dungeon-game/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0185 | [Department Top Three Salaries](solutions/0185-department-top-three-salaries/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [SQL / C++](solutions/0185-department-top-three-salaries/solution.sql) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0188 | [Best Time to Buy and Sell Stock IV](solutions/0188-best-time-to-buy-and-sell-stock-iv/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot k)$ | $\mathcal{O}(k)$ | [C++](solutions/0188-best-time-to-buy-and-sell-stock-iv/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 0212 | [Word Search II](solutions/0212-word-search-ii/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(M \cdot N \cdot 3^L + W \cdot L)$ | $\mathcal{O}(W \cdot L)$ | [C++](solutions/0212-word-search-ii/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
