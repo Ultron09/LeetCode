@@ -152,6 +152,13 @@ When determining an unknown state among $N$ candidates using $P$ parallel probes
    $$(T + 1)^P \ge N \implies P = \left\lceil \frac{\log N}{\log(T + 1)} \right\rceil$$
 4. **Complexity**: $\mathcal{O}(\log_{T+1} N)$ time and $\mathcal{O}(1)$ space.
 
+### Pattern O: Descending Palindrome Generation & Bounded Divisor Search (Largest Palindrome Product)
+When finding the largest product of two $n$-digit numbers that forms a palindrome:
+1. **Upper-Half Mirroring**: Rather than checking all $10^{2n}$ products, generate $2n$-digit palindromes in descending order from upper half $H \in [10^n - 1, 10^{n-1}]$ via $P = H \times 10^n + \text{reverse}(H)$.
+2. **Bounded Divisor Search**: Test divisors $x \in [10^n - 1, \lceil \sqrt{P} \rceil]$ in descending order.
+3. **Early Exit on $x^2 < P$**: If $x^2 < P$, then $y = P / x > x$ has already been tested, allowing immediate termination.
+4. **Complexity**: $\mathcal{O}(10^n)$ worst-case, $\mathcal{O}(1)$ space in standard 64-bit integer arithmetic.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -176,6 +183,7 @@ When determining an unknown state among $N$ candidates using $P$ parallel probes
 | 335 | [Self Crossing](../solutions/0335-self-crossing/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0335-self-crossing/solution.cpp) |
 | 391 | [Perfect Rectangle](../solutions/0391-perfect-rectangle/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0391-perfect-rectangle/solution.cpp) |
 | 458 | [Poor Pigs](../solutions/0458-poor-pigs/README.md) | `Hard` | $\mathcal{O}(\log_{T+1} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0458-poor-pigs/solution.cpp) |
+| 479 | [Largest Palindrome Product](../solutions/0479-largest-palindrome-product/README.md) | `Hard` | $\mathcal{O}(10^N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0479-largest-palindrome-product/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
