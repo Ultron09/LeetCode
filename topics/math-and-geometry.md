@@ -128,6 +128,16 @@ When counting occurrences of a target digit across all integers in $[1, n]$:
 5. If $\text{curr} > 1 \implies \text{count} += (\text{higher} + 1) \times m$.
 Achieves optimal $\mathcal{O}(\log_{10} n)$ time with $\mathcal{O}(1)$ space.
 
+### Pattern L: Orthogonal 2D Spiral Self-Crossing Classification
+For a 2D path turning $90^\circ$ counter-clockwise at each step, self-intersection can only occur across 3 canonical geometric configurations:
+1. **Line $i$ crosses Line $i-3$ ($i \ge 3$)**:
+   $$\text{dist}[i] \ge \text{dist}[i-2] \land \text{dist}[i-1] \le \text{dist}[i-3]$$
+2. **Line $i$ meets / overlaps Line $i-4$ ($i \ge 4$)**:
+   $$\text{dist}[i-1] == \text{dist}[i-3] \land \text{dist}[i] + \text{dist}[i-4] \ge \text{dist}[i-2]$$
+3. **Line $i$ crosses Line $i-5$ on Expanding-to-Contracting Transition ($i \ge 5$)**:
+   $$\text{dist}[i-2] \ge \text{dist}[i-4] \land \text{dist}[i-1] \le \text{dist}[i-3] \land \text{dist}[i-1] + \text{dist}[i-5] \ge \text{dist}[i-3] \land \text{dist}[i] + \text{dist}[i-4] \ge \text{dist}[i-2]$$
+Evaluating these 3 conditions in a single $\mathcal{O}(N)$ pass determines self-crossing in $\mathcal{O}(1)$ space without coordinate sets.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -149,8 +159,8 @@ Achieves optimal $\mathcal{O}(\log_{10} n)$ time with $\mathcal{O}(1)$ space.
 | 149 | [Max Points on a Line](../solutions/0149-max-points-on-a-line/README.md) | `Hard` | $\mathcal{O}(N^2 \log(\max(\text{coord})))$ | $\mathcal{O}(N)$ | [C++](../solutions/0149-max-points-on-a-line/solution.cpp) |
 | 233 | [Number of Digit One](../solutions/0233-number-of-digit-one/README.md) | `Hard` | $\mathcal{O}(\log_{10} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0233-number-of-digit-one/solution.cpp) |
 | 273 | [Integer to English Words](../solutions/0273-integer-to-english-words/README.md) | `Hard` | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | [C++](../solutions/0273-integer-to-english-words/solution.cpp) |
+| 335 | [Self Crossing](../solutions/0335-self-crossing/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0335-self-crossing/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
-
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3336 | [Find the Number of Subsequences With Equal GCD](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/README.md) | `Hard` | $\mathcal{O}(N \cdot M^2)$ | $\mathcal{O}(M^2)$ | [C++](../solutions/3336-find-the-number-of-subsequences-with-equal-gcd/solution.cpp) |
