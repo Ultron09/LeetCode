@@ -159,6 +159,13 @@ ListNode* reverseKGroup(ListNode* head, int k) {
 }
 ```
 
+### Pattern F: Doubly-Linked List of Buckets with Hash Map Indexing (All O`one / LFU Cache)
+When designing data structures requiring $\mathcal{O}(1)$ frequency modifications alongside $\mathcal{O}(1)$ min/max queries:
+1. **Sorted Frequency Buckets**: Maintain a `std::list<Bucket>` where each bucket stores `count` and an `unordered_set<string> keys`.
+2. **Hash Map to List Iterator**: Store `unordered_map<string, list<Bucket>::iterator>` mapping each key to its containing bucket node.
+3. **Unit Shift Property**: Increments and decrements modify counts by $\pm 1$, meaning keys only ever transition to immediately adjacent bucket nodes (`next(it)` or `prev(it)`).
+4. **Self-Pruning Empty Nodes**: When a bucket's key set becomes empty, splice it out of the list in $\mathcal{O}(1)$ time. `list.front()` and `list.back()` always supply the minimum and maximum keys in $\mathcal{O}(1)$ time.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -175,5 +182,6 @@ ListNode* reverseKGroup(ListNode* head, int k) {
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
 | 25 | [Reverse Nodes in k-Group](../solutions/0025-reverse-nodes-in-k-group/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0025-reverse-nodes-in-k-group/solution.cpp) |
+| 432 | [All O`one Data Structure](../solutions/0432-all-oone-data-structure/README.md) | `Hard` | $\mathcal{O}(1) \text{ all ops}$ | $\mathcal{O}(N)$ | [C++](../solutions/0432-all-oone-data-structure/solution.cpp) |
 
 
