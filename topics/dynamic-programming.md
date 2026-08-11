@@ -258,6 +258,15 @@ When elimination games allow non-adjacent identical elements to concatenate acro
      $$\text{dp}(l + 1, m - 1, 0) + \text{dp}(m, r, k + 1)$$
 4. **Complexity**: $\mathcal{O}(N^4)$ worst-case, $\mathcal{O}(N^3)$ average with memoization, $\mathcal{O}(N^3)$ space.
 
+### Pattern AA: Finite State Space Linear Recurrence DP (Student Attendance Record)
+When sequencing constrained alphabets where legality depends only on small discrete counters (e.g. total absences $a \in \{0, 1\}$, consecutive lates $l \in \{0, 1, 2\}$):
+1. **FSM State Space**: Encode valid suffixes/prefixes with a fixed tuple state $(a, l)$, yielding $|S| = 2 \times 3 = 6$ total states.
+2. **Transition Rules**:
+   - `'P'`: $(a, l) \to (a, 0)$
+   - `'A'`: $(0, l) \to (1, 0)$
+   - `'L'`: $(a, l) \to (a, l + 1)$ for $l < 2$
+3. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(1)$ space using rolling array, with optional $\mathcal{O}(|S|^3 \log N)$ matrix exponentiation for large $N$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -292,6 +301,7 @@ When elimination games allow non-adjacent identical elements to concatenate acro
 | 472 | [Concatenated Words](../solutions/0472-concatenated-words/README.md) | `Hard` | $\mathcal{O}(N \log N + N \cdot L^3)$ | $\mathcal{O}(\sum \|W_i\|)$ | [C++](../solutions/0472-concatenated-words/solution.cpp) |
 | 514 | [Freedom Trail](../solutions/0514-freedom-trail/README.md) | `Hard` | $\mathcal{O}(K \cdot R^2)$ | $\mathcal{O}(R)$ | [C++](../solutions/0514-freedom-trail/solution.cpp) |
 | 546 | [Remove Boxes](../solutions/0546-remove-boxes/README.md) | `Hard` | $\mathcal{O}(N^4)$ | $\mathcal{O}(N^3)$ | [C++](../solutions/0546-remove-boxes/solution.cpp) |
+| 552 | [Student Attendance Record II](../solutions/0552-student-attendance-record-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0552-student-attendance-record-ii/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |

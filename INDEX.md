@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **114** | 1 | 0 | 113 |
+| **115** | 1 | 0 | 114 |
 
 ---
 
@@ -94,6 +94,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0514 | [Freedom Trail](solutions/0514-freedom-trail/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(K \cdot R^2)$ | $\mathcal{O}(R)$ | [C++](solutions/0514-freedom-trail/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0517 | [Super Washing Machines](solutions/0517-super-washing-machines/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0517-super-washing-machines/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 0546 | [Remove Boxes](solutions/0546-remove-boxes/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^4)$ | $\mathcal{O}(N^3)$ | [C++](solutions/0546-remove-boxes/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 0552 | [Student Attendance Record II](solutions/0552-student-attendance-record-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0552-student-attendance-record-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
