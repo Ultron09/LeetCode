@@ -204,6 +204,15 @@ When finding the longest chain where **all** dimensions are strictly increasing 
 3. **Patience-Sort LIS on Reduced Dimension**: Extract the secondary dimension and compute the LIS in $\mathcal{O}(N \log N)$ using `lower_bound` on a `tails` array.
 4. **Generalizes to $k$ Dimensions**: For $k > 2$, sort by the first $k-1$ dimensions and apply patience-sort on the last, though additional care is needed for ties in intermediate dimensions.
 
+### Pattern U: State-Bounded Forward Jump DP (Position-Index Dual Mapping & Velocity State)
+When simulating forward movement where the next jump step depends on previous velocity $k \in \{k-1, k, k+1\}$:
+1. **Mathematical Bound on Velocity**: Prove that after $i$ hops, maximum incoming jump size $k \le i < N$, strictly bounding the 2D state space to $N \times N$.
+2. **Dual Spatial-Index Mapping**: Use a pre-allocated hash map or binary search (`std::lower_bound`) to map coordinate positions $\text{stones}[i] + d$ to array indices $j$ in $\mathcal{O}(1)$ or $\mathcal{O}(\log N)$.
+3. **Forward Transition with Early Exit**:
+   $$\text{dp}[j][d] = \text{true} \quad \forall d \in \{k-1, k, k+1\}, \quad d > 0, \quad \text{stones}[j] = \text{stones}[i] + d$$
+   Immediately exit with `true` as soon as $j == N - 1$.
+4. **Flat Contiguous Storage**: Allocate a 1D `vector<uint8_t> dp(N * N, 0)` for zero container allocation overhead and optimal CPU cache locality.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -232,6 +241,7 @@ When finding the longest chain where **all** dimensions are strictly increasing 
 | 312 | [Burst Balloons](../solutions/0312-burst-balloons/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0312-burst-balloons/solution.cpp) |
 | 329 | [Longest Increasing Path in a Matrix](../solutions/0329-longest-increasing-path-in-a-matrix/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0329-longest-increasing-path-in-a-matrix/solution.cpp) |
 | 354 | [Russian Doll Envelopes](../solutions/0354-russian-doll-envelopes/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0354-russian-doll-envelopes/solution.cpp) |
+| 403 | [Frog Jump](../solutions/0403-frog-jump/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0403-frog-jump/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
