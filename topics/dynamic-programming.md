@@ -267,6 +267,13 @@ When sequencing constrained alphabets where legality depends only on small discr
    - `'L'`: $(a, l) \to (a, l + 1)$ for $l < 2$
 3. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(1)$ space using rolling array, with optional $\mathcal{O}(|S|^3 \log N)$ matrix exponentiation for large $N$.
 
+### Pattern AB: Sliding Window / Prefix-Sum Accelerated DP Transitions (K Inverse Pairs Array)
+When DP transitions involve contiguous range sums of the previous state row $\text{dp}[i][j] = \sum_{p=0}^{\min(j, i-1)} \text{dp}[i-1][j - p]$:
+1. **Algebraic Difference**:
+   $$\text{dp}[i][j] = \text{dp}[i][j-1] + \text{dp}[i-1][j] - \text{dp}[i-1][j-i] \quad (j \ge i)$$
+2. **Complexity Reduction**: Reduces naive $\mathcal{O}(N \cdot K \cdot \min(N, K))$ combinatorial summations to $\mathcal{O}(N \cdot K)$ overall time.
+3. **Space Optimization**: 1D rolling array reduces space from $\mathcal{O}(N \cdot K)$ to $\mathcal{O}(K)$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -302,6 +309,7 @@ When sequencing constrained alphabets where legality depends only on small discr
 | 514 | [Freedom Trail](../solutions/0514-freedom-trail/README.md) | `Hard` | $\mathcal{O}(K \cdot R^2)$ | $\mathcal{O}(R)$ | [C++](../solutions/0514-freedom-trail/solution.cpp) |
 | 546 | [Remove Boxes](../solutions/0546-remove-boxes/README.md) | `Hard` | $\mathcal{O}(N^4)$ | $\mathcal{O}(N^3)$ | [C++](../solutions/0546-remove-boxes/solution.cpp) |
 | 552 | [Student Attendance Record II](../solutions/0552-student-attendance-record-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0552-student-attendance-record-ii/solution.cpp) |
+| 629 | [K Inverse Pairs Array](../solutions/0629-k-inverse-pairs-array/README.md) | `Hard` | $\mathcal{O}(N \cdot K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0629-k-inverse-pairs-array/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
