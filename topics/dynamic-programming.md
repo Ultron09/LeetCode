@@ -197,7 +197,12 @@ When traversing a grid where step transitions enforce strict inequalities ($M[nr
 2. **Top-Down Memoization**: Define $DP[r][c]$ as the longest strictly increasing path starting from cell $(r, c)$.
 3. **State Transition**:
    $$DP[r][c] = 1 + \max_{(nr, nc) \in \text{adj}(r, c), M[nr][nc] > M[r][c]} DP[nr][nc]$$
-4. **Time & Space**: Each cell is computed exactly once $\implies \mathcal{O}(M \cdot N)$ runtime and $\mathcal{O}(M \cdot N)$ memoization space.
+### Pattern T: Multi-Dimensional LIS via Sorting + Dimension Reduction
+When finding the longest chain where **all** dimensions are strictly increasing (e.g. Russian doll nesting):
+1. **Sort by Primary Dimension Ascending**: Guarantees monotonicity in the first coordinate.
+2. **Break Ties with Reverse Sort on Secondary Dimension**: For equal primary keys, sort the secondary dimension **descending**. This prevents `lower_bound` in the patience-sort LIS from selecting two elements with the same primary key.
+3. **Patience-Sort LIS on Reduced Dimension**: Extract the secondary dimension and compute the LIS in $\mathcal{O}(N \log N)$ using `lower_bound` on a `tails` array.
+4. **Generalizes to $k$ Dimensions**: For $k > 2$, sort by the first $k-1$ dimensions and apply patience-sort on the last, though additional care is needed for ties in intermediate dimensions.
 
 ---
 
@@ -226,6 +231,7 @@ When traversing a grid where step transitions enforce strict inequalities ($M[nr
 | 188 | [Best Time to Buy and Sell Stock IV](../solutions/0188-best-time-to-buy-and-sell-stock-iv/README.md) | `Hard` | $\mathcal{O}(N \cdot k)$ | $\mathcal{O}(k)$ | [C++](../solutions/0188-best-time-to-buy-and-sell-stock-iv/solution.cpp) |
 | 312 | [Burst Balloons](../solutions/0312-burst-balloons/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0312-burst-balloons/solution.cpp) |
 | 329 | [Longest Increasing Path in a Matrix](../solutions/0329-longest-increasing-path-in-a-matrix/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0329-longest-increasing-path-in-a-matrix/solution.cpp) |
+| 354 | [Russian Doll Envelopes](../solutions/0354-russian-doll-envelopes/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0354-russian-doll-envelopes/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
