@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **86** | 0 | 0 | 86 |
+| **87** | 0 | 0 | 87 |
 
 ---
 
@@ -25,7 +25,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Topic | Key Concepts | Solved Count | Link |
 | :--- | :--- | :---: | :---: |
-| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 6 | [Explore Notes](topics/arrays-and-hashing.md) |
+| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 7 | [Explore Notes](topics/arrays-and-hashing.md) |
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 2 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 5 | [Explore Notes](topics/sliding-window.md) |
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 7 | [Explore Notes](topics/stack-and-queue.md) |
