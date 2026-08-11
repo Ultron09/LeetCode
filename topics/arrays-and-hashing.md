@@ -129,13 +129,20 @@ When building a multiset supporting $\mathcal{O}(1)$ insert, remove, and uniform
 3. **Swap-and-Pop Removal**: To remove `val` at `removeIdx`, swap with `nums.back()`, update both index sets, then `pop_back()`.
 4. **Self-Swap Guard**: When `removeIdx == lastIdx`, do **not** re-insert the index after erasing, or the set will contain a stale entry.
 
+### Pattern I: Island-and-Gap Consecutive Streak Partitioning (Human Traffic of Stadium)
+When grouping contiguous runs of qualifying entities (e.g., consecutive sequence IDs):
+1. **Window Invariant**: In SQL, `id - ROW_NUMBER() OVER (ORDER BY id)` is identical for all consecutive IDs in an unbroken run.
+2. **Partition Aggregation**: Window function `COUNT(*) OVER (PARTITION BY island_id)` evaluates the run length in $\mathcal{O}(N)$ without expensive self-joins.
+3. **In-Memory Two-Pointer Scanning**: In algorithmic C++, a two-pointer pass $[i, j]$ identifies runs where $A[k+1] = A[k] + 1$ and outputs segments of length $\ge K$.
+4. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
 
-1. **Unordered Map Rehashing Overheads**: `std::unordered_map` can degrade to $\mathcal{O}(N^2)$ due to hash collisions. Use `custom_hash` or static arrays:
+1. **`std::unordered_map` Anti-Hash Collisions**: `std::hash` for primitive integer types is an identity mapping in GCC/Clang, making it vulnerable to $\mathcal{O}(N^2)$ worst-case hash-bomb test cases. Use a custom `splitmix64` hash functor for competitive programming:
    ```cpp
-   struct custom_hash {
+   struct CustomHash {
        static uint64_t splitmix64(uint64_t x) {
            x += 0x9e3779b97f4a7c15;
            x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
@@ -162,13 +169,8 @@ When building a multiset supporting $\mathcal{O}(1)$ insert, remove, and uniform
 | 262 | [Trips and Users](../solutions/0262-trips-and-users/README.md) | `Hard` | $\mathcal{O}(T + U)$ | $\mathcal{O}(U + D)$ | [SQL / C++](../solutions/0262-trips-and-users/solution.sql) |
 | 336 | [Palindrome Pairs](../solutions/0336-palindrome-pairs/README.md) | `Hard` | $\mathcal{O}(\sum L_i^2)$ | $\mathcal{O}(N \cdot L)$ | [C++](../solutions/0336-palindrome-pairs/solution.cpp) |
 | 381 | [Insert Delete GetRandom O(1) - Duplicates allowed](../solutions/0381-insert-delete-getrandom-o1-duplicates-allowed/README.md) | `Hard` | $\mathcal{O}(1)$ avg | $\mathcal{O}(N)$ | [C++](../solutions/0381-insert-delete-getrandom-o1-duplicates-allowed/solution.cpp) |
+| 601 | [Human Traffic of Stadium](../solutions/0601-human-traffic-of-stadium/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [SQL / C++](../solutions/0601-human-traffic-of-stadium/solution.sql) |
 | 2996 | [Smallest Missing Integer Greater Than Sequential Prefix Sum](../solutions/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/README.md) | `Easy` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/solution.cpp) |
 | 3548 | [Equal Sum Grid Partition II](../solutions/3548-equal-sum-grid-partition-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/3548-equal-sum-grid-partition-ii/solution.cpp) |
 | 3655 | [XOR After Range Multiplication Queries II](../solutions/3655-xor-after-range-multiplication-queries-ii/README.md) | `Hard` | $\mathcal{O}((N + Q)\sqrt{N})$ | $\mathcal{O}(N + Q)$ | [C++](../solutions/3655-xor-after-range-multiplication-queries-ii/solution.cpp) |
 | 3739 | [Count Subarrays With Majority Element II](../solutions/3739-count-subarrays-with-majority-element-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3739-count-subarrays-with-majority-element-ii/solution.cpp) |
-
-
-
-
-
-
