@@ -163,7 +163,6 @@ When finding the largest product of two $n$-digit numbers that forms a palindrom
 When finding the minimal integer base $k \ge 2$ such that $n = \sum_{i=0}^{m-1} k^i$:
 1. **Inverse Length Monotonicity**: Maximize digit length $m \in [\lfloor \log_2 n \rfloor + 1, 2]$ to minimize base $k$.
 2. **Root Approximation**: Bounded by binomial inequalities, $k \approx \lfloor \sqrt[m-1]{n} \rfloor$.
-3. **Horner's Method with Overflow Guard**: Evaluate $\sum_{i=0}^{m-1} k^i$ in $\mathcal{O}(m)$ time with early break `sum > (n - 1) / k`.
 4. **Complexity**: $\mathcal{O}((\log_2 n)^2)$ time and $\mathcal{O}(1)$ space.
 
 ### Pattern Q: Nearest Palindrome Construction via 5-Candidate Family Generation
@@ -173,6 +172,17 @@ When finding the numerically closest non-self palindrome to a number $N$ with $L
 3. **Candidate 5 (Upper Order Boundary)**: $10^L + 1$ (e.g. `100...001`).
 4. **Disqualification & Tie-Breaking**: Exclude candidate if equal to $N$; select minimal $|C - N|$ with smaller value on ties.
 5. **Complexity**: $\mathcal{O}(L)$ time and $\mathcal{O}(L)$ space ($L \le 18$).
+
+### Pattern R: Monotone Chain 2D Convex Hull with Collinear Edge Preservation (Erect the Fence)
+When finding the minimum perimeter enclosing rope containing all 2D points including points on linear boundaries:
+1. **Lexicographical Sort**: Sort points primarily by $x$, secondarily by $y$.
+2. **2D Orientation via Cross Product**:
+   $$\text{cross}(O, A, B) = (A_x - O_x)(B_y - O_y) - (A_y - O_y)(B_x - O_x)$$
+3. **Collinear Edge Preservation**:
+   - In standard Convex Hull, we pop when $\text{cross} \le 0$.
+   - To retain collinear boundary points, pop **strictly when $\text{cross} < 0$** during both lower hull and upper hull sweeps.
+4. **Deduplication**: Concatenate lower and upper hulls, sort, and remove adjacent duplicates.
+5. **Complexity**: $\mathcal{O}(N \log N)$ time and $\mathcal{O}(N)$ space.
 
 ---
 
@@ -201,6 +211,7 @@ When finding the numerically closest non-self palindrome to a number $N$ with $L
 | 479 | [Largest Palindrome Product](../solutions/0479-largest-palindrome-product/README.md) | `Hard` | $\mathcal{O}(10^N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0479-largest-palindrome-product/solution.cpp) |
 | 483 | [Smallest Good Base](../solutions/0483-smallest-good-base/README.md) | `Hard` | $\mathcal{O}((\log_2 N)^2)$ | $\mathcal{O}(1)$ | [C++](../solutions/0483-smallest-good-base/solution.cpp) |
 | 564 | [Find the Closest Palindrome](../solutions/0564-find-the-closest-palindrome/README.md) | `Hard` | $\mathcal{O}(L)$ | $\mathcal{O}(L)$ | [C++](../solutions/0564-find-the-closest-palindrome/solution.cpp) |
+| 587 | [Erect the Fence](../solutions/0587-erect-the-fence/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0587-erect-the-fence/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
@@ -209,9 +220,3 @@ When finding the numerically closest non-self palindrome to a number $N$ with $L
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
-
-
-
-
-
-
