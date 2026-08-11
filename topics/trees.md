@@ -121,7 +121,9 @@ When finding the maximum path sum across any simple path in a binary tree:
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 124 | [Binary Tree Maximum Path Sum](../solutions/0124-binary-tree-maximum-path-sum/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | [C++](../solutions/0124-binary-tree-maximum-path-sum/solution.cpp) |
+| 297 | [Serialize and Deserialize Binary Tree](../solutions/0297-serialize-and-deserialize-binary-tree/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0297-serialize-and-deserialize-binary-tree/solution.cpp) |
 | 3093 | [Longest Common Suffix Queries](../solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](../solutions/3093-longest-common-suffix-queries/solution.cpp) |
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
+
 
 
