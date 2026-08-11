@@ -155,6 +155,13 @@ To find the longest palindromic prefix in $\mathcal{O}(N)$ deterministic time:
 3. The value $\pi[|T|-1]$ yields the length $L$ of the longest palindromic prefix of $s$.
 4. Reversing the unmirrored suffix $s[L \dots |s|-1]$ and prepending to $s$ generates the minimal palindrome.
 
+### Pattern F: Sliding Window Bucketing (Contains Duplicate III)
+When checking if two elements within index difference $K$ have value difference $\le T$:
+1. Define bucket width $w = T + 1$.
+2. Map value $x$ to bucket ID with floor division: `(x < 0) ? ((x + 1) / w - 1) : (x / w)`.
+3. Check if current bucket `bId`, `bId - 1`, or `bId + 1` contains a valid candidate.
+4. Maintain a sliding window of at most $K$ elements by deleting `getBucketId(nums[i - K])` when advancing. Time complexity is $\mathcal{O}(N)$ average vs $\mathcal{O}(N \log K)$ with ordered sets.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -172,6 +179,8 @@ To find the longest palindromic prefix in $\mathcal{O}(N)$ deterministic time:
 | 30 | [Substring with Concatenation of All Words](../solutions/0030-substring-with-concatenation-of-all-words/README.md) | `Hard` | $\mathcal{O}(N \cdot L)$ | $\mathcal{O}(K \cdot L)$ | [C++](../solutions/0030-substring-with-concatenation-of-all-words/solution.cpp) |
 | 76 | [Minimum Window Substring](../solutions/0076-minimum-window-substring/README.md) | `Hard` | $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0076-minimum-window-substring/solution.cpp) |
 | 214 | [Shortest Palindrome](../solutions/0214-shortest-palindrome/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0214-shortest-palindrome/solution.cpp) |
+| 220 | [Contains Duplicate III](../solutions/0220-contains-duplicate-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\min(N, K))$ | [C++](../solutions/0220-contains-duplicate-iii/solution.cpp) |
+
 
 
 

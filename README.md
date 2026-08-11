@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **68** | 0 | 0 | 68 |
+| **69** | 0 | 0 | 69 |
 
 ---
 
@@ -27,7 +27,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | :--- | :--- | :---: | :---: |
 | **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 5 | [Explore Notes](topics/arrays-and-hashing.md) |
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 2 | [Explore Notes](topics/two-pointers.md) |
-| **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 3 | [Explore Notes](topics/sliding-window.md) |
+| **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 4 | [Explore Notes](topics/sliding-window.md) |
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 5 | [Explore Notes](topics/stack-and-queue.md) |
 | **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 6 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 2 | [Explore Notes](topics/linked-list.md) |
