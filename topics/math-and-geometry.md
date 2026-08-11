@@ -159,6 +159,13 @@ When finding the largest product of two $n$-digit numbers that forms a palindrom
 3. **Early Exit on $x^2 < P$**: If $x^2 < P$, then $y = P / x > x$ has already been tested, allowing immediate termination.
 4. **Complexity**: $\mathcal{O}(10^n)$ worst-case, $\mathcal{O}(1)$ space in standard 64-bit integer arithmetic.
 
+### Pattern P: Geometric Series Length Descent & Bounded Root Search (Smallest Good Base)
+When finding the minimal integer base $k \ge 2$ such that $n = \sum_{i=0}^{m-1} k^i$:
+1. **Inverse Length Monotonicity**: Maximize digit length $m \in [\lfloor \log_2 n \rfloor + 1, 2]$ to minimize base $k$.
+2. **Root Approximation**: Bounded by binomial inequalities, $k \approx \lfloor \sqrt[m-1]{n} \rfloor$.
+3. **Horner's Method with Overflow Guard**: Evaluate $\sum_{i=0}^{m-1} k^i$ in $\mathcal{O}(m)$ time with early break `sum > (n - 1) / k`.
+4. **Complexity**: $\mathcal{O}((\log_2 n)^2)$ time and $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -184,6 +191,7 @@ When finding the largest product of two $n$-digit numbers that forms a palindrom
 | 391 | [Perfect Rectangle](../solutions/0391-perfect-rectangle/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0391-perfect-rectangle/solution.cpp) |
 | 458 | [Poor Pigs](../solutions/0458-poor-pigs/README.md) | `Hard` | $\mathcal{O}(\log_{T+1} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0458-poor-pigs/solution.cpp) |
 | 479 | [Largest Palindrome Product](../solutions/0479-largest-palindrome-product/README.md) | `Hard` | $\mathcal{O}(10^N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0479-largest-palindrome-product/solution.cpp) |
+| 483 | [Smallest Good Base](../solutions/0483-smallest-good-base/README.md) | `Hard` | $\mathcal{O}((\log_2 N)^2)$ | $\mathcal{O}(1)$ | [C++](../solutions/0483-smallest-good-base/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
