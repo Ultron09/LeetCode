@@ -216,7 +216,9 @@ When finding the minimum initial resource needed to traverse a grid without ever
 | 132 | [Palindrome Partitioning II](../solutions/0132-palindrome-partitioning-ii/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0132-palindrome-partitioning-ii/solution.cpp) |
 | 174 | [Dungeon Game](../solutions/0174-dungeon-game/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0174-dungeon-game/solution.cpp) |
 | 188 | [Best Time to Buy and Sell Stock IV](../solutions/0188-best-time-to-buy-and-sell-stock-iv/README.md) | `Hard` | $\mathcal{O}(N \cdot k)$ | $\mathcal{O}(k)$ | [C++](../solutions/0188-best-time-to-buy-and-sell-stock-iv/solution.cpp) |
+| 312 | [Burst Balloons](../solutions/0312-burst-balloons/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0312-burst-balloons/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
+
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
 | 1406 | [Stone Game III](../solutions/1406-stone-game-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1406-stone-game-iii/solution.cpp) |
