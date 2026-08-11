@@ -104,6 +104,15 @@ When finding the maximum path sum across any simple path in a binary tree:
 2. **Apex Path Sum**: Path turning at $u$: $u.\text{val} + \max(0, \text{leftGain}) + \max(0, \text{rightGain})$.
 3. Update global maximum across all nodes in $\mathcal{O}(N)$ post-order traversal.
 
+### Pattern G: 10-ary Trie Traversal & Subtree Skip Counting (Lexicographical Number Search)
+When finding the $k$-th lexicographically ordered integer in $[1, n]$:
+1. **Denary Tree Abstraction**: Numbers $1 \dots n$ form a 10-ary tree where node $x$ has children $[10x, 10x+9]$. Pre-order traversal corresponds to lexicographical order.
+2. **Subtree Size Counting**: Count numbers sharing prefix `curr` by expanding intervals $[first, last)$ with $\times 10$, summing $\min(n + 1, last) - first$.
+3. **Branching**:
+   - If $\text{steps} \le k$: target lies outside subtree $\to$ skip subtree ($k \gets k - \text{steps}, curr \gets curr + 1$).
+   - If $\text{steps} > k$: target lies inside subtree $\to$ descend down ($k \gets k - 1, curr \gets curr \times 10$).
+4. Runs in $\mathcal{O}((\log_{10} n)^2)$ time and $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -122,6 +131,7 @@ When finding the maximum path sum across any simple path in a binary tree:
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 124 | [Binary Tree Maximum Path Sum](../solutions/0124-binary-tree-maximum-path-sum/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | [C++](../solutions/0124-binary-tree-maximum-path-sum/solution.cpp) |
 | 297 | [Serialize and Deserialize Binary Tree](../solutions/0297-serialize-and-deserialize-binary-tree/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0297-serialize-and-deserialize-binary-tree/solution.cpp) |
+| 440 | [K-th Smallest in Lexicographical Order](../solutions/0440-k-th-smallest-in-lexicographical-order/README.md) | `Hard` | $\mathcal{O}((\log_{10} N)^2)$ | $\mathcal{O}(1)$ | [C++](../solutions/0440-k-th-smallest-in-lexicographical-order/solution.cpp) |
 | 3093 | [Longest Common Suffix Queries](../solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](../solutions/3093-longest-common-suffix-queries/solution.cpp) |
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
 
