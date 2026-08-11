@@ -93,6 +93,18 @@ When intervals/gaps are dynamically split by inserting obstacles and queried for
 3. On obstacle insertion at $x$: update gap at $x$ ($x - prev$) and gap at next obstacle ($next - x$).
 4. On query $[0, x]$: find largest obstacle $p \le x$; maximum gap is $\max(\text{SegmentTree.query}(0, p), x - p)$.
 
+### Pattern E: Dynamic Disjoint Interval Maintenance via Ordered Map
+When dynamically inserting values into a stream and maintaining disjoint continuous intervals $[L, R]$:
+1. **Ordered Map Invariant**: Store intervals in `std::map<int, int>` mapping `start -> end`.
+2. **Neighbor Lookups via `upper_bound`**: For a new value $x$, find `it = upper_bound(x)` and `prevIt = prev(it)`.
+3. **Four Merge Invariants**:
+   - **Contained**: If `prevIt->second >= x`, $x$ is already covered.
+   - **Bridge Left & Right**: If `prevIt->second + 1 == x` and `it->first == x + 1`, update `prevIt->second = it->second` and erase `it`.
+   - **Extend Left**: If `prevIt->second + 1 == x`, set `prevIt->second = x`.
+   - **Extend Right**: If `it->first == x + 1`, replace `it` with $[x, it->second]$.
+   - **New Interval**: Insert $[x, x]$.
+4. **Complexity**: $\mathcal{O}(\log K)$ insertion and $\mathcal{O}(K)$ retrieval, where $K$ is the number of disjoint intervals ($K \ll N$).
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -101,6 +113,7 @@ When intervals/gaps are dynamically split by inserting obstacles and queried for
 2. **Unsorted Inputs**: Never assume intervals are pre-sorted unless guaranteed by constraints.
 3. **Empty Input**: Always check `intervals.empty()`.
 4. **Partial Prefix Interval**: In dynamic gap queries up to $x$, don't forget the partial gap between the last obstacle $p \le x$ and $x$ ($x - p$).
+5. **Iterator Invalidation on Erase**: In `std::map`, save the iterator's required values before calling `erase()`.
 
 ---
 
@@ -108,5 +121,6 @@ When intervals/gaps are dynamically split by inserting obstacles and queried for
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 352 | [Data Stream as Disjoint Intervals](../solutions/0352-data-stream-as-disjoint-intervals/README.md) | `Hard` | $\mathcal{O}(\log K) \text{ add}, \mathcal{O}(K) \text{ get}$ | $\mathcal{O}(K)$ | [C++](../solutions/0352-data-stream-as-disjoint-intervals/solution.cpp) |
 | 3161 | [Block Placement Queries](../solutions/3161-block-placement-queries/README.md) | `Hard` | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3161-block-placement-queries/solution.cpp) |
 
