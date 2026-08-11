@@ -114,6 +114,13 @@ When an element's value must strictly exceed both its left and right neighbors s
 2. **Right-to-Left Pass**: Update $A[i] = \max(A[i], A[i + 1] + 1)$ whenever $R[i] > R[i + 1]$.
 3. The $\max$ operator maintains the previously satisfied left-neighbor condition while strictly enforcing the right-neighbor condition in $\mathcal{O}(N)$ time.
 
+### Pattern J: Greedy Interval Expansion & Continuous Reachability Range
+When extending the contiguous range of formable subset sums $[1, \text{miss} - 1]$ to cover $[1, n]$:
+1. **Invariant**: Maintain that all integers in $[1, \text{miss} - 1]$ can be formed.
+2. **Expansion with Existing Elements**: If the next sorted element satisfies $\text{nums}[i] \le \text{miss}$, include it to expand reach to $[1, \text{miss} + \text{nums}[i] - 1]$ without gaps ($\text{miss} \gets \text{miss} + \text{nums}[i], i \gets i + 1$).
+3. **Greedy Patching on Discontinuity**: If $\text{nums}[i] > \text{miss}$ (or input exhausted), patch $\text{miss}$ itself to double coverage to $[1, 2 \cdot \text{miss} - 1]$ ($\text{miss} \gets 2 \cdot \text{miss}, \text{patches} \gets \text{patches} + 1$).
+4. **Complexity**: Since reach doubles on each patch, at most $\mathcal{O}(\log n)$ patches occur $\implies \mathcal{O}(M + \log n)$ time, $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -122,6 +129,7 @@ When an element's value must strictly exceed both its left and right neighbors s
 2. **Sorting Criteria**: Choosing whether to sort by start time, end time, or value ratio is crucial. Always verify with an exchange argument.
 3. **Empty Input / Single Element**: Always verify behavior for $N = 0$ or $N = 1$.
 4. **Unrelaxed Restrictions**: Calculating peaks on loose/unrelaxed restrictions overestimates peak height. Always perform two-pass relaxation first.
+5. **64-bit Overflow on Reach Range**: Continuous interval expansion ($\text{miss} \times 2$) can exceed $2^{31}-1$; always store `miss` as `long long`.
 
 ---
 
@@ -131,6 +139,7 @@ When an element's value must strictly exceed both its left and right neighbors s
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 68 | [Text Justification](../solutions/0068-text-justification/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\text{maxWidth})$ | [C++](../solutions/0068-text-justification/solution.cpp) |
 | 135 | [Candy](../solutions/0135-candy/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0135-candy/solution.cpp) |
+| 330 | [Patching Array](../solutions/0330-patching-array/README.md) | `Hard` | $\mathcal{O}(M + \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0330-patching-array/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
