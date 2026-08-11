@@ -248,6 +248,16 @@ When finding the minimum steps to sequence through an alphabet on a circular dia
    $$\text{next\_dp}[\text{nxt}] = \min_{\text{prev}} (\text{dp}[\text{prev}] + \text{dist}(\text{prev}, \text{nxt}) + 1)$$
 4. **Complexity**: $\mathcal{O}(K \cdot R^2)$ time and $\mathcal{O}(R)$ space.
 
+### Pattern Z: Interval DP with Trailing Context Dimension (Remove Boxes)
+When elimination games allow non-adjacent identical elements to concatenate across erased subsegments:
+1. **Context Augmented State**: $\text{dp}[l][r][k]$ = max points from $\text{boxes}[l \dots r]$ with $k$ identical predecessor elements attached to $\text{boxes}[l]$.
+2. **Contiguous Compression**: Advance $l$ and increase $k$ while $\text{boxes}[l+1] == \text{boxes}[l]$.
+3. **Branching Transitions**:
+   - *Option 1 (Immediate Removal)*: $(k + 1)^2 + \text{dp}(l + 1, r, 0)$.
+   - *Option 2 (Subsegment Clearing for Merge)*: For $m \in [l + 1, r]$ where $\text{boxes}[m] == \text{boxes}[l]$ and $\text{boxes}[m - 1] \ne \text{boxes}[l]$:
+     $$\text{dp}(l + 1, m - 1, 0) + \text{dp}(m, r, k + 1)$$
+4. **Complexity**: $\mathcal{O}(N^4)$ worst-case, $\mathcal{O}(N^3)$ average with memoization, $\mathcal{O}(N^3)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -281,6 +291,7 @@ When finding the minimum steps to sequence through an alphabet on a circular dia
 | 466 | [Count The Repetitions](../solutions/0466-count-the-repetitions/README.md) | `Hard` | $\mathcal{O}(\|s_1\| \cdot \|s_2\|)$ | $\mathcal{O}(\|s_2\|)$ | [C++](../solutions/0466-count-the-repetitions/solution.cpp) |
 | 472 | [Concatenated Words](../solutions/0472-concatenated-words/README.md) | `Hard` | $\mathcal{O}(N \log N + N \cdot L^3)$ | $\mathcal{O}(\sum \|W_i\|)$ | [C++](../solutions/0472-concatenated-words/solution.cpp) |
 | 514 | [Freedom Trail](../solutions/0514-freedom-trail/README.md) | `Hard` | $\mathcal{O}(K \cdot R^2)$ | $\mathcal{O}(R)$ | [C++](../solutions/0514-freedom-trail/solution.cpp) |
+| 546 | [Remove Boxes](../solutions/0546-remove-boxes/README.md) | `Hard` | $\mathcal{O}(N^4)$ | $\mathcal{O}(N^3)$ | [C++](../solutions/0546-remove-boxes/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
