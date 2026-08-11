@@ -148,6 +148,13 @@ vector<int> findSubstring(string s, vector<string>& words) {
 }
 ```
 
+### Pattern E: KMP Prefix Table for Mirror Matching & Shortest Palindrome
+To find the longest palindromic prefix in $\mathcal{O}(N)$ deterministic time:
+1. Construct combined string $T = s + '\#' + \text{reverse}(s)$.
+2. Compute the KMP Prefix Function ($\pi$ array / LPS table) over $T$.
+3. The value $\pi[|T|-1]$ yields the length $L$ of the longest palindromic prefix of $s$.
+4. Reversing the unmirrored suffix $s[L \dots |s|-1]$ and prepending to $s$ generates the minimal palindrome.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -164,5 +171,7 @@ vector<int> findSubstring(string s, vector<string>& words) {
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 30 | [Substring with Concatenation of All Words](../solutions/0030-substring-with-concatenation-of-all-words/README.md) | `Hard` | $\mathcal{O}(N \cdot L)$ | $\mathcal{O}(K \cdot L)$ | [C++](../solutions/0030-substring-with-concatenation-of-all-words/solution.cpp) |
 | 76 | [Minimum Window Substring](../solutions/0076-minimum-window-substring/README.md) | `Hard` | $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0076-minimum-window-substring/solution.cpp) |
+| 214 | [Shortest Palindrome](../solutions/0214-shortest-palindrome/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0214-shortest-palindrome/solution.cpp) |
+
 
 
