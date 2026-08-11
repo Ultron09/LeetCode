@@ -191,6 +191,14 @@ When finding the minimum initial resource needed to traverse a grid without ever
    $$dp[i][j] = \max(1, \min(dp[i+1][j], dp[i][j+1]) - \text{grid}[i][j])$$
 4. The $\max(1, \cdot)$ operator guarantees non-zero survival at every step. Compress to 1D rolling array of size $N+1$ for $\mathcal{O}(N)$ space.
 
+### Pattern S: Memoized DFS on Grid DAG (Longest Monotonic Path)
+When traversing a grid where step transitions enforce strict inequalities ($M[nr][nc] > M[r][c]$):
+1. **DAG Property**: Strict monotonicity guarantees acyclicity; an explicit `visited` cycle set is unnecessary.
+2. **Top-Down Memoization**: Define $DP[r][c]$ as the longest strictly increasing path starting from cell $(r, c)$.
+3. **State Transition**:
+   $$DP[r][c] = 1 + \max_{(nr, nc) \in \text{adj}(r, c), M[nr][nc] > M[r][c]} DP[nr][nc]$$
+4. **Time & Space**: Each cell is computed exactly once $\implies \mathcal{O}(M \cdot N)$ runtime and $\mathcal{O}(M \cdot N)$ memoization space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -217,8 +225,8 @@ When finding the minimum initial resource needed to traverse a grid without ever
 | 174 | [Dungeon Game](../solutions/0174-dungeon-game/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0174-dungeon-game/solution.cpp) |
 | 188 | [Best Time to Buy and Sell Stock IV](../solutions/0188-best-time-to-buy-and-sell-stock-iv/README.md) | `Hard` | $\mathcal{O}(N \cdot k)$ | $\mathcal{O}(k)$ | [C++](../solutions/0188-best-time-to-buy-and-sell-stock-iv/solution.cpp) |
 | 312 | [Burst Balloons](../solutions/0312-burst-balloons/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0312-burst-balloons/solution.cpp) |
+| 329 | [Longest Increasing Path in a Matrix](../solutions/0329-longest-increasing-path-in-a-matrix/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0329-longest-increasing-path-in-a-matrix/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
-
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
 | 1406 | [Stone Game III](../solutions/1406-stone-game-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1406-stone-game-iii/solution.cpp) |
