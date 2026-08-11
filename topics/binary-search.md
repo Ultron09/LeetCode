@@ -133,6 +133,13 @@ When counting index pairs $(i, j)$ with $i < j$ satisfying range bounds on prefi
 3. **Linear Cross-Counting**: Advance two non-resetting pointers `low_ptr` and `high_ptr` through the sorted left half in $\mathcal{O}(\text{right} - \text{left} + 1)$ time.
 4. **Merge**: In-place / buffer merge maintains sorted order for the parent recursion frame, achieving optimal $\mathcal{O}(N \log N)$ total time without coordinate compression overhead.
 
+### Pattern J: 2D Column Compression with Ordered Set BST Prefix Lookup
+When finding the max rectangle sum $\le k$ in an $m \times n$ matrix:
+1. **Column Compression**: Fix left column $l$ and right column $r$. Maintain `rowSum[i]` = sum of `matrix[i][l..r]`, reducing the 2D problem to a 1D constrained max subarray sum.
+2. **Ordered Set for Constrained Prefix Sum**: For prefix sum `currSum`, find the smallest `prevSum` $\ge$ `currSum - k` using `std::set::lower_bound(currSum - k)` in $\mathcal{O}(\log m)$.
+3. **Dimension Optimization**: Always iterate over $\min(m, n)^2$ pairs in the outer loop. Transpose the matrix if $m < n$.
+4. **Total Complexity**: $\mathcal{O}(\min(m,n)^2 \cdot \max(m,n) \cdot \log(\max(m,n)))$.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -154,6 +161,7 @@ When counting index pairs $(i, j)$ with $i < j$ satisfying range bounds on prefi
 | 154 | [Find Minimum in Rotated Sorted Array II](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/README.md) | `Hard` | $\mathcal{O}(\log N)$ avg / $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0154-find-minimum-in-rotated-sorted-array-ii/solution.cpp) |
 | 315 | [Count of Smaller Numbers After Self](../solutions/0315-count-of-smaller-numbers-after-self/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0315-count-of-smaller-numbers-after-self/solution.cpp) |
 | 327 | [Count of Range Sum](../solutions/0327-count-of-range-sum/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0327-count-of-range-sum/solution.cpp) |
+| 363 | [Max Sum of Rectangle No Larger Than K](../solutions/0363-max-sum-of-rectangle-no-larger-than-k/README.md) | `Hard` | $\mathcal{O}(\min(m,n)^2 \cdot \max(m,n) \cdot \log(\max(m,n)))$ | $\mathcal{O}(\max(m,n))$ | [C++](../solutions/0363-max-sum-of-rectangle-no-larger-than-k/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3464 | [Maximize the Distance Between Points on a Square](../solutions/3464-maximize-the-distance-between-points-on-a-square/README.md) | `Hard` | $\mathcal{O}(N \log N \log(\text{side}))$ | $\mathcal{O}(N)$ | [C++](../solutions/3464-maximize-the-distance-between-points-on-a-square/solution.cpp) |
 | 3501 | [Maximize Active Section with Trade II](../solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) |

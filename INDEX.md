@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **89** | 0 | 0 | 89 |
+| **90** | 0 | 0 | 90 |
 
 ---
 
@@ -71,6 +71,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0336 | [Palindrome Pairs](solutions/0336-palindrome-pairs/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(\sum L_i^2)$ | $\mathcal{O}(N \cdot L)$ | [C++](solutions/0336-palindrome-pairs/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0352 | [Data Stream as Disjoint Intervals](solutions/0352-data-stream-as-disjoint-intervals/README.md) | `Hard` | [Intervals](topics/intervals.md) | $\mathcal{O}(\log K) \text{ add}, \mathcal{O}(K) \text{ get}$ | $\mathcal{O}(K)$ | [C++](solutions/0352-data-stream-as-disjoint-intervals/solution.cpp) | [Notes](topics/intervals.md#solved-problems) |
 | 0354 | [Russian Doll Envelopes](solutions/0354-russian-doll-envelopes/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0354-russian-doll-envelopes/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 0363 | [Max Sum of Rectangle No Larger Than K](solutions/0363-max-sum-of-rectangle-no-larger-than-k/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\min(m,n)^2 \cdot \max(m,n) \cdot \log)$ | $\mathcal{O}(\max(m,n))$ | [C++](solutions/0363-max-sum-of-rectangle-no-larger-than-k/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

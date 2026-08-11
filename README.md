@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **89** | 0 | 0 | 89 |
+| **90** | 0 | 0 | 90 |
 
 ---
 
@@ -29,7 +29,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 2 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 5 | [Explore Notes](topics/sliding-window.md) |
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 7 | [Explore Notes](topics/stack-and-queue.md) |
-| **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 8 | [Explore Notes](topics/binary-search.md) |
+| **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 9 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 2 | [Explore Notes](topics/linked-list.md) |
 | **Trees & BST** | DFS/BFS Traversals, Lowest Common Ancestor, Tree DP | 4 | [Explore Notes](topics/trees.md) |
 | **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 4 | [Explore Notes](topics/heaps-and-priority-queues.md) |
