@@ -183,10 +183,13 @@ When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
      - Zero match of $p[j-2]$: $dp[i][j] = dp[i][j-2]$.
      - One or more match: If $p[j-2]$ matches $s[i-1]$, $dp[i][j] = dp[i][j] \lor dp[i-1][j]$.
 
-### Pattern Q: Wildcard String Matching (DP & Greedy Two-Pointer)
-1. **Dynamic Programming**:
-   $$\text{dp}[i][j] = \begin{cases} \text{dp}[i-1][j-1] & \text{if } p[j-1] \in \{'?', s[i-1]\} \\ \text{dp}[i-1][j] \lor \text{dp}[i][j-1] & \text{if } p[j-1] == '*' \end{cases}$$
-2. **Greedy Optimization**: Because `'*'` matches any character sequence, maintaining the most recent `starIdx` and `sTmpIdx` allows matching with $\mathcal{O}(1)$ auxiliary space and linear average runtime.
+### Pattern R: Reverse Grid DP for Survival/Health Optimization (Dungeon Game)
+When finding the minimum initial resource needed to traverse a grid without ever hitting $\le 0$:
+1. Forward DP fails because maximizing health does not guarantee surviving early dips.
+2. Define $dp[i][j]$ as the minimum health required *before* entering cell $(i, j)$.
+3. Recurrence working backwards from bottom-right $(M-1, N-1)$ to $(0, 0)$:
+   $$dp[i][j] = \max(1, \min(dp[i+1][j], dp[i][j+1]) - \text{grid}[i][j])$$
+4. The $\max(1, \cdot)$ operator guarantees non-zero survival at every step. Compress to 1D rolling array of size $N+1$ for $\mathcal{O}(N)$ space.
 
 ---
 
@@ -211,6 +214,7 @@ When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
 | 115 | [Distinct Subsequences](../solutions/0115-distinct-subsequences/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0115-distinct-subsequences/solution.cpp) |
 | 123 | [Best Time to Buy and Sell Stock III](../solutions/0123-best-time-to-buy-and-sell-stock-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0123-best-time-to-buy-and-sell-stock-iii/solution.cpp) |
 | 132 | [Palindrome Partitioning II](../solutions/0132-palindrome-partitioning-ii/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0132-palindrome-partitioning-ii/solution.cpp) |
+| 174 | [Dungeon Game](../solutions/0174-dungeon-game/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0174-dungeon-game/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
@@ -223,6 +227,7 @@ When matching text $s$ against pattern $p$ with wildcards (`.` and `*`):
 | 3699 | [Number of ZigZag Arrays I](../solutions/3699-number-of-zigzag-arrays-i/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3699-number-of-zigzag-arrays-i/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 

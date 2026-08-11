@@ -117,10 +117,14 @@ When maximizing the minimum distance among $k$ points on a circular boundary (e.
 To find the median or $k$-th element of two sorted arrays in $\mathcal{O}(\log(\min(M, N)))$ time:
 1. **Partition Search Space**: Ensure $M \le N$. Binary search $i \in [0, M]$ elements taken from array 1, fixing $j = \lfloor \frac{M + N + 1}{2} \rfloor - i$ elements from array 2.
 2. **Boundary Sentinels**: Define $\text{maxLeft1} = (i == 0) \, ? \, -\infty : A[i-1]$, $\text{minRight1} = (i == M) \, ? \, +\infty : A[i]$, and similarly for $B$.
-3. **Partition Test**:
-   - If $\text{maxLeft1} \le \text{minRight2}$ and $\text{maxLeft2} \le \text{minRight1}$, the partition is optimal.
-   - If $\text{maxLeft1} > \text{minRight2}$, decrease $i$ (`high = i - 1`).
-   - Otherwise, increase $i$ (`low = i + 1`).
+### Pattern H: Rotated Array Pivot Search with Duplicates
+To find the minimum element or rotation pivot when the array contains duplicate elements:
+1. Maintain search window `[left, right]` with `mid = left + (right - left) / 2`.
+2. Compare `nums[mid]` against `nums[right]`:
+   - If `nums[mid] > nums[right]`: The inflection pivot must lie strictly in the right half $\implies \text{left} = \text{mid} + 1$.
+   - If `nums[mid] < nums[right]`: The right half is strictly sorted; minimum lies in the left half or at `mid` $\implies \text{right} = \text{mid}$.
+   - If `nums[mid] == nums[right]`: Ambiguity exists due to duplicates; safely eliminate the redundant boundary element without missing the minimum $\implies \text{right} = \text{right} - 1$.
+3. Average time complexity is $\mathcal{O}(\log N)$, degrading to $\mathcal{O}(N)$ in the worst case when all elements are identical.
 
 ---
 
