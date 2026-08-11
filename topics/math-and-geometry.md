@@ -138,6 +138,12 @@ For a 2D path turning $90^\circ$ counter-clockwise at each step, self-intersecti
    $$\text{dist}[i-2] \ge \text{dist}[i-4] \land \text{dist}[i-1] \le \text{dist}[i-3] \land \text{dist}[i-1] + \text{dist}[i-5] \ge \text{dist}[i-3] \land \text{dist}[i] + \text{dist}[i-4] \ge \text{dist}[i-2]$$
 Evaluating these 3 conditions in a single $\mathcal{O}(N)$ pass determines self-crossing in $\mathcal{O}(1)$ space without coordinate sets.
 
+### Pattern M: Perfect Rectangle Cover via Corner Parity + Area Conservation
+To verify whether $N$ axis-aligned rectangles tile a bounding rectangle exactly (no gaps, no overlaps):
+1. **Area Conservation**: $\sum \text{area}(R_i) = \text{area}(\text{bounding box})$. This catches gaps and overlaps that change total area.
+2. **Corner Parity Theorem**: Toggle each rectangle's 4 corners in a set (insert if absent, erase if present). After all rectangles, exactly the 4 corners of the bounding box must remain.
+3. **Why This Is Sufficient**: Interior vertices of a valid tiling always have 2 or 4 rectangles meeting → even corner count → cancelled. Edge vertices (non-bounding-corner) also pair up. Only the 4 bounding corners appear exactly once.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -160,6 +166,7 @@ Evaluating these 3 conditions in a single $\mathcal{O}(N)$ pass determines self-
 | 233 | [Number of Digit One](../solutions/0233-number-of-digit-one/README.md) | `Hard` | $\mathcal{O}(\log_{10} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0233-number-of-digit-one/solution.cpp) |
 | 273 | [Integer to English Words](../solutions/0273-integer-to-english-words/README.md) | `Hard` | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | [C++](../solutions/0273-integer-to-english-words/solution.cpp) |
 | 335 | [Self Crossing](../solutions/0335-self-crossing/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0335-self-crossing/solution.cpp) |
+| 391 | [Perfect Rectangle](../solutions/0391-perfect-rectangle/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0391-perfect-rectangle/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
