@@ -131,7 +131,9 @@ When computing the continuous upper envelope / contour of overlapping intervals 
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
 | 218 | [The Skyline Problem](../solutions/0218-the-skyline-problem/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0218-the-skyline-problem/solution.cpp) |
+| 295 | [Find Median from Data Stream](../solutions/0295-find-median-from-data-stream/README.md) | `Hard` | $\mathcal{O}(\log N) \text{ add}, \mathcal{O}(1) \text{ query}$ | $\mathcal{O}(N)$ | [C++](../solutions/0295-find-median-from-data-stream/solution.cpp) |
 | 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
+
 
 
 

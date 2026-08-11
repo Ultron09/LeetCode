@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **75** | 0 | 0 | 75 |
+| **76** | 0 | 0 | 76 |
 
 ---
 
@@ -59,6 +59,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0262 | [Trips and Users](solutions/0262-trips-and-users/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(T + U)$ | $\mathcal{O}(U + D)$ | [SQL / C++](solutions/0262-trips-and-users/solution.sql) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0273 | [Integer to English Words](solutions/0273-integer-to-english-words/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | [C++](solutions/0273-integer-to-english-words/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0282 | [Expression Add Operators](solutions/0282-expression-add-operators/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](solutions/0282-expression-add-operators/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
+| 0295 | [Find Median from Data Stream](solutions/0295-find-median-from-data-stream/README.md) | `Hard` | [Heaps & Priority Queues](topics/heaps-and-priority-queues.md) | $\mathcal{O}(\log N) \text{ add}, \mathcal{O}(1) \text{ query}$ | $\mathcal{O}(N)$ | [C++](solutions/0295-find-median-from-data-stream/solution.cpp) | [Notes](topics/heaps-and-priority-queues.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
