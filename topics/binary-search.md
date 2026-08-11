@@ -140,6 +140,15 @@ When finding the max rectangle sum $\le k$ in an $m \times n$ matrix:
 3. **Dimension Optimization**: Always iterate over $\min(m, n)^2$ pairs in the outer loop. Transpose the matrix if $m < n$.
 4. **Total Complexity**: $\mathcal{O}(\min(m,n)^2 \cdot \max(m,n) \cdot \log(\max(m,n)))$.
 
+### Pattern K: Minimax Partitioning on Answer Space (Greedy Capacity Packing)
+When partitioning a contiguous array into $k$ non-empty subarrays to minimize the largest subarray sum:
+1. **Monotonicity Identification**: Feasibility predicate $P(S)$ = "Can `nums` be split into $\le k$ subarrays with sum $\le S$?" evaluates monotonically as `[false, ..., false, true, ..., true]`.
+2. **Search Range Bounds**:
+   - $\text{low} = \max(\text{nums})$ (the single largest element cannot be subdivided).
+   - $\text{high} = \sum \text{nums}$ (all elements in a single partition).
+3. **Linear Greedy Verification**: Greedily accumulate elements into the current subarray; as soon as adding the next element exceeds $S$, start a new subarray. If total subarrays exceed $k$, return `false`.
+4. **Logarithmic Convergence**: Achieves $\mathcal{O}(N \log(\sum \text{nums}))$ time with $\mathcal{O}(1)$ space, drastically outperforming $\mathcal{O}(k N^2)$ DP.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -162,6 +171,7 @@ When finding the max rectangle sum $\le k$ in an $m \times n$ matrix:
 | 315 | [Count of Smaller Numbers After Self](../solutions/0315-count-of-smaller-numbers-after-self/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0315-count-of-smaller-numbers-after-self/solution.cpp) |
 | 327 | [Count of Range Sum](../solutions/0327-count-of-range-sum/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0327-count-of-range-sum/solution.cpp) |
 | 363 | [Max Sum of Rectangle No Larger Than K](../solutions/0363-max-sum-of-rectangle-no-larger-than-k/README.md) | `Hard` | $\mathcal{O}(\min(m,n)^2 \cdot \max(m,n) \cdot \log(\max(m,n)))$ | $\mathcal{O}(\max(m,n))$ | [C++](../solutions/0363-max-sum-of-rectangle-no-larger-than-k/solution.cpp) |
+| 410 | [Split Array Largest Sum](../solutions/0410-split-array-largest-sum/README.md) | `Hard` | $\mathcal{O}(N \log(\sum \text{nums}))$ | $\mathcal{O}(1)$ | [C++](../solutions/0410-split-array-largest-sum/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3464 | [Maximize the Distance Between Points on a Square](../solutions/3464-maximize-the-distance-between-points-on-a-square/README.md) | `Hard` | $\mathcal{O}(N \log N \log(\text{side}))$ | $\mathcal{O}(N)$ | [C++](../solutions/3464-maximize-the-distance-between-points-on-a-square/solution.cpp) |
 | 3501 | [Maximize Active Section with Trade II](../solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) |
