@@ -186,6 +186,8 @@ When exploring combinations of binary operators with mixed precedences (`+`, `-`
 | 140 | [Word Break II](../solutions/0140-word-break-ii/README.md) | `Hard` | $\mathcal{O}(2^N + N^2 + W)$ | $\mathcal{O}(2^N \cdot N + W)$ | [C++](../solutions/0140-word-break-ii/solution.cpp) |
 | 212 | [Word Search II](../solutions/0212-word-search-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot 3^L + W \cdot L)$ | $\mathcal{O}(W \cdot L)$ | [C++](../solutions/0212-word-search-ii/solution.cpp) |
 | 282 | [Expression Add Operators](../solutions/0282-expression-add-operators/README.md) | `Hard` | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0282-expression-add-operators/solution.cpp) |
+| 301 | [Remove Invalid Parentheses](../solutions/0301-remove-invalid-parentheses/README.md) | `Hard` | $\mathcal{O}(2^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0301-remove-invalid-parentheses/solution.cpp) |
+
 
 
 

@@ -2,13 +2,11 @@
 
 Comprehensive index of all solved LeetCode problems, categorized by topic, difficulty, and algorithmic complexities.
 
----
-
 ## 📊 Summary Statistics
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **77** | 0 | 0 | 77 |
+| **78** | 0 | 0 | 78 |
 
 ---
 
@@ -61,6 +59,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0282 | [Expression Add Operators](solutions/0282-expression-add-operators/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](solutions/0282-expression-add-operators/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 0295 | [Find Median from Data Stream](solutions/0295-find-median-from-data-stream/README.md) | `Hard` | [Heaps & Priority Queues](topics/heaps-and-priority-queues.md) | $\mathcal{O}(\log N) \text{ add}, \mathcal{O}(1) \text{ query}$ | $\mathcal{O}(N)$ | [C++](solutions/0295-find-median-from-data-stream/solution.cpp) | [Notes](topics/heaps-and-priority-queues.md#solved-problems) |
 | 0297 | [Serialize and Deserialize Binary Tree](solutions/0297-serialize-and-deserialize-binary-tree/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0297-serialize-and-deserialize-binary-tree/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
+| 0301 | [Remove Invalid Parentheses](solutions/0301-remove-invalid-parentheses/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(2^N)$ | $\mathcal{O}(N)$ | [C++](solutions/0301-remove-invalid-parentheses/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
