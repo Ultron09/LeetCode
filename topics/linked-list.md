@@ -183,5 +183,6 @@ When designing data structures requiring $\mathcal{O}(1)$ frequency modification
 | 23 | [Merge k Sorted Lists](../solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0023-merge-k-sorted-lists/solution.cpp) |
 | 25 | [Reverse Nodes in k-Group](../solutions/0025-reverse-nodes-in-k-group/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0025-reverse-nodes-in-k-group/solution.cpp) |
 | 432 | [All O`one Data Structure](../solutions/0432-all-oone-data-structure/README.md) | `Hard` | $\mathcal{O}(1) \text{ all ops}$ | $\mathcal{O}(N)$ | [C++](../solutions/0432-all-oone-data-structure/solution.cpp) |
+| 460 | [LFU Cache](../solutions/0460-lfu-cache/README.md) | `Hard` | $\mathcal{O}(1) \text{ all ops}$ | $\mathcal{O}(\text{capacity})$ | [C++](../solutions/0460-lfu-cache/solution.cpp) |
 
 
