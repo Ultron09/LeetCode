@@ -119,6 +119,15 @@ When finding the maximum number of collinear points on an integer 2D plane:
 3. Reduce by $g = \gcd(|\Delta x|, |\Delta y|)$ and normalize direction (canonical sign and zero cases).
 4. Pack coprime integer pair into a 64-bit key and accumulate in a hash map to avoid all floating-point precision loss.
 
+### Pattern K: Place-Value Positional Counting (Number of Digit One)
+When counting occurrences of a target digit across all integers in $[1, n]$:
+1. Iterate over each place value $m \in \{1, 10, 100, \dots\}$ where $m \le n$.
+2. Compute $\text{higher} = \lfloor n / (10m) \rfloor$, $\text{curr} = \lfloor n / m \rfloor \bmod 10$, and $\text{lower} = n \bmod m$.
+3. If $\text{curr} == 0 \implies \text{count} += \text{higher} \times m$.
+4. If $\text{curr} == 1 \implies \text{count} += \text{higher} \times m + (\text{lower} + 1)$.
+5. If $\text{curr} > 1 \implies \text{count} += (\text{higher} + 1) \times m$.
+Achieves optimal $\mathcal{O}(\log_{10} n)$ time with $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -138,6 +147,7 @@ When finding the maximum number of collinear points on an integer 2D plane:
 | 60 | [Permutation Sequence](../solutions/0060-permutation-sequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0060-permutation-sequence/solution.cpp) |
 | 65 | [Valid Number](../solutions/0065-valid-number/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0065-valid-number/solution.cpp) |
 | 149 | [Max Points on a Line](../solutions/0149-max-points-on-a-line/README.md) | `Hard` | $\mathcal{O}(N^2 \log(\max(\text{coord})))$ | $\mathcal{O}(N)$ | [C++](../solutions/0149-max-points-on-a-line/solution.cpp) |
+| 233 | [Number of Digit One](../solutions/0233-number-of-digit-one/README.md) | `Hard` | $\mathcal{O}(\log_{10} N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0233-number-of-digit-one/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
@@ -146,6 +156,7 @@ When finding the maximum number of collinear points on an integer 2D plane:
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 
