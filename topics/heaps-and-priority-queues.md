@@ -144,6 +144,7 @@ When determining the bounding envelope / bottleneck water level across escape pa
 | 407 | [Trapping Rain Water II](../solutions/0407-trapping-rain-water-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \log(M \cdot N))$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0407-trapping-rain-water-ii/solution.cpp) |
 | 502 | [IPO](../solutions/0502-ipo/README.md) | `Hard` | $\mathcal{O}(N \log N + k \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0502-ipo/solution.cpp) |
 | 630 | [Course Schedule III](../solutions/0630-course-schedule-iii/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0630-course-schedule-iii/solution.cpp) |
+| 632 | [Smallest Range Covering Elements from K Lists](../solutions/0632-smallest-range-covering-elements-from-k-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0632-smallest-range-covering-elements-from-k-lists/solution.cpp) |
 | 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
 
 

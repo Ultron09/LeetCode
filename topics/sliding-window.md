@@ -178,6 +178,16 @@ When optimizing products or combinations of disjoint palindromic substrings:
 3. **Prefix & Suffix Extrema Aggregation**: Compute `leftMax[t]` and `rightMax[t+1]` and find $\max_{t} (\text{leftMax}[t] \times \text{rightMax}[t+1])$.
 4. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(N)$ space.
 
+### Pattern I: K-Pointer Multi-Way Min-Heap Sweep (Smallest Range Covering Elements from K Lists)
+When finding the minimum bounding interval $[\min, \max]$ containing at least one element from each of $k$ sorted lists:
+1. **Min-Heap Configuration**: Initialize min-heap with $(x_{i, 0}, i, 0)$ for all $i \in [0, k-1]$, and maintain the running maximum $\text{currentMax} = \max_i x_{i, 0}$.
+2. **Window Tightening & Advancement**:
+   - Extract the minimum element $(\text{currentMin}, r, c)$ from the heap.
+   - Update best range if $\text{currentMax} - \text{currentMin} < \text{rangeEnd} - \text{rangeStart}$.
+   - Advance in list $r$: push $(x_{r, c+1}, r, c+1)$ and update $\text{currentMax} \gets \max(\text{currentMax}, x_{r, c+1})$.
+3. **Termination**: When any list is exhausted, stop because covering all $k$ lists is no longer possible.
+4. **Complexity**: $\mathcal{O}(N \log k)$ time and $\mathcal{O}(k)$ auxiliary space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -198,6 +208,7 @@ When optimizing products or combinations of disjoint palindromic substrings:
 | 220 | [Contains Duplicate III](../solutions/0220-contains-duplicate-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\min(N, K))$ | [C++](../solutions/0220-contains-duplicate-iii/solution.cpp) |
 | 239 | [Sliding Window Maximum](../solutions/0239-sliding-window-maximum/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(K)$ | [C++](../solutions/0239-sliding-window-maximum/solution.cpp) |
 | 480 | [Sliding Window Median](../solutions/0480-sliding-window-median/README.md) | `Hard` | $\mathcal{O}(N \log k)$ | $\mathcal{O}(N)$ | [C++](../solutions/0480-sliding-window-median/solution.cpp) |
+| 632 | [Smallest Range Covering Elements from K Lists](../solutions/0632-smallest-range-covering-elements-from-k-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0632-smallest-range-covering-elements-from-k-lists/solution.cpp) |
 | 1960 | [Maximum Product of the Length of Two Palindromic Substrings](../solutions/1960-maximum-product-of-the-length-of-two-palindromic-substrings/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1960-maximum-product-of-the-length-of-two-palindromic-substrings/solution.cpp) |
 
 
