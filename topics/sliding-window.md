@@ -180,6 +180,8 @@ When checking if two elements within index difference $K$ have value difference 
 | 76 | [Minimum Window Substring](../solutions/0076-minimum-window-substring/README.md) | `Hard` | $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0076-minimum-window-substring/solution.cpp) |
 | 214 | [Shortest Palindrome](../solutions/0214-shortest-palindrome/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0214-shortest-palindrome/solution.cpp) |
 | 220 | [Contains Duplicate III](../solutions/0220-contains-duplicate-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\min(N, K))$ | [C++](../solutions/0220-contains-duplicate-iii/solution.cpp) |
+| 239 | [Sliding Window Maximum](../solutions/0239-sliding-window-maximum/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(K)$ | [C++](../solutions/0239-sliding-window-maximum/solution.cpp) |
+
 
 
 
