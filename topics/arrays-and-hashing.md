@@ -122,6 +122,12 @@ When finding all pairs $(i, j)$ such that $\text{words}[i] + \text{words}[j]$ fo
    - **Suffix Palindrome (Append $(i, j)$)**: If $w[k\dots L-1]$ is a palindrome, check if $\text{reversed}(w[0\dots k-1])$ exists in the map at $j \ne i$.
    - **Prefix Palindrome (Prepend $(j, i)$)**: If $k > 0$ and $w[0\dots k-1]$ is a palindrome, check if $\text{reversed}(w[k\dots L-1])$ exists in the map at $j \ne i$.
 3. **Complexity**: Achieves optimal $\mathcal{O}(\sum L_i^2)$ time with $\mathcal{O}(N \cdot L)$ space.
+### Pattern I: O(1) Randomized Multiset with Dense Array + Index Set Map
+When building a multiset supporting $\mathcal{O}(1)$ insert, remove, and uniform random sampling:
+1. **Dense Array**: Store all elements in a `vector<int> nums` for $\mathcal{O}(1)$ random access via `nums[rand() % size]`.
+2. **Index Set Map**: Maintain `unordered_map<int, unordered_set<int>> valToIdx` mapping each value to its set of indices in `nums`.
+3. **Swap-and-Pop Removal**: To remove `val` at `removeIdx`, swap with `nums.back()`, update both index sets, then `pop_back()`.
+4. **Self-Swap Guard**: When `removeIdx == lastIdx`, do **not** re-insert the index after erasing, or the set will contain a stale entry.
 
 ---
 
@@ -155,6 +161,7 @@ When finding all pairs $(i, j)$ such that $\text{words}[i] + \text{words}[j]$ fo
 | 185 | [Department Top Three Salaries](../solutions/0185-department-top-three-salaries/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [SQL / C++](../solutions/0185-department-top-three-salaries/solution.sql) |
 | 262 | [Trips and Users](../solutions/0262-trips-and-users/README.md) | `Hard` | $\mathcal{O}(T + U)$ | $\mathcal{O}(U + D)$ | [SQL / C++](../solutions/0262-trips-and-users/solution.sql) |
 | 336 | [Palindrome Pairs](../solutions/0336-palindrome-pairs/README.md) | `Hard` | $\mathcal{O}(\sum L_i^2)$ | $\mathcal{O}(N \cdot L)$ | [C++](../solutions/0336-palindrome-pairs/solution.cpp) |
+| 381 | [Insert Delete GetRandom O(1) - Duplicates allowed](../solutions/0381-insert-delete-getrandom-o1-duplicates-allowed/README.md) | `Hard` | $\mathcal{O}(1)$ avg | $\mathcal{O}(N)$ | [C++](../solutions/0381-insert-delete-getrandom-o1-duplicates-allowed/solution.cpp) |
 | 3548 | [Equal Sum Grid Partition II](../solutions/3548-equal-sum-grid-partition-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/3548-equal-sum-grid-partition-ii/solution.cpp) |
 | 3655 | [XOR After Range Multiplication Queries II](../solutions/3655-xor-after-range-multiplication-queries-ii/README.md) | `Hard` | $\mathcal{O}((N + Q)\sqrt{N})$ | $\mathcal{O}(N + Q)$ | [C++](../solutions/3655-xor-after-range-multiplication-queries-ii/solution.cpp) |
 | 3739 | [Count Subarrays With Majority Element II](../solutions/3739-count-subarrays-with-majority-element-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3739-count-subarrays-with-majority-element-ii/solution.cpp) |
