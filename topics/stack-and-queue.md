@@ -117,6 +117,13 @@ int longestValidParentheses(const string& s) {
 }
 ```
 
+### Pattern E: Sign-Distributive Expression Parsing Stack Machine (Basic Calculator)
+When evaluating arithmetic expressions with additions, subtractions, unary signs, and nested parentheses:
+1. Maintain running `currentResult` and `sign` ($\pm 1$).
+2. On `(`: Push `currentResult`, then `sign` onto the stack; reset `currentResult = 0` and `sign = 1`.
+3. On `)`: Pop `prevSign` and `prevResult`; merge via $\text{currentResult} = \text{prevResult} + \text{prevSign} \times \text{currentResult}$.
+4. This avoids complex operator-precedence parsing while handling arbitrary nested unary and binary negations in $\mathcal{O}(N)$ time.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -135,8 +142,10 @@ int longestValidParentheses(const string& s) {
 | 32 | [Longest Valid Parentheses](../solutions/0032-longest-valid-parentheses/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0032-longest-valid-parentheses/solution.cpp) |
 | 84 | [Largest Rectangle in Histogram](../solutions/0084-largest-rectangle-in-histogram/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0084-largest-rectangle-in-histogram/solution.cpp) |
 | 85 | [Maximal Rectangle](../solutions/0085-maximal-rectangle/README.md) | `Hard` | $\mathcal{O}(R \cdot C)$ | $\mathcal{O}(C)$ | [C++](../solutions/0085-maximal-rectangle/solution.cpp) |
+| 224 | [Basic Calculator](../solutions/0224-basic-calculator/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0224-basic-calculator/solution.cpp) |
 | 2751 | [Robot Collisions](../solutions/2751-robot-collisions/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2751-robot-collisions/solution.cpp) |
 | 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
+
 
 
 
