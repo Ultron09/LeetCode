@@ -240,6 +240,14 @@ When identifying composite/concatenated strings formed by at least two shorter e
 3. **Incremental Insertion**: If `dp[L] == true`, mark $W$ as concatenated. Always insert $W$ into `wordSet` afterward.
 4. **Complexity**: $\mathcal{O}(N \log N + N \cdot L^3)$ time, $\mathcal{O}(\sum |W_i|)$ space.
 
+### Pattern Y: Circular Ring Metric Multi-Stage Transition DP (Freedom Trail)
+When finding the minimum steps to sequence through an alphabet on a circular dial:
+1. **Circular Distance Metric**: For positions $i, j$ on a dial of length $R$, $\text{dist}(i, j) = \min(|i - j|, R - |i - j|)$.
+2. **State Representation**: `dp[pos]` = minimum accumulated rotations + button presses to spell the prefix of `key` ending at dial index `pos`.
+3. **Stage Transitions**: For each character in `key`, transition from all previous valid positions to each index `nxt` containing the target character:
+   $$\text{next\_dp}[\text{nxt}] = \min_{\text{prev}} (\text{dp}[\text{prev}] + \text{dist}(\text{prev}, \text{nxt}) + 1)$$
+4. **Complexity**: $\mathcal{O}(K \cdot R^2)$ time and $\mathcal{O}(R)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -272,6 +280,7 @@ When identifying composite/concatenated strings formed by at least two shorter e
 | 446 | [Arithmetic Slices II - Subsequence](../solutions/0446-arithmetic-slices-ii-subsequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0446-arithmetic-slices-ii-subsequence/solution.cpp) |
 | 466 | [Count The Repetitions](../solutions/0466-count-the-repetitions/README.md) | `Hard` | $\mathcal{O}(\|s_1\| \cdot \|s_2\|)$ | $\mathcal{O}(\|s_2\|)$ | [C++](../solutions/0466-count-the-repetitions/solution.cpp) |
 | 472 | [Concatenated Words](../solutions/0472-concatenated-words/README.md) | `Hard` | $\mathcal{O}(N \log N + N \cdot L^3)$ | $\mathcal{O}(\sum \|W_i\|)$ | [C++](../solutions/0472-concatenated-words/solution.cpp) |
+| 514 | [Freedom Trail](../solutions/0514-freedom-trail/README.md) | `Hard` | $\mathcal{O}(K \cdot R^2)$ | $\mathcal{O}(R)$ | [C++](../solutions/0514-freedom-trail/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
