@@ -117,12 +117,13 @@ int longestValidParentheses(const string& s) {
 }
 ```
 
-### Pattern E: Sign-Distributive Expression Parsing Stack Machine (Basic Calculator)
-When evaluating arithmetic expressions with additions, subtractions, unary signs, and nested parentheses:
-1. Maintain running `currentResult` and `sign` ($\pm 1$).
-2. On `(`: Push `currentResult`, then `sign` onto the stack; reset `currentResult = 0` and `sign = 1`.
-3. On `)`: Pop `prevSign` and `prevResult`; merge via $\text{currentResult} = \text{prevResult} + \text{prevSign} \times \text{currentResult}$.
-4. This avoids complex operator-precedence parsing while handling arbitrary nested unary and binary negations in $\mathcal{O}(N)$ time.
+### Pattern G: Deterministic XML/HTML Grammar Stack Parser (Tag Validator)
+When validating nested structured markups containing opening/closing tags and literal CDATA blocks:
+1. **Single Root Enclosure Invariant**: If `stack.empty()` and $i > 0$ while $i < N$, reject immediately (prevents multiple roots or trailing garbage). Characters outside tags require `!stack.empty()`.
+2. **CDATA Literal Skipping**: On prefix `<![CDATA[`, verify `!stack.empty()` and jump $i$ to the index past `]]>`.
+3. **Tag Name Grammar**: Validate opening/closing tags for matching, length $\in [1, 9]$, and uppercase alphabetic characters only.
+4. **Stack Invariant**: Push on `<TAG>`, pop on `</TAG>` matching `stack.top()`. Accept if and only if `stack.empty()` at index $N$.
+5. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(N)$ space.
 
 ---
 
@@ -144,8 +145,10 @@ When evaluating arithmetic expressions with additions, subtractions, unary signs
 | 85 | [Maximal Rectangle](../solutions/0085-maximal-rectangle/README.md) | `Hard` | $\mathcal{O}(R \cdot C)$ | $\mathcal{O}(C)$ | [C++](../solutions/0085-maximal-rectangle/solution.cpp) |
 | 224 | [Basic Calculator](../solutions/0224-basic-calculator/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0224-basic-calculator/solution.cpp) |
 | 321 | [Create Maximum Number](../solutions/0321-create-maximum-number/README.md) | `Hard` | $\mathcal{O}(k(m + n + k^2))$ | $\mathcal{O}(k)$ | [C++](../solutions/0321-create-maximum-number/solution.cpp) |
+| 591 | [Tag Validator](../solutions/0591-tag-validator/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0591-tag-validator/solution.cpp) |
 | 2751 | [Robot Collisions](../solutions/2751-robot-collisions/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2751-robot-collisions/solution.cpp) |
 | 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
+
 
 
 
