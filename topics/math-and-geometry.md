@@ -112,9 +112,12 @@ To compute the $k^{\text{th}}$ lexicographical permutation of $\{1, \dots, n\}$ 
 ### Pattern H: Deterministic Finite State Machine for Number Parsing
 Maintain boolean flags `seenDigit`, `seenDot`, `seenExponent` to validate numerical formats in $\mathcal{O}(N)$ time and $\mathcal{O}(1)$ space:
 1. `+`/`-`: Permitted only at index 0 or immediately after `e`/`E`.
-2. `.`: Permitted at most once and never after `e`/`E`.
-3. `e`/`E`: Permitted only if preceded by digits and never repeated; resets `seenDigit = false` requiring subsequent digits.
-4. Terminal state: Requires `seenDigit == true`.
+### Pattern J: Irreducible Coprime Slope Representation & Collinear Sweeps
+When finding the maximum number of collinear points on an integer 2D plane:
+1. Fix an anchor point $(x_i, y_i)$.
+2. For each other point $(x_j, y_j)$, compute differences $\Delta x = x_j - x_i, \Delta y = y_j - y_i$.
+3. Reduce by $g = \gcd(|\Delta x|, |\Delta y|)$ and normalize direction (canonical sign and zero cases).
+4. Pack coprime integer pair into a 64-bit key and accumulate in a hash map to avoid all floating-point precision loss.
 
 ---
 
@@ -122,7 +125,7 @@ Maintain boolean flags `seenDigit`, `seenDot`, `seenExponent` to validate numeri
 
 1. **`INT_MIN` Negation**: Negating `INT_MIN` ($-2^{31}$) causes integer overflow because `INT_MAX` is $2^{31} - 1$. Always cast to `long long` before taking absolute values or negating.
 2. **Division by Zero**: Guard against division or modulo operations with $0$.
-3. **Floating Point Precision**: When checking floating point equality (geometry), use an epsilon comparison: `fabs(a - b) < 1e-9`.
+3. **Floating Point Precision**: When checking floating point equality (geometry), use an epsilon comparison or exact integer coprime fractions.
 4. **Factorial Overflow in Permutation Counts**: Compute combinations incrementally using $\binom{n}{m} = \prod \frac{n-j+1}{j}$ and cap intermediate products at $k+1$.
 5. **Pair Count Overflow**: With $N \le 10^5$, total pairs can exceed $5 \times 10^9$; always store counts and prefix sums in `long long`.
 
@@ -134,6 +137,7 @@ Maintain boolean flags `seenDigit`, `seenDot`, `seenExponent` to validate numeri
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 60 | [Permutation Sequence](../solutions/0060-permutation-sequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0060-permutation-sequence/solution.cpp) |
 | 65 | [Valid Number](../solutions/0065-valid-number/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0065-valid-number/solution.cpp) |
+| 149 | [Max Points on a Line](../solutions/0149-max-points-on-a-line/README.md) | `Hard` | $\mathcal{O}(N^2 \log(\max(\text{coord})))$ | $\mathcal{O}(N)$ | [C++](../solutions/0149-max-points-on-a-line/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
@@ -142,6 +146,7 @@ Maintain boolean flags `seenDigit`, `seenDot`, `seenExponent` to validate numeri
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
 | 3700 | [Number of ZigZag Arrays II](../solutions/3700-number-of-zigzag-arrays-ii/README.md) | `Hard` | $\mathcal{O}((2M)^3 \log N)$ | $\mathcal{O}((2M)^2)$ | [C++](../solutions/3700-number-of-zigzag-arrays-ii/solution.cpp) |
 | 3753 | [Total Waviness of Numbers in Range II](../solutions/3753-total-waviness-of-numbers-in-range-ii/README.md) | `Hard` | $\mathcal{O}(D^3 \log_{10}(num_2))$ | $\mathcal{O}(D^2 \log_{10}(num_2))$ | [C++](../solutions/3753-total-waviness-of-numbers-in-range-ii/solution.cpp) |
+
 
 
 
