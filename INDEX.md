@@ -8,7 +8,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **74** | 0 | 0 | 74 |
+| **75** | 0 | 0 | 75 |
 
 ---
 
@@ -31,7 +31,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0052 | [N-Queens II](solutions/0052-n-queens-ii/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](solutions/0052-n-queens-ii/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 0060 | [Permutation Sequence](solutions/0060-permutation-sequence/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](solutions/0060-permutation-sequence/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0065 | [Valid Number](solutions/0065-valid-number/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0065-valid-number/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
-| 0068 | [Text Justification](solutions/0068-text-justification/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N)$ | $\mathcal{O}(\text{maxWidth})$ | [C++](solutions/0068-text-justification/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
+| 0068 | [Text Justification](solutions/0068-text-justification/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0068-text-justification/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 0076 | [Minimum Window Substring](solutions/0076-minimum-window-substring/README.md) | `Hard` | [Sliding Window](topics/sliding-window.md) | $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](solutions/0076-minimum-window-substring/solution.cpp) | [Notes](topics/sliding-window.md#solved-problems) |
 | 0084 | [Largest Rectangle in Histogram](solutions/0084-largest-rectangle-in-histogram/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0084-largest-rectangle-in-histogram/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 0085 | [Maximal Rectangle](solutions/0085-maximal-rectangle/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(R \cdot C)$ | $\mathcal{O}(C)$ | [C++](solutions/0085-maximal-rectangle/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
@@ -58,6 +58,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0239 | [Sliding Window Maximum](solutions/0239-sliding-window-maximum/README.md) | `Hard` | [Sliding Window](topics/sliding-window.md) | $\mathcal{O}(N)$ | $\mathcal{O}(K)$ | [C++](solutions/0239-sliding-window-maximum/solution.cpp) | [Notes](topics/sliding-window.md#solved-problems) |
 | 0262 | [Trips and Users](solutions/0262-trips-and-users/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(T + U)$ | $\mathcal{O}(U + D)$ | [SQL / C++](solutions/0262-trips-and-users/solution.sql) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0273 | [Integer to English Words](solutions/0273-integer-to-english-words/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | [C++](solutions/0273-integer-to-english-words/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
+| 0282 | [Expression Add Operators](solutions/0282-expression-add-operators/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](solutions/0282-expression-add-operators/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

@@ -158,7 +158,13 @@ When searching for a collection of words in a character grid:
 1. Build a Trie containing all target words.
 2. Launch DFS from each grid cell, traversing the grid and the Trie in lockstep.
 3. Mark visited cells in-place with a sentinel (e.g. `'#'`) and restore upon backtrack.
-4. **In-Flight Trie Pruning**: When a word is discovered, clear `node->word`. If the node becomes a leaf (`childCount == 0`), delete and unlink it from its parent to prune dead search branches.
+### Pattern H: Operator Precedence in Backtracking Expressions (Expression Add Operators)
+When exploring combinations of binary operators with mixed precedences (`+`, `-`, `*`):
+1. Maintain `currentVal` and `prevOperand` (the last added or subtracted term) in the recursion state.
+2. For multiplication with operand $X$, dynamically undo the last operation and multiply:
+   $$\text{newVal} = (\text{currentVal} - \text{prevOperand}) + (\text{prevOperand} \times X)$$
+   $$\text{newPrev} = \text{prevOperand} \times X$$
+3. Avoid multi-digit operands with leading zeros by breaking early if `len > 1 && num[idx] == '0'`.
 
 ---
 
@@ -179,6 +185,8 @@ When searching for a collection of words in a character grid:
 | 52 | [N-Queens II](../solutions/0052-n-queens-ii/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](../solutions/0052-n-queens-ii/solution.cpp) |
 | 140 | [Word Break II](../solutions/0140-word-break-ii/README.md) | `Hard` | $\mathcal{O}(2^N + N^2 + W)$ | $\mathcal{O}(2^N \cdot N + W)$ | [C++](../solutions/0140-word-break-ii/solution.cpp) |
 | 212 | [Word Search II](../solutions/0212-word-search-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot 3^L + W \cdot L)$ | $\mathcal{O}(W \cdot L)$ | [C++](../solutions/0212-word-search-ii/solution.cpp) |
+| 282 | [Expression Add Operators](../solutions/0282-expression-add-operators/README.md) | `Hard` | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0282-expression-add-operators/solution.cpp) |
+
 
 
 
