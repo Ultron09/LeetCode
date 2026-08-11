@@ -139,6 +139,14 @@ When selecting at most $k$ projects to maximize total capital where projects hav
 4. **Exchange Correctness**: Taking the maximum profit strictly maximizes future capital $w$, expanding the pool of available projects monotonically.
 5. **Complexity**: $\mathcal{O}(N \log N + k \log N)$ time and $\mathcal{O}(N)$ space.
 
+### Pattern M: Prefix Flow Conservation & Dual Bottleneck Analysis (Super Washing Machines)
+When equalizing distributions along a 1D line with simultaneous unit transfers:
+1. **Feasibility Check**: Ensure total sum $S \pmod N == 0$; set target per unit to $S / N$.
+2. **Cut Bottleneck (Cross-Boundary Flow)**: Cumulative prefix balance $\text{balance}[i] = \sum_{k=0}^i (\text{arr}[k] - \text{target})$ requires $|\text{balance}[i]|$ moves across boundary $(i, i+1)$.
+3. **Single Node Outflow Rate Bottleneck**: A node with surplus $\text{arr}[i] > \text{target}$ can only emit 1 unit per turn, requiring $\text{arr}[i] - \text{target}$ moves.
+4. **Global Minimum**: $\max_{i} (\max(|\text{balance}[i]|, \text{arr}[i] - \text{target}))$.
+5. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -160,6 +168,7 @@ When selecting at most $k$ projects to maximize total capital where projects hav
 | 330 | [Patching Array](../solutions/0330-patching-array/README.md) | `Hard` | $\mathcal{O}(M + \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0330-patching-array/solution.cpp) |
 | 420 | [Strong Password Checker](../solutions/0420-strong-password-checker/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0420-strong-password-checker/solution.cpp) |
 | 502 | [IPO](../solutions/0502-ipo/README.md) | `Hard` | $\mathcal{O}(N \log N + k \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0502-ipo/solution.cpp) |
+| 517 | [Super Washing Machines](../solutions/0517-super-washing-machines/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0517-super-washing-machines/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |

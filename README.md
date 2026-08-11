@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **112** | 1 | 0 | 111 |
+| **113** | 1 | 0 | 112 |
 
 ---
 
@@ -36,7 +36,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Backtracking** | Permutations, Combinations, Subsets, Pruning | 8 | [Explore Notes](topics/backtracking.md) |
 | **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 6 | [Explore Notes](topics/graphs.md) |
 | **Dynamic Programming** | 1D/2D DP, Knapsack, LCS/LIS, Interval DP, Bitmask DP | 28 | [Explore Notes](topics/dynamic-programming.md) |
-| **Greedy** | Activity Selection, Jump Game, Huffman Coding | 9 | [Explore Notes](topics/greedy.md) |
+| **Greedy** | Activity Selection, Jump Game, Huffman Coding | 10 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 2 | [Explore Notes](topics/intervals.md) |
 | **Bit Manipulation** | XOR properties, Bitmasks, Power of 2 checks | 0 | [Explore Notes](topics/bit-manipulation.md) |
 | **Math & Geometry** | Sieve of Eratosthenes, GCD/LCM, Fast Exponentiation | 18 | [Explore Notes](topics/math-and-geometry.md) |
