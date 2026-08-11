@@ -222,6 +222,16 @@ When counting subsequences with constant step differences:
 3. **Difference Overflow Protection**: Always compute $d$ using `static_cast<long long>` to avoid 32-bit signed integer overflow.
 4. **Complexity**: $\mathcal{O}(N^2)$ time and $\mathcal{O}(N^2)$ space.
 
+### Pattern W: Pigeonhole Cycle Detection & Fast-Forwarding (String Repetition Matching)
+When matching a target string $s_2$ as a subsequence inside an $n_1$-times repeated source block $s_1$:
+1. **Periodic State Representation**: The matching index `s2Idx` $\in [0, |s_2|-1]$ at the boundary of each $s_1$ block fully captures the continuation state.
+2. **Pigeonhole Cycle Bound**: Because `s2Idx` has only $|s_2|$ distinct values, a repeat state must occur within $|s_2| + 1$ iterations of $s_1$.
+3. **Cycle Jump**:
+   - Compute cycle periods $\Delta s_1 = \text{currS1} - \text{prevS1}$ and $\Delta s_2 = \text{currS2} - \text{prevS2}$.
+   - Fast-forward $s_1$ and $s_2$ counts by $\lfloor (n_1 - \text{currS1}) / \Delta s_1 \rfloor$.
+   - Execute the remaining tail iterations ($< |s_2|$) linearly.
+4. **Complexity**: $\mathcal{O}(|s_1| \cdot |s_2|)$ time and $\mathcal{O}(|s_2|)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -252,6 +262,7 @@ When counting subsequences with constant step differences:
 | 354 | [Russian Doll Envelopes](../solutions/0354-russian-doll-envelopes/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0354-russian-doll-envelopes/solution.cpp) |
 | 403 | [Frog Jump](../solutions/0403-frog-jump/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0403-frog-jump/solution.cpp) |
 | 446 | [Arithmetic Slices II - Subsequence](../solutions/0446-arithmetic-slices-ii-subsequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0446-arithmetic-slices-ii-subsequence/solution.cpp) |
+| 466 | [Count The Repetitions](../solutions/0466-count-the-repetitions/README.md) | `Hard` | $\mathcal{O}(\|s_1\| \cdot \|s_2\|)$ | $\mathcal{O}(\|s_2\|)$ | [C++](../solutions/0466-count-the-repetitions/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
