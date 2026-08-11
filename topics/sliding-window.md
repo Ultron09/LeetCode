@@ -169,6 +169,15 @@ When tracking running medians or quantiles across a sliding window of size $k$:
 3. **Size Rebalancing**: Keep active logical counters `smallSize` and `largeSize`, shifting top elements across heaps to restore balance.
 4. **Complexity**: $\mathcal{O}(N \log k)$ time and $\mathcal{O}(N)$ space ($\mathcal{O}(k)$ average).
 
+### Pattern H: Manacher's Algorithm with Monotonic Queue Palindrome Span Tracking
+When optimizing products or combinations of disjoint palindromic substrings:
+1. **Odd Manacher's Radii**: Compute palindrome radius array $P[i]$ centered at index $i$ in linear $\mathcal{O}(N)$ time.
+2. **Monotonic Queue for Boundary Reachability**:
+   - For an end index $e$, palindrome length is $2(e - c) + 1$ for centers with $c + P[c] \ge e$.
+   - Maintain centers in a monotonic queue and pop expired centers ($c + P[c] < e$) to retrieve the minimal $c$ in $\mathcal{O}(1)$ amortized time.
+3. **Prefix & Suffix Extrema Aggregation**: Compute `leftMax[t]` and `rightMax[t+1]` and find $\max_{t} (\text{leftMax}[t] \times \text{rightMax}[t+1])$.
+4. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -189,6 +198,7 @@ When tracking running medians or quantiles across a sliding window of size $k$:
 | 220 | [Contains Duplicate III](../solutions/0220-contains-duplicate-iii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(\min(N, K))$ | [C++](../solutions/0220-contains-duplicate-iii/solution.cpp) |
 | 239 | [Sliding Window Maximum](../solutions/0239-sliding-window-maximum/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(K)$ | [C++](../solutions/0239-sliding-window-maximum/solution.cpp) |
 | 480 | [Sliding Window Median](../solutions/0480-sliding-window-median/README.md) | `Hard` | $\mathcal{O}(N \log k)$ | $\mathcal{O}(N)$ | [C++](../solutions/0480-sliding-window-median/solution.cpp) |
+| 1960 | [Maximum Product of the Length of Two Palindromic Substrings](../solutions/1960-maximum-product-of-the-length-of-two-palindromic-substrings/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1960-maximum-product-of-the-length-of-two-palindromic-substrings/solution.cpp) |
 
 
 

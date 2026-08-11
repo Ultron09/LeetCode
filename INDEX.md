@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **109** | 1 | 0 | 108 |
+| **110** | 1 | 0 | 109 |
 
 ---
 
@@ -98,6 +98,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 1622 | [Fancy Sequence](solutions/1622-fancy-sequence/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](solutions/1622-fancy-sequence/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
 | 1840 | [Maximum Building Height](solutions/1840-maximum-building-height/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](solutions/1840-maximum-building-height/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
+| 1960 | [Maximum Product of the Length of Two Palindromic Substrings](solutions/1960-maximum-product-of-the-length-of-two-palindromic-substrings/README.md) | `Hard` | [Sliding Window](topics/sliding-window.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/1960-maximum-product-of-the-length-of-two-palindromic-substrings/solution.cpp) | [Notes](topics/sliding-window.md#solved-problems) |
 | 2463 | [Minimum Total Distance Traveled](solutions/2463-minimum-total-distance-traveled/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N \cdot \min(N, \text{limit}))$ | $\mathcal{O}(N)$ | [C++](solutions/2463-minimum-total-distance-traveled/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 2573 | [Find the String with LCP](solutions/2573-find-the-string-with-lcp/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/2573-find-the-string-with-lcp/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 2751 | [Robot Collisions](solutions/2751-robot-collisions/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/2751-robot-collisions/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
