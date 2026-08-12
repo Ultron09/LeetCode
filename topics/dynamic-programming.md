@@ -300,6 +300,15 @@ When finding $k$ non-overlapping fixed-length intervals maximizing total value:
 3. **Anchor Middle Window Sweep**: For each valid middle start index $j \in [k, M - 1 - k]$, query $l = \text{leftMax}[j - k]$ and $r = \text{rightMax}[j + k]$.
 4. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(N)$ space.
 
+### Pattern AF: Bitmask DP Subset Cover (Stickers to Spell Word)
+When a target string of length $T \le 15$–$20$ must be covered using items from a collection (stickers, tiles, etc.):
+1. **State**: $dp[\text{mask}]$ = min items to cover target positions indicated by set bits in `mask`. Total states: $2^T$.
+2. **Anchor Pruning**: For each state, find the **lowest uncovered bit position** and only try items that contain that character. This enforces a canonical ordering and prunes exponentially.
+3. **Greedy Matching**: For each qualifying item, iterate through target positions left-to-right. For each uncovered position, if the item has a remaining copy of that letter, mark it covered and decrement the item's available count.
+4. **Transition**: $dp[\text{newMask}] = \min(dp[\text{newMask}], dp[\text{mask}] + 1)$.
+5. **Impossibility**: If $dp[2^T - 1]$ stays $\infty$, return $-1$.
+6. **Complexity**: $\mathcal{O}(2^T \cdot N \cdot T)$ time, $\mathcal{O}(2^T)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -339,6 +348,7 @@ When finding $k$ non-overlapping fixed-length intervals maximizing total value:
 | 639 | [Decode Ways II](../solutions/0639-decode-ways-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0639-decode-ways-ii/solution.cpp) |
 | 664 | [Strange Printer](../solutions/0664-strange-printer/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0664-strange-printer/solution.cpp) |
 | 689 | [Maximum Sum of 3 Non-Overlapping Subarrays](../solutions/0689-maximum-sum-of-3-non-overlapping-subarrays/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0689-maximum-sum-of-3-non-overlapping-subarrays/solution.cpp) |
+| 691 | [Stickers to Spell Word](../solutions/0691-stickers-to-spell-word/README.md) | `Hard` | $\mathcal{O}(2^T \cdot N \cdot T)$ | $\mathcal{O}(2^T)$ | [C++](../solutions/0691-stickers-to-spell-word/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
