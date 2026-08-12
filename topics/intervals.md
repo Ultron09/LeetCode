@@ -129,5 +129,6 @@ When objects with intervals are dropped sequentially and stack on overlapping ob
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 352 | [Data Stream as Disjoint Intervals](../solutions/0352-data-stream-as-disjoint-intervals/README.md) | `Hard` | $\mathcal{O}(\log K) \text{ add}, \mathcal{O}(K) \text{ get}$ | $\mathcal{O}(K)$ | [C++](../solutions/0352-data-stream-as-disjoint-intervals/solution.cpp) |
 | 699 | [Falling Squares](../solutions/0699-falling-squares/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0699-falling-squares/solution.cpp) |
+| 715 | [Range Module](../solutions/0715-range-module/README.md) | `Hard` | $\mathcal{O}(N)$ amortized | $\mathcal{O}(N)$ | [C++](../solutions/0715-range-module/solution.cpp) |
 | 3161 | [Block Placement Queries](../solutions/3161-block-placement-queries/README.md) | `Hard` | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3161-block-placement-queries/solution.cpp) |
 
