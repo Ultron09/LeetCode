@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **126** | 1 | 0 | 125 |
+| **127** | 1 | 0 | 126 |
 
 ---
 
@@ -106,6 +106,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0639 | [Decode Ways II](solutions/0639-decode-ways-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0639-decode-ways-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0664 | [Strange Printer](solutions/0664-strange-printer/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](solutions/0664-strange-printer/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0668 | [Kth Smallest Number in Multiplication Table](solutions/0668-kth-smallest-number-in-multiplication-table/README.md) | `Hard` | [Binary Search](topics/binary-search.md), [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(\min(M, N) \cdot \log(M \cdot N))$ | $\mathcal{O}(1)$ | [C++](solutions/0668-kth-smallest-number-in-multiplication-table/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
+| 0675 | [Cut Off Trees for Golf Event](solutions/0675-cut-off-trees-for-golf-event/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(M^2 \cdot N^2)$ | $\mathcal{O}(M \cdot N)$ | [C++](solutions/0675-cut-off-trees-for-golf-event/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

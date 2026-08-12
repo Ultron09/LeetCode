@@ -134,6 +134,16 @@ When an itinerary/path must traverse every directed edge in a multigraph exactly
    - When $u$ runs out of outgoing edges (dead end reached or subcycle completed), push $u$ onto the `itinerary` sequence.
 3. **Eulerian Reversal**: Reversing the post-order sequence splices subcycles into the master Eulerian path, resolving dead ends without backtracking in $\mathcal{O}(E \log E)$ time.
 
+### Pattern I: Multi-Stage Sequential BFS / Ordered Waypoint Traversal (Cut Off Trees for Golf Event)
+When visiting a series of strictly ordered waypoints $W_1, W_2, \dots, W_K$ on an unweighted grid with obstacles:
+1. **Target Sorting**: Extract and sort all waypoints based on the ordering criterion (e.g. tree height).
+2. **Sequential BFS Invocations**:
+   - Initialize $(sr, sc) = (0, 0)$.
+   - For each waypoint $(tr, tc)$, execute an unweighted 2D BFS to compute the exact shortest distance $\text{dist}((sr, sc), (tr, tc))$.
+   - If $\text{dist} == -1$ (destination disconnected), immediately return $-1$.
+   - Accumulate steps: $\text{totalSteps} += \text{dist}$ and update $(sr, sc) \gets (tr, tc)$.
+3. **Complexity**: $\mathcal{O}(K \cdot M \cdot N) = \mathcal{O}(M^2 N^2)$ time and $\mathcal{O}(M \cdot N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -155,6 +165,7 @@ When an itinerary/path must traverse every directed edge in a multigraph exactly
 | 126 | [Word Ladder II](../solutions/0126-word-ladder-ii/README.md) | `Hard` | $\mathcal{O}(N \cdot L \cdot 26 + K \cdot L)$ | $\mathcal{O}(N \cdot L)$ | [C++](../solutions/0126-word-ladder-ii/solution.cpp) |
 | 127 | [Word Ladder](../solutions/0127-word-ladder/README.md) | `Hard` | $\mathcal{O}(N \cdot L \cdot 26)$ | $\mathcal{O}(N \cdot L)$ | [C++](../solutions/0127-word-ladder/solution.cpp) |
 | 332 | [Reconstruct Itinerary](../solutions/0332-reconstruct-itinerary/README.md) | `Hard` | $\mathcal{O}(E \log E)$ | $\mathcal{O}(V + E)$ | [C++](../solutions/0332-reconstruct-itinerary/solution.cpp) |
+| 675 | [Cut Off Trees for Golf Event](../solutions/0675-cut-off-trees-for-golf-event/README.md) | `Hard` | $\mathcal{O}(M^2 \cdot N^2)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0675-cut-off-trees-for-golf-event/solution.cpp) |
 | 1345 | [Jump Game IV](../solutions/1345-jump-game-iv/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1345-jump-game-iv/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
