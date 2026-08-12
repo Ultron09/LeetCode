@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **129** | 1 | 0 | 128 |
+| **130** | 1 | 0 | 129 |
 
 ---
 
@@ -109,6 +109,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0675 | [Cut Off Trees for Golf Event](solutions/0675-cut-off-trees-for-golf-event/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(M^2 \cdot N^2)$ | $\mathcal{O}(M \cdot N)$ | [C++](solutions/0675-cut-off-trees-for-golf-event/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 0679 | [24 Game](solutions/0679-24-game/README.md) | `Hard` | [Backtracking](topics/backtracking.md), [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(1)$ bounded | $\mathcal{O}(1)$ | [C++](solutions/0679-24-game/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 0685 | [Redundant Connection II](solutions/0685-redundant-connection-ii/README.md) | `Hard` | [Graphs](topics/graphs.md), [Trees & BST](topics/trees.md) | $\mathcal{O}(N \cdot \alpha(N))$ | $\mathcal{O}(N)$ | [C++](solutions/0685-redundant-connection-ii/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
+| 0689 | [Maximum Sum of 3 Non-Overlapping Subarrays](solutions/0689-maximum-sum-of-3-non-overlapping-subarrays/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md), [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0689-maximum-sum-of-3-non-overlapping-subarrays/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

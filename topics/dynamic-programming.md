@@ -291,6 +291,15 @@ When finding the minimum turns/operations to generate a target string where oper
    $$\text{dp}[i][j] = \min_{k=i}^{j-1} (\text{dp}[i][k] + (k + 1 \le j - 1 ? \text{dp}[k + 1][j - 1] : 0)) \quad (s[k] == s[j])$$
 4. **Complexity**: $\mathcal{O}(N^3)$ time and $\mathcal{O}(N^2)$ space.
 
+### Pattern AE: Anchor Decomposition with Prefix & Suffix Optimal Subarray DP (Maximum Sum of 3 Non-Overlapping Subarrays)
+When finding $k$ non-overlapping fixed-length intervals maximizing total value:
+1. **Window Sum Precomputation**: Compute length-$k$ window sums $\text{windowSum}[i]$ in $\mathcal{O}(N)$ time.
+2. **Left/Right Optimal Indexes**:
+   - `leftMax[i]` = index in $[0, i]$ with maximum sum (use strict `>` to maintain smallest index on ties).
+   - `rightMax[i]` = index in $[i, M - 1]$ with maximum sum (use non-strict `>=` to maintain earlier index on ties).
+3. **Anchor Middle Window Sweep**: For each valid middle start index $j \in [k, M - 1 - k]$, query $l = \text{leftMax}[j - k]$ and $r = \text{rightMax}[j + k]$.
+4. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -329,6 +338,7 @@ When finding the minimum turns/operations to generate a target string where oper
 | 629 | [K Inverse Pairs Array](../solutions/0629-k-inverse-pairs-array/README.md) | `Hard` | $\mathcal{O}(N \cdot K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0629-k-inverse-pairs-array/solution.cpp) |
 | 639 | [Decode Ways II](../solutions/0639-decode-ways-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0639-decode-ways-ii/solution.cpp) |
 | 664 | [Strange Printer](../solutions/0664-strange-printer/README.md) | `Hard` | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0664-strange-printer/solution.cpp) |
+| 689 | [Maximum Sum of 3 Non-Overlapping Subarrays](../solutions/0689-maximum-sum-of-3-non-overlapping-subarrays/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0689-maximum-sum-of-3-non-overlapping-subarrays/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
