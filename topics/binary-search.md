@@ -156,6 +156,13 @@ When counting index pairs $(i, j)$ with $i < j$ satisfying non-unit multiplicati
 3. **64-bit Overflow Protection**: Evaluate $c \times \text{nums}[j]$ using `2LL * nums[j]` to avoid signed 32-bit integer overflow.
 4. **Complexity**: $\mathcal{O}(N \log N)$ time and $\mathcal{O}(N)$ space.
 
+### Pattern M: Search on Answer in Implicit Monotonic 2D Matrices (Kth Smallest Number in Multiplication Table)
+When finding the $k$-th smallest element in an implicit monotonic 2D grid (e.g. $A[i][j] = i \times j$):
+1. **Search Domain**: Low bound $1$, high bound $M \times N$.
+2. **Row-Wise Counting Predicate**: For candidate $X$, row $i$ values are $i \times 1, i \times 2, \dots, i \times N$. The number of elements $\le X$ in row $i$ is $\min(N, \lfloor X / i \rfloor)$.
+3. **Dimension Optimization**: Summing over $\min(M, N)$ rows evaluates $f(X)$ in $\mathcal{O}(\min(M, N))$ time.
+4. **Complexity**: $\mathcal{O}(\min(M, N) \cdot \log(M \cdot N))$ time and $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -180,6 +187,7 @@ When counting index pairs $(i, j)$ with $i < j$ satisfying non-unit multiplicati
 | 363 | [Max Sum of Rectangle No Larger Than K](../solutions/0363-max-sum-of-rectangle-no-larger-than-k/README.md) | `Hard` | $\mathcal{O}(\min(m,n)^2 \cdot \max(m,n) \cdot \log(\max(m,n)))$ | $\mathcal{O}(\max(m,n))$ | [C++](../solutions/0363-max-sum-of-rectangle-no-larger-than-k/solution.cpp) |
 | 410 | [Split Array Largest Sum](../solutions/0410-split-array-largest-sum/README.md) | `Hard` | $\mathcal{O}(N \log(\sum \text{nums}))$ | $\mathcal{O}(1)$ | [C++](../solutions/0410-split-array-largest-sum/solution.cpp) |
 | 493 | [Reverse Pairs](../solutions/0493-reverse-pairs/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0493-reverse-pairs/solution.cpp) |
+| 668 | [Kth Smallest Number in Multiplication Table](../solutions/0668-kth-smallest-number-in-multiplication-table/README.md) | `Hard` | $\mathcal{O}(\min(M, N) \cdot \log(M \cdot N))$ | $\mathcal{O}(1)$ | [C++](../solutions/0668-kth-smallest-number-in-multiplication-table/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
 | 3464 | [Maximize the Distance Between Points on a Square](../solutions/3464-maximize-the-distance-between-points-on-a-square/README.md) | `Hard` | $\mathcal{O}(N \log N \log(\text{side}))$ | $\mathcal{O}(N)$ | [C++](../solutions/3464-maximize-the-distance-between-points-on-a-square/solution.cpp) |
 | 3501 | [Maximize Active Section with Trade II](../solutions/3501-maximize-active-section-with-trade-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3501-maximize-active-section-with-trade-ii/solution.cpp) |
