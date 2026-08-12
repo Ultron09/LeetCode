@@ -175,6 +175,13 @@ When finding the minimum number of actions to reduce a recursive matching string
    - Between two identical characters (`board[i-1] == board[i] && board[i] != c`) to allow cascading split reactions.
 4. **Complexity**: $\mathcal{O}(V \cdot B \cdot H)$ time and $\mathcal{O}(V \cdot (B + H))$ space where $V$ is reachable pruned states.
 
+### Pattern J: State Reduction Backtracking with Precision Tolerance (24 Game)
+When finding if an arithmetic target can be reached from $N$ numbers using binary operators:
+1. **Pairwise Reduction**: At each step with $k$ numbers, choose any two numbers $(a, b)$, replace them with a valid operation ($a + b, a - b, a \times b, a / b$), yielding $k - 1$ numbers.
+2. **Floating-Point Arithmetic**: Use `double` for operations to support non-integer fractions. Guard division by checking $|\text{divisor}| > 10^{-6}$.
+3. **Epsilon Comparison**: In the base case ($k = 1$), test $|\text{val} - \text{target}| < 10^{-6}$.
+4. **Complexity**: $\mathcal{O}(1)$ bounded state space ($\le 3888$ combinations for $N = 4$) and $\mathcal{O}(1)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -197,6 +204,7 @@ When finding the minimum number of actions to reduce a recursive matching string
 | 282 | [Expression Add Operators](../solutions/0282-expression-add-operators/README.md) | `Hard` | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0282-expression-add-operators/solution.cpp) |
 | 301 | [Remove Invalid Parentheses](../solutions/0301-remove-invalid-parentheses/README.md) | `Hard` | $\mathcal{O}(2^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0301-remove-invalid-parentheses/solution.cpp) |
 | 488 | [Zuma Game](../solutions/0488-zuma-game/README.md) | `Hard` | $\mathcal{O}(V \cdot B \cdot H)$ | $\mathcal{O}(V \cdot (B + H))$ | [C++](../solutions/0488-zuma-game/solution.cpp) |
+| 679 | [24 Game](../solutions/0679-24-game/README.md) | `Hard` | $\mathcal{O}(1)$ bounded | $\mathcal{O}(1)$ | [C++](../solutions/0679-24-game/solution.cpp) |
 
 
 
