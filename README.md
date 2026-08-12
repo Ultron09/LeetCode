@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **132** | 1 | 0 | 131 |
+| **133** | 1 | 0 | 132 |
 
 ---
 
@@ -25,7 +25,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Topic | Key Concepts | Solved Count | Link |
 | :--- | :--- | :---: | :---: |
-| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 10 | [Explore Notes](topics/arrays-and-hashing.md) |
+| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 11 | [Explore Notes](topics/arrays-and-hashing.md) |
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 2 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 8 | [Explore Notes](topics/sliding-window.md) |
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 8 | [Explore Notes](topics/stack-and-queue.md) |
@@ -39,7 +39,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Greedy** | Activity Selection, Jump Game, Huffman Coding | 11 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 3 | [Explore Notes](topics/intervals.md) |
 | **Bit Manipulation** | XOR properties, Bitmasks, Power of 2 checks | 2 | [Explore Notes](topics/bit-manipulation.md) |
-| **Math & Geometry** | Sieve of Eratosthenes, GCD/LCM, Fast Exponentiation | 20 | [Explore Notes](topics/math-and-geometry.md) |
+| **Math & Geometry** | Sieve of Eratosthenes, GCD/LCM, Fast Exponentiation | 21 | [Explore Notes](topics/math-and-geometry.md) |
 
 ---
 
