@@ -1,7 +1,7 @@
 # [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 **Difficulty:** `Hard`  
-**Topics:** [Trees & BST](../../topics/trees.md), [Depth-First Search](../../topics/trees.md), [Breadth-First Search](../../topics/trees.md), [Design](../../topics/arrays-and-hashing.md), [String](../../topics/arrays-and-hashing.md)
+**Topics:** [Trees & BST](../../topics/trees.md), [Depth-First Search](../../topics/trees.md), [Breadth-First Search](../../topics/graphs.md), [Design](../../topics/arrays-and-hashing.md), [String](../../topics/arrays-and-hashing.md)
 
 ---
 
@@ -13,6 +13,12 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
 ### Example 1:
 ```
+        1
+       / \
+      2   3
+         / \
+        4   5
+
 Input: root = [1,2,3,null,null,4,5]
 Output: [1,2,3,null,null,4,5]
 ```
@@ -31,37 +37,46 @@ Output: []
 
 ## 💡 Intuition & Approach
 
-### 1. Preorder DFS Traversal with Null Sentinel
-A standard preorder traversal is insufficient to uniquely reconstruct a binary tree unless null pointers (`nullptr`) are explicitly marked with a sentinel character (e.g. `'#'` or `'null'`).
+### 1. Preorder DFS Traversal with Null Sentinels (Optimal & Cleanest)
+In a standard binary tree traversal (preorder, inorder, or postorder), knowing just one traversal is insufficient to reconstruct the unique tree structure without additional constraints (e.g., BST property or having both preorder and inorder).
 
-### 2. Serialization:
-- Traverse the tree in **pre-order** (`Root -> Left -> Right`):
-  - If current node is `nullptr`: append `"# "` to the output buffer.
-  - Else: append `node->val` followed by space, then recursively serialize `node->left` and `node->right`.
+However, **recording explicit null pointers (`#`)** removes all ambiguity:
+- Every node has exactly two children recorded.
+- Preorder sequence: `Root -> Left Subtree -> Right Subtree`.
+- The first element of any subtree in preorder is unambiguously the root of that subtree.
 
-### 3. Deserialization:
-- Feed the serialized string into an `std::istringstream`.
-- Read token-by-token:
-  - If token is `"#"`: return `nullptr`.
-  - Otherwise: parse integer value $V$, instantiate `node = new TreeNode(V)`, recursively assign `node->left = deserializeDfs(in)`, `node->right = deserializeDfs(in)`, and return `node`.
+### 2. Implementation Mechanics
+1. **Serialization (`serialize`)**:
+   - Traverse the tree recursively in preorder.
+   - If `root == nullptr`, append `"# "` to the string stream.
+   - Otherwise, append `to_string(root->val) + " "` and recurse on `root->left` then `root->right`.
+2. **Deserialization (`deserialize`)**:
+   - Wrap the serialized string in `istringstream in(data)`.
+   - Read the next token:
+     - If the token is `"#"` or stream is exhausted, return `nullptr`.
+     - Otherwise, construct `TreeNode* root = new TreeNode(stoi(token))`.
+     - Recursively assign `root->left = deserializeHelper(in)` and `root->right = deserializeHelper(in)`.
+     - Return `root`.
 
 ---
 
 ## ⚡ Complexity Analysis
 
-- **Time Complexity:**
-  - `serialize(root)`: $\mathcal{O}(N)$ where $N \le 10^4$ is the number of nodes (visits each node and null leaf once).
-  - `deserialize(data)`: $\mathcal{O}(N)$ (reconstructs each tree node in linear time).
-- **Space Complexity:** $\mathcal{O}(N)$ for serialized string representation and recursion call stack depth $\mathcal{O}(H)$.
+- **Time Complexity:** $\mathcal{O}(N)$
+  - **Serialize**: Visits each of the $N$ nodes (and $N+1$ null leaves) exactly once in $\mathcal{O}(1)$ work per node $\implies \mathcal{O}(N)$.
+  - **Deserialize**: Parses $2N + 1$ tokens, constructing each node in $\mathcal{O}(1)$ time $\implies \mathcal{O}(N)$.
+- **Space Complexity:** $\mathcal{O}(N)$
+  - **Recursion Stack**: $\mathcal{O}(H)$ where $H$ is the tree height ($\mathcal{O}(\log N)$ balanced, $\mathcal{O}(N)$ skewed).
+  - **Serialized String**: Contains $2N + 1$ tokens $\implies \mathcal{O}(N)$.
 
 ---
 
 ## 🔍 Edge Cases Considered
 
-- **Empty Tree (`root == nullptr`)**: Serializes to `"# "` and reconstructs to `nullptr`.
-- **Single Node**: Encodes root and two null markers.
-- **Skewed / Degenerate Trees**: Recursion depth up to $N = 10^4$ without heap degradation.
-- **Negative Node Values**: Preserved through `std::stoi` and `std::ostringstream`.
+- **Empty Tree (`root = nullptr`)**: Serializes to `"# "`, deserializes directly to `nullptr`.
+- **Single Node Tree**: Serializes to `"val # # "`, correctly reconstructed as leaf node.
+- **Skewed Trees (Line Trees)**: Correctly tracks left/right orientation through explicit `#` tokens without recursion depth stack overflow.
+- **Negative Values**: `stoi` automatically parses negative numbers (e.g., `"-1000"`).
 
 ---
 

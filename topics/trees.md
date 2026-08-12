@@ -111,7 +111,13 @@ When finding the $k$-th lexicographically ordered integer in $[1, n]$:
 3. **Branching**:
    - If $\text{steps} \le k$: target lies outside subtree $\to$ skip subtree ($k \gets k - \text{steps}, curr \gets curr + 1$).
    - If $\text{steps} > k$: target lies inside subtree $\to$ descend down ($k \gets k - 1, curr \gets curr \times 10$).
-4. Runs in $\mathcal{O}((\log_{10} n)^2)$ time and $\mathcal{O}(1)$ space.
+4. **Complexity**: $\mathcal{O}((\log_{10} n)^2)$ time and $\mathcal{O}(1)$ space.
+
+### Pattern H: Preorder DFS Serialization with Null Sentinels (Serialize and Deserialize Binary Tree)
+When serializing and reconstructing arbitrary binary tree structures:
+1. **Preorder DFS Encoding**: Traverse `Root -> Left -> Right`. Append `"# "` for null pointers and `to_string(val) + " "` for real nodes.
+2. **Deterministic Deserialization**: Wrap serialized tokens in an `istringstream`. Each recursive call extracts a token: if `"#"` return `nullptr`, else construct `TreeNode(val)`, assign `left = deserializeHelper(in)`, `right = deserializeHelper(in)`, and return the root.
+3. **Complexity**: $\mathcal{O}(N)$ time and $\mathcal{O}(N)$ space.
 
 ---
 

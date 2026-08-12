@@ -1,68 +1,66 @@
 /**
  * Problem: 297. Serialize and Deserialize Binary Tree
  * Difficulty: Hard
- * Topics: String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree
+ * Topics: Tree, Depth-First Search, Breadth-First Search, Design, String, Binary Tree
  * LeetCode Link: https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
  * 
- * Time Complexity:
- *   - serialize():   O(N) - visits each node once
- *   - deserialize(): O(N) - reconstructs each node once
- * Space Complexity:  O(N) - string representation and recursion call stack
+ * Time Complexity:  O(N) for both serialize and deserialize (where N is the number of nodes)
+ * Space Complexity: O(N) for recursion stack and serialized string representation
  */
 
 #include <iostream>
-#include <sstream>
 #include <string>
+#include <sstream>
 #include <cassert>
 
 using namespace std;
 
-#ifdef LOCAL_TEST
 // Definition for a binary tree node.
 struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *l, TreeNode *r) : val(x), left(l), right(r) {}
 };
-#endif
 
 class Codec {
 private:
-    void serializeDfs(TreeNode* node, ostringstream& out) {
-        if (!node) {
+    void serializeHelper(TreeNode* root, ostringstream& out) {
+        if (!root) {
             out << "# ";
             return;
         }
-        out << node->val << " ";
-        serializeDfs(node->left, out);
-        serializeDfs(node->right, out);
+        out << root->val << " ";
+        serializeHelper(root->left, out);
+        serializeHelper(root->right, out);
     }
 
-    TreeNode* deserializeDfs(istringstream& in) {
+    TreeNode* deserializeHelper(istringstream& in) {
         string val;
-        if (!(in >> val) || val == "#") {
+        if (!(in >> val)) return nullptr;
+
+        if (val == "#") {
             return nullptr;
         }
-        TreeNode* node = new TreeNode(stoi(val));
-        node->left = deserializeDfs(in);
-        node->right = deserializeDfs(in);
-        return node;
+
+        TreeNode* root = new TreeNode(stoi(val));
+        root->left = deserializeHelper(in);
+        root->right = deserializeHelper(in);
+        return root;
     }
 
 public:
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
         ostringstream out;
-        serializeDfs(root, out);
+        serializeHelper(root, out);
         return out.str();
     }
 
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
         istringstream in(data);
-        return deserializeDfs(in);
+        return deserializeHelper(in);
     }
 };
 
@@ -76,10 +74,17 @@ bool isSameTree(TreeNode* p, TreeNode* q) {
     return (p->val == q->val) && isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
 }
 
+void deleteTree(TreeNode* root) {
+    if (!root) return;
+    deleteTree(root->left);
+    deleteTree(root->right);
+    delete root;
+}
+
 int main() {
     Codec codec;
 
-    // Test Case 1: [1,2,3,null,null,4,5]
+    // Test Case 1: Standard Tree [1, 2, 3, null, null, 4, 5]
     {
         TreeNode* root = new TreeNode(1);
         root->left = new TreeNode(2);
@@ -88,33 +93,40 @@ int main() {
         root->right->right = new TreeNode(5);
 
         string serialized = codec.serialize(root);
-        TreeNode* deserialized = codec.deserialize(serialized);
+        cout << "Test 1 - Serialized: " << serialized << endl;
 
+        TreeNode* deserialized = codec.deserialize(serialized);
         assert(isSameTree(root, deserialized));
-        cout << "Test 1 Passed: [1,2,3,null,null,4,5] serialized to: " << serialized << endl;
+        cout << "Test 1 Passed: Tree deserialized accurately!" << endl;
+
+        deleteTree(root);
+        deleteTree(deserialized);
     }
 
-    // Test Case 2: Empty Tree
+    // Test Case 2: Empty Tree []
     {
         TreeNode* root = nullptr;
         string serialized = codec.serialize(root);
-        TreeNode* deserialized = codec.deserialize(serialized);
+        cout << "Test 2 - Empty tree serialized: " << serialized << endl;
 
-        assert(isSameTree(root, deserialized));
-        cout << "Test 2 Passed: Empty tree serialized to: \"" << serialized << "\"" << endl;
+        TreeNode* deserialized = codec.deserialize(serialized);
+        assert(deserialized == nullptr);
+        cout << "Test 2 Passed: Empty tree correctly reconstructed as nullptr!" << endl;
     }
 
-    // Test Case 3: Single Node with Negative Value
+    // Test Case 3: Single Node [42]
     {
-        TreeNode* root = new TreeNode(-42);
+        TreeNode* root = new TreeNode(42);
         string serialized = codec.serialize(root);
         TreeNode* deserialized = codec.deserialize(serialized);
-
         assert(isSameTree(root, deserialized));
-        cout << "Test 3 Passed: Single negative node [-42]" << endl;
+        cout << "Test 3 Passed: Single node tree reconstructed!" << endl;
+
+        deleteTree(root);
+        deleteTree(deserialized);
     }
 
-    cout << "All test cases passed successfully!" << endl;
+    cout << "\nAll test cases passed successfully!" << endl;
     return 0;
 }
 #endif
