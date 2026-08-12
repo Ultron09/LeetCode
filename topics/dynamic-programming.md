@@ -274,6 +274,15 @@ When DP transitions involve contiguous range sums of the previous state row $\te
 2. **Complexity Reduction**: Reduces naive $\mathcal{O}(N \cdot K \cdot \min(N, K))$ combinatorial summations to $\mathcal{O}(N \cdot K)$ overall time.
 3. **Space Optimization**: 1D rolling array reduces space from $\mathcal{O}(N \cdot K)$ to $\mathcal{O}(K)$.
 
+### Pattern AC: Multi-Branch Wildcard Second-Order Linear DP (Decode Ways II)
+When decoding sequential encodings containing wildcard tokens (`*` expanding into $[1 \dots 9]$):
+1. **Recurrence Decomposition**:
+   $$\text{dp}[i] = (w_1(s[i-1]) \cdot \text{dp}[i-1] + w_2(s[i-2], s[i-1]) \cdot \text{dp}[i-2]) \pmod{10^9 + 7}$$
+2. **Exhaustive Multipliers**:
+   - Single-digit $w_1$: `*` $\to 9$, `[1..9]` $\to 1$, `0` $\to 0$.
+   - Two-digit $w_2$: `**` $\to 15$, `*d` $\to (d \le '6' ? 2 : 1)$, `1*` $\to 9$, `2*` $\to 6$, valid digits $\to 1$, else $0$.
+3. **Space Optimization**: $\mathcal{O}(N)$ time with $\mathcal{O}(1)$ space using two rolling variables.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -310,6 +319,7 @@ When DP transitions involve contiguous range sums of the previous state row $\te
 | 546 | [Remove Boxes](../solutions/0546-remove-boxes/README.md) | `Hard` | $\mathcal{O}(N^4)$ | $\mathcal{O}(N^3)$ | [C++](../solutions/0546-remove-boxes/solution.cpp) |
 | 552 | [Student Attendance Record II](../solutions/0552-student-attendance-record-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0552-student-attendance-record-ii/solution.cpp) |
 | 629 | [K Inverse Pairs Array](../solutions/0629-k-inverse-pairs-array/README.md) | `Hard` | $\mathcal{O}(N \cdot K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0629-k-inverse-pairs-array/solution.cpp) |
+| 639 | [Decode Ways II](../solutions/0639-decode-ways-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0639-decode-ways-ii/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
