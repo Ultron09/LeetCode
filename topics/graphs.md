@@ -144,6 +144,15 @@ When visiting a series of strictly ordered waypoints $W_1, W_2, \dots, W_K$ on a
    - Accumulate steps: $\text{totalSteps} += \text{dist}$ and update $(sr, sc) \gets (tr, tc)$.
 3. **Complexity**: $\mathcal{O}(K \cdot M \cdot N) = \mathcal{O}(M^2 N^2)$ time and $\mathcal{O}(M \cdot N)$ space.
 
+### Pattern J: Directed Rooted Tree Invariant Violation & DSU Cycle/Two-Parent Resolution (Redundant Connection II)
+When finding a redundant edge in a directed graph that was originally a rooted tree:
+1. **Structural Classification**:
+   - **Case 1 (In-degree 2, no cycle with earlier edge)**: Returning the second parent edge `cand2` restores the valid tree.
+   - **Case 2 (In-degree 2, earlier edge forms cycle)**: Removing `cand2` still yields a DSU cycle $\implies$ return `cand1`.
+   - **Case 3 (In-degree 1 for all nodes, pure directed cycle)**: The edge closing the cycle in DSU is redundant.
+2. **Unified DSU Workflow**: Skip `cand2` during DSU union. If cycle is found, return `cand1` (if present) else `edge`. If no cycle occurs, return `cand2`.
+3. **Complexity**: $\mathcal{O}(N \cdot \alpha(N))$ time and $\mathcal{O}(N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -166,6 +175,7 @@ When visiting a series of strictly ordered waypoints $W_1, W_2, \dots, W_K$ on a
 | 127 | [Word Ladder](../solutions/0127-word-ladder/README.md) | `Hard` | $\mathcal{O}(N \cdot L \cdot 26)$ | $\mathcal{O}(N \cdot L)$ | [C++](../solutions/0127-word-ladder/solution.cpp) |
 | 332 | [Reconstruct Itinerary](../solutions/0332-reconstruct-itinerary/README.md) | `Hard` | $\mathcal{O}(E \log E)$ | $\mathcal{O}(V + E)$ | [C++](../solutions/0332-reconstruct-itinerary/solution.cpp) |
 | 675 | [Cut Off Trees for Golf Event](../solutions/0675-cut-off-trees-for-golf-event/README.md) | `Hard` | $\mathcal{O}(M^2 \cdot N^2)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0675-cut-off-trees-for-golf-event/solution.cpp) |
+| 685 | [Redundant Connection II](../solutions/0685-redundant-connection-ii/README.md) | `Hard` | $\mathcal{O}(N \cdot \alpha(N))$ | $\mathcal{O}(N)$ | [C++](../solutions/0685-redundant-connection-ii/solution.cpp) |
 | 1345 | [Jump Game IV](../solutions/1345-jump-game-iv/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1345-jump-game-iv/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
