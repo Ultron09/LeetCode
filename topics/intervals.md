@@ -104,6 +104,12 @@ When dynamically inserting values into a stream and maintaining disjoint continu
    - **Extend Right**: If `it->first == x + 1`, replace `it` with $[x, it->second]$.
    - **New Interval**: Insert $[x, x]$.
 4. **Complexity**: $\mathcal{O}(\log K)$ insertion and $\mathcal{O}(K)$ retrieval, where $K$ is the number of disjoint intervals ($K \ll N$).
+### Pattern F: Sequential Interval Drop with Max-Height Scan (Falling Squares)
+When objects with intervals are dropped sequentially and stack on overlapping objects:
+1. **Half-Open Intervals**: Represent each dropped object as $[\text{left}, \text{left} + \text{side})$. Two half-open intervals $[l_1, r_1)$ and $[l_2, r_2)$ overlap iff $l_1 < r_2$ AND $l_2 < r_1$. Strict `<` ensures touching-at-endpoint ("brushing") is excluded.
+2. **Landing Height**: For each new object, scan all previously placed objects. The landing base = max top-height among all overlapping objects. New top = base + side.
+3. **Running Maximum**: Maintain a global max after each drop.
+4. **Complexity**: $\mathcal{O}(N^2)$ time (or $\mathcal{O}(N \log N)$ with coordinate compression + segment tree with lazy propagation).
 
 ---
 
@@ -122,5 +128,6 @@ When dynamically inserting values into a stream and maintaining disjoint continu
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 352 | [Data Stream as Disjoint Intervals](../solutions/0352-data-stream-as-disjoint-intervals/README.md) | `Hard` | $\mathcal{O}(\log K) \text{ add}, \mathcal{O}(K) \text{ get}$ | $\mathcal{O}(K)$ | [C++](../solutions/0352-data-stream-as-disjoint-intervals/solution.cpp) |
+| 699 | [Falling Squares](../solutions/0699-falling-squares/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0699-falling-squares/solution.cpp) |
 | 3161 | [Block Placement Queries](../solutions/3161-block-placement-queries/README.md) | `Hard` | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3161-block-placement-queries/solution.cpp) |
 
