@@ -150,5 +150,6 @@ for (auto& [time, delta] : diff) {
 | 699 | [Falling Squares](../solutions/0699-falling-squares/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0699-falling-squares/solution.cpp) |
 | 715 | [Range Module](../solutions/0715-range-module/README.md) | `Hard` | $\mathcal{O}(N)$ amortized | $\mathcal{O}(N)$ | [C++](../solutions/0715-range-module/solution.cpp) |
 | 732 | [My Calendar III](../solutions/0732-my-calendar-iii/README.md) | `Hard` | $\mathcal{O}(N)$ per call | $\mathcal{O}(N)$ | [C++](../solutions/0732-my-calendar-iii/solution.cpp) |
+| 757 | [Set Intersection Size At Least Two](../solutions/0757-set-intersection-size-at-least-two/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0757-set-intersection-size-at-least-two/solution.cpp) |
 | 3161 | [Block Placement Queries](../solutions/3161-block-placement-queries/README.md) | `Hard` | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3161-block-placement-queries/solution.cpp) |
 
