@@ -181,6 +181,7 @@ When finding a redundant edge in a directed graph that was originally a rooted t
 | 765 | [Couples Holding Hands](../solutions/0765-couples-holding-hands/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0765-couples-holding-hands/solution.cpp) |
 | 773 | [Sliding Puzzle](../solutions/0773-sliding-puzzle/README.md) | `Hard` | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | [C++](../solutions/0773-sliding-puzzle/solution.cpp) |
 | 778 | [Swim in Rising Water](../solutions/0778-swim-in-rising-water/README.md) | `Hard` | $\mathcal{O}(N^2 \log N)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0778-swim-in-rising-water/solution.cpp) |
+| 803 | [Bricks Falling When Hit](../solutions/0803-bricks-falling-when-hit/README.md) | `Hard` | $\mathcal{O}(MN + H\alpha(MN))$ | $\mathcal{O}(MN)$ | [C++](../solutions/0803-bricks-falling-when-hit/solution.cpp) |
 | 1345 | [Jump Game IV](../solutions/1345-jump-game-iv/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1345-jump-game-iv/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |

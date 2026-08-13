@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **158** | 3 | 1 | 154 |
+| **159** | 3 | 1 | 155 |
 
 ---
 
@@ -138,6 +138,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0793 | [Preimage Size of Factorial Zeroes Function](solutions/0793-preimage-size-of-factorial-zeroes-function/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log^2 K)$ | $\mathcal{O}(1)$ | [C++](solutions/0793-preimage-size-of-factorial-zeroes-function/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 0798 | [Smallest Rotation with Highest Score](solutions/0798-smallest-rotation-with-highest-score/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0798-smallest-rotation-with-highest-score/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0801 | [Minimum Swaps To Make Sequences Increasing](solutions/0801-minimum-swaps-to-make-sequences-increasing/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0801-minimum-swaps-to-make-sequences-increasing/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 0803 | [Bricks Falling When Hit](solutions/0803-bricks-falling-when-hit/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(MN + H\alpha(MN))$ | $\mathcal{O}(MN)$ | [C++](solutions/0803-bricks-falling-when-hit/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
