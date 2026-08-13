@@ -111,6 +111,24 @@ When objects with intervals are dropped sequentially and stack on overlapping ob
 3. **Running Maximum**: Maintain a global max after each drop.
 4. **Complexity**: $\mathcal{O}(N^2)$ time (or $\mathcal{O}(N \log N)$ with coordinate compression + segment tree with lazy propagation).
 
+### Pattern G: Sweep Line / Difference Map (Maximum Overlap / k-Booking)
+When computing the maximum number of simultaneously active intervals:
+1. For each interval $[s, e)$, record $+1$ at $s$ and $-1$ at $e$ in an ordered map.
+2. Sweep through all event points in sorted order, maintaining a running prefix sum.
+3. The maximum prefix sum at any point equals the maximum overlap (k-booking).
+```cpp
+map<int, int> diff;
+diff[startTime]++;
+diff[endTime]--;
+
+int maxOverlap = 0, active = 0;
+for (auto& [time, delta] : diff) {
+    active += delta;
+    maxOverlap = max(maxOverlap, active);
+}
+```
+4. **Complexity**: $\mathcal{O}(N)$ per query (sweep), $\mathcal{O}(N)$ space.
+
 ---
 
 ## ⚠️ 3. Common Pitfalls & Edge Cases
@@ -130,5 +148,6 @@ When objects with intervals are dropped sequentially and stack on overlapping ob
 | 352 | [Data Stream as Disjoint Intervals](../solutions/0352-data-stream-as-disjoint-intervals/README.md) | `Hard` | $\mathcal{O}(\log K) \text{ add}, \mathcal{O}(K) \text{ get}$ | $\mathcal{O}(K)$ | [C++](../solutions/0352-data-stream-as-disjoint-intervals/solution.cpp) |
 | 699 | [Falling Squares](../solutions/0699-falling-squares/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0699-falling-squares/solution.cpp) |
 | 715 | [Range Module](../solutions/0715-range-module/README.md) | `Hard` | $\mathcal{O}(N)$ amortized | $\mathcal{O}(N)$ | [C++](../solutions/0715-range-module/solution.cpp) |
+| 732 | [My Calendar III](../solutions/0732-my-calendar-iii/README.md) | `Hard` | $\mathcal{O}(N)$ per call | $\mathcal{O}(N)$ | [C++](../solutions/0732-my-calendar-iii/solution.cpp) |
 | 3161 | [Block Placement Queries](../solutions/3161-block-placement-queries/README.md) | `Hard` | $\mathcal{O}(Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3161-block-placement-queries/solution.cpp) |
 
