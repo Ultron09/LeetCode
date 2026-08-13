@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **161** | 3 | 1 | 157 |
+| **162** | 3 | 1 | 158 |
 
 ---
 
@@ -141,6 +141,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0803 | [Bricks Falling When Hit](solutions/0803-bricks-falling-when-hit/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(MN + H\alpha(MN))$ | $\mathcal{O}(MN)$ | [C++](solutions/0803-bricks-falling-when-hit/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 0805 | [Split Array With Same Average](solutions/0805-split-array-with-same-average/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(2^{N/2} \log(2^{N/2}))$ | $\mathcal{O}(2^{N/2})$ | [C++](solutions/0805-split-array-with-same-average/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0810 | [Chalkboard XOR Game](solutions/0810-chalkboard-xor-game/README.md) | `Hard` | [Bit Manipulation](topics/bit-manipulation.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0810-chalkboard-xor-game/solution.cpp) | [Notes](topics/bit-manipulation.md#solved-problems) |
+| 0815 | [Bus Routes](solutions/0815-bus-routes/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(S)$ | $\mathcal{O}(S)$ | [C++](solutions/0815-bus-routes/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
