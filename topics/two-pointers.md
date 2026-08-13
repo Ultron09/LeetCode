@@ -121,5 +121,6 @@ int trap(vector<int>& height) {
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 42 | [Trapping Rain Water](../solutions/0042-trapping-rain-water/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0042-trapping-rain-water/solution.cpp) |
+| 719 | [Find K-th Smallest Pair Distance](../solutions/0719-find-k-th-smallest-pair-distance/README.md) | `Hard` | $\mathcal{O}(N \log N + N \log W)$ | $\mathcal{O}(1)$ | [C++](../solutions/0719-find-k-th-smallest-pair-distance/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 
