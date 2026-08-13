@@ -185,6 +185,7 @@ When finding a redundant edge in a directed graph that was originally a rooted t
 | 815 | [Bus Routes](../solutions/0815-bus-routes/README.md) | `Hard` | $\mathcal{O}(S)$ | $\mathcal{O}(S)$ | [C++](../solutions/0815-bus-routes/solution.cpp) |
 | 827 | [Making A Large Island](../solutions/0827-making-a-large-island/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0827-making-a-large-island/solution.cpp) |
 | 839 | [Similar String Groups](../solutions/0839-similar-string-groups/README.md) | `Hard` | $\mathcal{O}(N^2 \cdot L)$ | $\mathcal{O}(N)$ | [C++](../solutions/0839-similar-string-groups/solution.cpp) |
+| 847 | [Shortest Path Visiting All Nodes](../solutions/0847-shortest-path-visiting-all-nodes/README.md) | `Hard` | $\mathcal{O}(N \cdot 2^N)$ | $\mathcal{O}(N \cdot 2^N)$ | [C++](../solutions/0847-shortest-path-visiting-all-nodes/solution.cpp) |
 | 1345 | [Jump Game IV](../solutions/1345-jump-game-iv/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1345-jump-game-iv/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
