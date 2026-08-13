@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **145** | 3 | 1 | 141 |
+| **146** | 3 | 1 | 142 |
 
 ---
 
@@ -125,6 +125,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0741 | [Cherry Pickup](solutions/0741-cherry-pickup/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](solutions/0741-cherry-pickup/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0745 | [Prefix and Suffix Search](solutions/0745-prefix-and-suffix-search/README.md) | `Hard` | [Trees & BST](topics/trees.md) | $\mathcal{O}(L)$ query | $\mathcal{O}(N \cdot L^2)$ | [C++](solutions/0745-prefix-and-suffix-search/solution.cpp) | [Notes](topics/trees.md#solved-problems) |
 | 0749 | [Contain Virus](solutions/0749-contain-virus/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}((M \cdot N)^2)$ | $\mathcal{O}(M \cdot N)$ | [C++](solutions/0749-contain-virus/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
+| 0753 | [Cracking the Safe](solutions/0753-cracking-the-safe/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(k^n)$ | $\mathcal{O}(k^n)$ | [C++](solutions/0753-cracking-the-safe/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
