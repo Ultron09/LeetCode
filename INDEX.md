@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **139** | 1 | 0 | 138 |
+| **143** | 3 | 1 | 139 |
 
 ---
 
@@ -15,8 +15,10 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | # | Title | Difficulty | Primary Topic | Time Complexity | Space Complexity | Solution | Notes |
 | :---: | :--- | :---: | :--- | :---: | :---: | :--- | :---: | :--- |
 <!-- PROBLEMS_TABLE_START -->
+| 0001 | [Two Sum](solutions/0001-two-sum/README.md) | `Easy` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0001-two-sum/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0004 | [Median of Two Sorted Arrays](solutions/0004-median-of-two-sorted-arrays/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log(\min(M, N)))$ | $\mathcal{O}(1)$ | [C++](solutions/0004-median-of-two-sorted-arrays/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 0010 | [Regular Expression Matching](solutions/0010-regular-expression-matching/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N)$ | $\mathcal{O}(M \cdot N)$ | [C++](solutions/0010-regular-expression-matching/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
+| 0020 | [Valid Parentheses](solutions/0020-valid-parentheses/README.md) | `Easy` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0020-valid-parentheses/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 0023 | [Merge k Sorted Lists](solutions/0023-merge-k-sorted-lists/README.md) | `Hard` | [Linked List](topics/linked-list.md) | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](solutions/0023-merge-k-sorted-lists/solution.cpp) | [Notes](topics/linked-list.md#solved-problems) |
 | 0025 | [Reverse Nodes in k-Group](solutions/0025-reverse-nodes-in-k-group/README.md) | `Hard` | [Linked List](topics/linked-list.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0025-reverse-nodes-in-k-group/solution.cpp) | [Notes](topics/linked-list.md#solved-problems) |
 | 0030 | [Substring with Concatenation of All Words](solutions/0030-substring-with-concatenation-of-all-words/README.md) | `Hard` | [Sliding Window](topics/sliding-window.md) | $\mathcal{O}(N \cdot L)$ | $\mathcal{O}(K \cdot L)$ | [C++](solutions/0030-substring-with-concatenation-of-all-words/solution.cpp) | [Notes](topics/sliding-window.md#solved-problems) |
@@ -27,6 +29,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0044 | [Wildcard Matching](solutions/0044-wildcard-matching/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(M \cdot N)$ worst / $\mathcal{O}(M + N)$ | $\mathcal{O}(1)$ | [C++](solutions/0044-wildcard-matching/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0051 | [N-Queens](solutions/0051-n-queens/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(N!)$ | $\mathcal{O}(N^2)$ | [C++](solutions/0051-n-queens/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
 | 0052 | [N-Queens II](solutions/0052-n-queens-ii/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](solutions/0052-n-queens-ii/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
+| 0056 | [Merge Intervals](solutions/0056-merge-intervals/README.md) | `Medium` | [Intervals](topics/intervals.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(\log N)$ | [C++](solutions/0056-merge-intervals/solution.cpp) | [Notes](topics/intervals.md#solved-problems) |
 | 0060 | [Permutation Sequence](solutions/0060-permutation-sequence/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](solutions/0060-permutation-sequence/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0065 | [Valid Number](solutions/0065-valid-number/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0065-valid-number/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0068 | [Text Justification](solutions/0068-text-justification/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0068-text-justification/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
@@ -119,6 +122,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0730 | [Count Different Palindromic Subsequences](solutions/0730-count-different-palindromic-subsequences/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/0730-count-different-palindromic-subsequences/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0732 | [My Calendar III](solutions/0732-my-calendar-iii/README.md) | `Hard` | [Intervals](topics/intervals.md) | $\mathcal{O}(N)$ per call | $\mathcal{O}(N)$ | [C++](solutions/0732-my-calendar-iii/solution.cpp) | [Notes](topics/intervals.md#solved-problems) |
 | 0736 | [Parse Lisp Expression](solutions/0736-parse-lisp-expression/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](solutions/0736-parse-lisp-expression/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
+| 0741 | [Cherry Pickup](solutions/0741-cherry-pickup/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^3)$ | $\mathcal{O}(N^2)$ | [C++](solutions/0741-cherry-pickup/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |

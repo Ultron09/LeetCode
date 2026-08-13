@@ -140,6 +140,7 @@ When validating nested structured markups containing opening/closing tags and li
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 20 | [Valid Parentheses](../solutions/0020-valid-parentheses/README.md) | `Easy` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0020-valid-parentheses/solution.cpp) |
 | 32 | [Longest Valid Parentheses](../solutions/0032-longest-valid-parentheses/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0032-longest-valid-parentheses/solution.cpp) |
 | 84 | [Largest Rectangle in Histogram](../solutions/0084-largest-rectangle-in-histogram/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0084-largest-rectangle-in-histogram/solution.cpp) |
 | 85 | [Maximal Rectangle](../solutions/0085-maximal-rectangle/README.md) | `Hard` | $\mathcal{O}(R \cdot C)$ | $\mathcal{O}(C)$ | [C++](../solutions/0085-maximal-rectangle/solution.cpp) |

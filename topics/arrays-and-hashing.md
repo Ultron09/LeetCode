@@ -164,6 +164,7 @@ When grouping contiguous runs of qualifying entities (e.g., consecutive sequence
 
 | # | Title | Difficulty | Time | Space | Solution Link |
 | :---: | :--- | :---: | :---: | :---: | :--- |
+| 1 | [Two Sum](../solutions/0001-two-sum/README.md) | `Easy` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0001-two-sum/solution.cpp) |
 | 41 | [First Missing Positive](../solutions/0041-first-missing-positive/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0041-first-missing-positive/solution.cpp) |
 | 185 | [Department Top Three Salaries](../solutions/0185-department-top-three-salaries/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [SQL / C++](../solutions/0185-department-top-three-salaries/solution.sql) |
 | 262 | [Trips and Users](../solutions/0262-trips-and-users/README.md) | `Hard` | $\mathcal{O}(T + U)$ | $\mathcal{O}(U + D)$ | [SQL / C++](../solutions/0262-trips-and-users/solution.sql) |
