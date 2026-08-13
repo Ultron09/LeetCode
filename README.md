@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **148** | 3 | 1 | 144 |
+| **149** | 3 | 1 | 145 |
 
 ---
 

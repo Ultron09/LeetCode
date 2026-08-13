@@ -178,6 +178,7 @@ When finding a redundant edge in a directed graph that was originally a rooted t
 | 685 | [Redundant Connection II](../solutions/0685-redundant-connection-ii/README.md) | `Hard` | $\mathcal{O}(N \cdot \alpha(N))$ | $\mathcal{O}(N)$ | [C++](../solutions/0685-redundant-connection-ii/solution.cpp) |
 | 749 | [Contain Virus](../solutions/0749-contain-virus/README.md) | `Hard` | $\mathcal{O}((M \cdot N)^2)$ | $\mathcal{O}(M \cdot N)$ | [C++](../solutions/0749-contain-virus/solution.cpp) |
 | 753 | [Cracking the Safe](../solutions/0753-cracking-the-safe/README.md) | `Hard` | $\mathcal{O}(k^n)$ | $\mathcal{O}(k^n)$ | [C++](../solutions/0753-cracking-the-safe/solution.cpp) |
+| 765 | [Couples Holding Hands](../solutions/0765-couples-holding-hands/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0765-couples-holding-hands/solution.cpp) |
 | 1345 | [Jump Game IV](../solutions/1345-jump-game-iv/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/1345-jump-game-iv/solution.cpp) |
 | 3534 | [Path Existence Queries in a Graph II](../solutions/3534-path-existence-queries-in-a-graph-ii/README.md) | `Hard` | $\mathcal{O}(N \log N + Q \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3534-path-existence-queries-in-a-graph-ii/solution.cpp) |
 | 3620 | [Network Recovery Pathways](../solutions/3620-network-recovery-pathways/README.md) | `Hard` | $\mathcal{O}((N + M) \log N \log M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3620-network-recovery-pathways/solution.cpp) |
