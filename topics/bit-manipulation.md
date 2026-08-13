@@ -94,3 +94,4 @@ When counting binary configurations $\le N$ satisfying local bit transitions (su
 | :---: | :--- | :---: | :---: | :--- | :--- |
 | 600 | [Non-negative Integers without Consecutive Ones](../solutions/0600-non-negative-integers-without-consecutive-ones/README.md) | `Hard` | $\mathcal{O}(\log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0600-non-negative-integers-without-consecutive-ones/solution.cpp) |
 | 691 | [Stickers to Spell Word](../solutions/0691-stickers-to-spell-word/README.md) | `Hard` | $\mathcal{O}(2^T \cdot N \cdot T)$ | $\mathcal{O}(2^T)$ | [C++](../solutions/0691-stickers-to-spell-word/solution.cpp) |
+| 810 | [Chalkboard XOR Game](../solutions/0810-chalkboard-xor-game/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0810-chalkboard-xor-game/solution.cpp) |
