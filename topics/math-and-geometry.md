@@ -214,6 +214,7 @@ When finding the minimum perimeter enclosing rope containing all 2D points inclu
 | 587 | [Erect the Fence](../solutions/0587-erect-the-fence/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0587-erect-the-fence/solution.cpp) |
 | 710 | [Random Pick with Blacklist](../solutions/0710-random-pick-with-blacklist/README.md) | `Hard` | $\mathcal{O}(1)$ pick | $\mathcal{O}(B)$ | [C++](../solutions/0710-random-pick-with-blacklist/solution.cpp) |
 | 780 | [Reaching Points](../solutions/0780-reaching-points/README.md) | `Hard` | $\mathcal{O}(\log(\max(tx, ty)))$ | $\mathcal{O}(1)$ | [C++](../solutions/0780-reaching-points/solution.cpp) |
+| 782 | [Transform to Chessboard](../solutions/0782-transform-to-chessboard/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(1)$ | [C++](../solutions/0782-transform-to-chessboard/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
