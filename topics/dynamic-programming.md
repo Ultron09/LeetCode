@@ -355,6 +355,7 @@ When a target string of length $T \le 15$–$20$ must be covered using items fro
 | 818 | [Race Car](../solutions/0818-race-car/README.md) | `Hard` | $\mathcal{O}(T \log^2 T)$ | $\mathcal{O}(T)$ | [C++](../solutions/0818-race-car/solution.cpp) |
 | 879 | [Profitable Schemes](../solutions/0879-profitable-schemes/README.md) | `Hard` | $\mathcal{O}(L \cdot N \cdot P)$ | $\mathcal{O}(N \cdot P)$ | [C++](../solutions/0879-profitable-schemes/solution.cpp) |
 | 887 | [Super Egg Drop](../solutions/0887-super-egg-drop/README.md) | `Hard` | $\mathcal{O}(K \cdot M)$ | $\mathcal{O}(K)$ | [C++](../solutions/0887-super-egg-drop/solution.cpp) |
+| 902 | [Numbers At Most N Given Digit Set](../solutions/0902-numbers-at-most-n-given-digit-set/README.md) | `Hard` | $\mathcal{O}(\log N)$ | $\mathcal{O}(\log N)$ | [C++](../solutions/0902-numbers-at-most-n-given-digit-set/solution.cpp) |
 | 1301 | [Number of Paths with Max Score](../solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/1301-number-of-paths-with-max-score/solution.cpp) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](../solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) |
 | 1340 | [Jump Game V](../solutions/1340-jump-game-v/README.md) | `Hard` | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](../solutions/1340-jump-game-v/solution.cpp) |
