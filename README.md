@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **200** | 3 | 1 | 196 |
+| **201** | 3 | 1 | 197 |
 
 ---
 
@@ -36,7 +36,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 9 | [Explore Notes](topics/heaps-and-priority-queues.md) |
 | **Backtracking** | Permutations, Combinations, Subsets, Pruning | 9 | [Explore Notes](topics/backtracking.md) |
 | **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 14 | [Explore Notes](topics/graphs.md) |
-| **Dynamic Programming** | 1D/2D DP, Knapsack, LCS/LIS, Interval DP, Bitmask DP | 44 | [Explore Notes](topics/dynamic-programming.md) |
+| **Dynamic Programming** | 1D/2D DP, State Compression, Memoization | 43 | [Explore Notes](topics/dynamic-programming.md) |
 | **Greedy** | Activity Selection, Jump Game, Huffman Coding | 13 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 4 | [Explore Notes](topics/intervals.md) |
 | **Bit Manipulation** | XOR properties, Bitmasks, Power of 2 checks | 2 | [Explore Notes](topics/bit-manipulation.md) |
