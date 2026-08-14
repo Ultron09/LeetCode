@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **185** | 3 | 1 | 181 |
+| **186** | 3 | 1 | 182 |
 
 ---
 
@@ -39,7 +39,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Greedy** | Activity Selection, Jump Game, Huffman Coding | 12 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 4 | [Explore Notes](topics/intervals.md) |
 | **Bit Manipulation** | XOR properties, Bitmasks, Power of 2 checks | 2 | [Explore Notes](topics/bit-manipulation.md) |
-| **Math & Geometry** | Sieve of Eratosthenes, GCD/LCM, Fast Exponentiation | 25 | [Explore Notes](topics/math-and-geometry.md) |
+| **Math & Geometry** | Sieve of Eratosthenes, GCD/LCM, Fast Exponentiation | 26 | [Explore Notes](topics/math-and-geometry.md) |
 
 ---
 

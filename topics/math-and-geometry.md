@@ -224,6 +224,7 @@ When finding the minimum perimeter enclosing rope containing all 2D points inclu
 | 891 | [Sum of Subsequence Widths](../solutions/0891-sum-of-subsequence-widths/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0891-sum-of-subsequence-widths/solution.cpp) |
 | 899 | [Orderly Queue](../solutions/0899-orderly-queue/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0899-orderly-queue/solution.cpp) |
 | 902 | [Numbers At Most N Given Digit Set](../solutions/0902-numbers-at-most-n-given-digit-set/README.md) | `Hard` | $\mathcal{O}(\log N)$ | $\mathcal{O}(\log N)$ | [C++](../solutions/0902-numbers-at-most-n-given-digit-set/solution.cpp) |
+| 906 | [Super Palindromes](../solutions/0906-super-palindromes/README.md) | `Hard` | $\mathcal{O}(W^{0.25} \log W)$ | $\mathcal{O}(\log W)$ | [C++](../solutions/0906-super-palindromes/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
