@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **203** | 3 | 1 | 199 |
+| **204** | 3 | 1 | 200 |
 
 ---
 
@@ -32,7 +32,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 10 | [Explore Notes](topics/stack-and-queue.md) |
 | **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 14 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 4 | [Explore Notes](topics/linked-list.md) |
-| **Trees & BST** | Traversals, LCA, BST properties, Segment Trees | 7 | [Explore Notes](topics/trees.md) |
+| **Trees & BST** | Traversals, LCA, BST properties, Segment Trees | 8 | [Explore Notes](topics/trees.md) |
 | **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 9 | [Explore Notes](topics/heaps-and-priority-queues.md) |
 | **Backtracking** | Permutations, Combinations, Subsets, Pruning | 10 | [Explore Notes](topics/backtracking.md) |
 | **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 14 | [Explore Notes](topics/graphs.md) |
