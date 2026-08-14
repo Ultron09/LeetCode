@@ -152,6 +152,7 @@ When validating nested structured markups containing opening/closing tags and li
 | 761 | [Special Binary String](../solutions/0761-special-binary-string/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0761-special-binary-string/solution.cpp) |
 | 770 | [Basic Calculator IV](../solutions/0770-basic-calculator-iv/README.md) | `Hard` | $\mathcal{O}(2^N)$ | $\mathcal{O}(2^N)$ | [C++](../solutions/0770-basic-calculator-iv/solution.cpp) |
 | 862 | [Shortest Subarray with Sum at Least K](../solutions/0862-shortest-subarray-with-sum-at-least-k/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0862-shortest-subarray-with-sum-at-least-k/solution.cpp) |
+| 895 | [Maximum Frequency Stack](../solutions/0895-maximum-frequency-stack/README.md) | `Hard` | $\mathcal{O}(1)$ | $\mathcal{O}(N)$ | [C++](../solutions/0895-maximum-frequency-stack/solution.cpp) |
 | 2751 | [Robot Collisions](../solutions/2751-robot-collisions/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/2751-robot-collisions/solution.cpp) |
 | 3614 | [Process String with Special Operations II](../solutions/3614-process-string-with-special-operations-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3614-process-string-with-special-operations-ii/solution.cpp) |
 

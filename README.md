@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **181** | 3 | 1 | 177 |
+| **182** | 3 | 1 | 178 |
 
 ---
 
@@ -25,10 +25,10 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Topic | Key Concepts | Solved Count | Link |
 | :--- | :--- | :---: | :---: |
-| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 12 | [Explore Notes](topics/arrays-and-hashing.md) |
+| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 13 | [Explore Notes](topics/arrays-and-hashing.md) |
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 2 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 8 | [Explore Notes](topics/sliding-window.md) |
-| **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 9 | [Explore Notes](topics/stack-and-queue.md) |
+| **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 10 | [Explore Notes](topics/stack-and-queue.md) |
 | **Binary Search** | Classic BS, Search on Answer, Rotated Arrays | 14 | [Explore Notes](topics/binary-search.md) |
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 4 | [Explore Notes](topics/linked-list.md) |
 | **Trees & BST** | DFS/BFS Traversals, Lowest Common Ancestor, Tree DP | 5 | [Explore Notes](topics/trees.md) |

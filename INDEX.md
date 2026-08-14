@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **181** | 3 | 1 | 177 |
+| **182** | 3 | 1 | 178 |
 
 ---
 
@@ -161,6 +161,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0882 | [Reachable Nodes In Subdivided Graph](solutions/0882-reachable-nodes-in-subdivided-graph/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(E \log V)$ | $\mathcal{O}(E + V)$ | [C++](solutions/0882-reachable-nodes-in-subdivided-graph/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 0887 | [Super Egg Drop](solutions/0887-super-egg-drop/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(K \cdot M)$ | $\mathcal{O}(K)$ | [C++](solutions/0887-super-egg-drop/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0891 | [Sum of Subsequence Widths](solutions/0891-sum-of-subsequence-widths/README.md) | `Hard` | [Math](topics/math-and-geometry.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](solutions/0891-sum-of-subsequence-widths/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
+| 0895 | [Maximum Frequency Stack](solutions/0895-maximum-frequency-stack/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(1)$ | $\mathcal{O}(N)$ | [C++](solutions/0895-maximum-frequency-stack/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
