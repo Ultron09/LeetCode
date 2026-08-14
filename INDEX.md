@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **195** | 3 | 1 | 191 |
+| **196** | 3 | 1 | 192 |
 
 ---
 
@@ -175,6 +175,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0940 | [Distinct Subsequences II](solutions/0940-distinct-subsequences-ii/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0940-distinct-subsequences-ii/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0943 | [Find the Shortest Superstring](solutions/0943-find-the-shortest-superstring/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2 \cdot 2^N)$ | $\mathcal{O}(N \cdot 2^N)$ | [C++](solutions/0943-find-the-shortest-superstring/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0952 | [Largest Component Size by Common Factor](solutions/0952-largest-component-size-by-common-factor/README.md) | `Hard` | [Math](topics/math-and-geometry.md) | $\mathcal{O}(M \log \log M)$ | $\mathcal{O}(M)$ | [C++](solutions/0952-largest-component-size-by-common-factor/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
+| 0956 | [Tallest Billboard](solutions/0956-tallest-billboard/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot S)$ | $\mathcal{O}(S)$ | [C++](solutions/0956-tallest-billboard/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
