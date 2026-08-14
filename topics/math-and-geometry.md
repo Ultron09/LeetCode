@@ -221,6 +221,7 @@ When finding the minimum perimeter enclosing rope containing all 2D points inclu
 | 829 | [Consecutive Numbers Sum](../solutions/0829-consecutive-numbers-sum/README.md) | `Hard` | $\mathcal{O}(\sqrt{N})$ | $\mathcal{O}(1)$ | [C++](../solutions/0829-consecutive-numbers-sum/solution.cpp) |
 | 850 | [Rectangle Area II](../solutions/0850-rectangle-area-ii/README.md) | `Hard` | $\mathcal{O}(N^2 \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0850-rectangle-area-ii/solution.cpp) |
 | 887 | [Super Egg Drop](../solutions/0887-super-egg-drop/README.md) | `Hard` | $\mathcal{O}(K \cdot M)$ | $\mathcal{O}(K)$ | [C++](../solutions/0887-super-egg-drop/solution.cpp) |
+| 891 | [Sum of Subsequence Widths](../solutions/0891-sum-of-subsequence-widths/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0891-sum-of-subsequence-widths/solution.cpp) |
 | 1622 | [Fancy Sequence](../solutions/1622-fancy-sequence/README.md) | `Hard` | $\mathcal{O}(\log M) \text{ append}, \mathcal{O}(1) \text{ rest}$ | $\mathcal{O}(N)$ | [C++](../solutions/1622-fancy-sequence/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3312 | [Sorted GCD Pair Queries](../solutions/3312-sorted-gcd-pair-queries/README.md) | `Hard` | $\mathcal{O}(N + M \log M + Q \log M)$ | $\mathcal{O}(M)$ | [C++](../solutions/3312-sorted-gcd-pair-queries/solution.cpp) |
