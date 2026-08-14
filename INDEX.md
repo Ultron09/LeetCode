@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **170** | 3 | 1 | 166 |
+| **171** | 3 | 1 | 167 |
 
 ---
 
@@ -150,6 +150,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0839 | [Similar String Groups](solutions/0839-similar-string-groups/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N^2 \cdot L)$ | $\mathcal{O}(N)$ | [C++](solutions/0839-similar-string-groups/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 0843 | [Guess the Word](solutions/0843-guess-the-word/README.md) | `Hard` | [Arrays & Hashing](topics/arrays-and-hashing.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](solutions/0843-guess-the-word/solution.cpp) | [Notes](topics/arrays-and-hashing.md#solved-problems) |
 | 0847 | [Shortest Path Visiting All Nodes](solutions/0847-shortest-path-visiting-all-nodes/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N \cdot 2^N)$ | $\mathcal{O}(N \cdot 2^N)$ | [C++](solutions/0847-shortest-path-visiting-all-nodes/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
+| 0850 | [Rectangle Area II](solutions/0850-rectangle-area-ii/README.md) | `Hard` | [Math & Geometry](topics/math-and-geometry.md) | $\mathcal{O}(N^2 \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0850-rectangle-area-ii/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
