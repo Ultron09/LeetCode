@@ -201,10 +201,12 @@ When finding if an arithmetic target can be reached from $N$ numbers using binar
 | 52 | [N-Queens II](../solutions/0052-n-queens-ii/README.md) | `Hard` | $\mathcal{O}(N!)$ | $\mathcal{O}(N)$ | [C++](../solutions/0052-n-queens-ii/solution.cpp) |
 | 140 | [Word Break II](../solutions/0140-word-break-ii/README.md) | `Hard` | $\mathcal{O}(2^N + N^2 + W)$ | $\mathcal{O}(2^N \cdot N + W)$ | [C++](../solutions/0140-word-break-ii/solution.cpp) |
 | 212 | [Word Search II](../solutions/0212-word-search-ii/README.md) | `Hard` | $\mathcal{O}(M \cdot N \cdot 3^L + W \cdot L)$ | $\mathcal{O}(W \cdot L)$ | [C++](../solutions/0212-word-search-ii/solution.cpp) |
-| 698 | [Partition to K Equal Sum Subsets](../solutions/0698-partition-to-k-equal-sum-subsets/README.md) | `Medium` | $\mathcal{O}(K \cdot 2^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0698-partition-to-k-equal-sum-subsets/solution.cpp) |
-| 980 | [Unique Paths III](../solutions/0980-unique-paths-iii/README.md) | `Hard` | $\mathcal{O}(3^{MN})$ | $\mathcal{O}(MN)$ | [C++](../solutions/0980-unique-paths-iii/solution.cpp) |
+| 282 | [Expression Add Operators](../solutions/0282-expression-add-operators/README.md) | `Hard` | $\mathcal{O}(4^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0282-expression-add-operators/solution.cpp) |
 | 301 | [Remove Invalid Parentheses](../solutions/0301-remove-invalid-parentheses/README.md) | `Hard` | $\mathcal{O}(2^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0301-remove-invalid-parentheses/solution.cpp) |
 | 488 | [Zuma Game](../solutions/0488-zuma-game/README.md) | `Hard` | $\mathcal{O}(V \cdot B \cdot H)$ | $\mathcal{O}(V \cdot (B + H))$ | [C++](../solutions/0488-zuma-game/solution.cpp) |
+| 679 | [24 Game](../solutions/0679-24-game/README.md) | `Hard` | $\mathcal{O}(1)$ bounded | $\mathcal{O}(1)$ | [C++](../solutions/0679-24-game/solution.cpp) |
+| 698 | [Partition to K Equal Sum Subsets](../solutions/0698-partition-to-k-equal-sum-subsets/README.md) | `Medium` | $\mathcal{O}(K \cdot 2^N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0698-partition-to-k-equal-sum-subsets/solution.cpp) |
+| 980 | [Unique Paths III](../solutions/0980-unique-paths-iii/README.md) | `Hard` | $\mathcal{O}(3^{MN})$ | $\mathcal{O}(MN)$ | [C++](../solutions/0980-unique-paths-iii/solution.cpp) |
 
 
 

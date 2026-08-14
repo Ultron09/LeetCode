@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **202** | 3 | 1 | 198 |
+| **203** | 3 | 1 | 199 |
 
 ---
 
@@ -26,7 +26,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | Topic | Key Concepts | Solved Count | Link |
 | :--- | :--- | :---: | :---: |
 | :--- | :--- | :---: | :--- |
-| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 13 | [Explore Notes](topics/arrays-and-hashing.md) |
+| **Arrays & Hashing** | Hash Maps, Hash Sets, Prefix Sums, Kadane's | 14 | [Explore Notes](topics/arrays-and-hashing.md) |
 | **Two Pointers** | Opposite Ends, Same Direction, Partitioning | 2 | [Explore Notes](topics/two-pointers.md) |
 | **Sliding Window** | Fixed Window, Dynamic Window, Monotonic Queue | 8 | [Explore Notes](topics/sliding-window.md) |
 | **Stack & Queue** | Monotonic Stack, Parentheses, Min-Stack, Queues | 10 | [Explore Notes](topics/stack-and-queue.md) |
@@ -39,7 +39,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Dynamic Programming** | 1D/2D DP, State Compression, Memoization | 43 | [Explore Notes](topics/dynamic-programming.md) |
 | **Greedy** | Activity Selection, Jump Game, Huffman Coding | 13 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 4 | [Explore Notes](topics/intervals.md) |
-| **Bit Manipulation** | XOR properties, Bitmasks, Power of 2 checks | 2 | [Explore Notes](topics/bit-manipulation.md) |
+| **Bit Manipulation** | XOR properties, Bitmasks, Power of 2 checks | 3 | [Explore Notes](topics/bit-manipulation.md) |
 | **Math & Geometry** | Modular Arithmetic, Number Theory, Geometry | 30 | [Explore Notes](topics/math-and-geometry.md) |
 
 ---

@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **202** | 3 | 1 | 198 |
+| **203** | 3 | 1 | 199 |
 
 ---
 
@@ -182,6 +182,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0972 | [Equal Rational Numbers](solutions/0972-equal-rational-numbers/README.md) | `Hard` | [Math](topics/math-and-geometry.md) | $\mathcal{O}(L)$ | $\mathcal{O}(1)$ | [C++](solutions/0972-equal-rational-numbers/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
 | 0975 | [Odd Even Jump](solutions/0975-odd-even-jump/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0975-odd-even-jump/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0980 | [Unique Paths III](solutions/0980-unique-paths-iii/README.md) | `Hard` | [Backtracking](topics/backtracking.md) | $\mathcal{O}(3^{MN})$ | $\mathcal{O}(MN)$ | [C++](solutions/0980-unique-paths-iii/solution.cpp) | [Notes](topics/backtracking.md#solved-problems) |
+| 0982 | [Triples with Bitwise AND Equal To Zero](solutions/0982-triples-with-bitwise-and-equal-to-zero/README.md) | `Hard` | [Bit Manipulation](topics/bit-manipulation.md) | $\mathcal{O}(N^2 + N \cdot 2^{16})$ | $\mathcal{O}(2^{16})$ | [C++](solutions/0982-triples-with-bitwise-and-equal-to-zero/solution.cpp) | [Notes](topics/bit-manipulation.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
