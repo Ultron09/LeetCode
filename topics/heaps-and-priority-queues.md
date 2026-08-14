@@ -146,6 +146,7 @@ When determining the bounding envelope / bottleneck water level across escape pa
 | 630 | [Course Schedule III](../solutions/0630-course-schedule-iii/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0630-course-schedule-iii/solution.cpp) |
 | 632 | [Smallest Range Covering Elements from K Lists](../solutions/0632-smallest-range-covering-elements-from-k-lists/README.md) | `Hard` | $\mathcal{O}(N \log K)$ | $\mathcal{O}(K)$ | [C++](../solutions/0632-smallest-range-covering-elements-from-k-lists/solution.cpp) |
 | 778 | [Swim in Rising Water](../solutions/0778-swim-in-rising-water/README.md) | `Hard` | $\mathcal{O}(N^2 \log N)$ | $\mathcal{O}(N^2)$ | [C++](../solutions/0778-swim-in-rising-water/solution.cpp) |
+| 857 | [Minimum Cost to Hire K Workers](../solutions/0857-minimum-cost-to-hire-k-workers/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N + K)$ | [C++](../solutions/0857-minimum-cost-to-hire-k-workers/solution.cpp) |
 | 3691 | [Maximum Total Subarray Value II](../solutions/3691-maximum-total-subarray-value-ii/README.md) | `Hard` | $\mathcal{O}((N + K) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3691-maximum-total-subarray-value-ii/solution.cpp) |
 
 
