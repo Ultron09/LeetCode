@@ -140,6 +140,7 @@ When serializing and reconstructing arbitrary binary tree structures:
 | 440 | [K-th Smallest in Lexicographical Order](../solutions/0440-k-th-smallest-in-lexicographical-order/README.md) | `Hard` | $\mathcal{O}((\log_{10} N)^2)$ | $\mathcal{O}(1)$ | [C++](../solutions/0440-k-th-smallest-in-lexicographical-order/solution.cpp) |
 | 745 | [Prefix and Suffix Search](../solutions/0745-prefix-and-suffix-search/README.md) | `Hard` | $\mathcal{O}(L)$ query | $\mathcal{O}(N \cdot L^2)$ | [C++](../solutions/0745-prefix-and-suffix-search/solution.cpp) |
 | 834 | [Sum of Distances in Tree](../solutions/0834-sum-of-distances-in-tree/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0834-sum-of-distances-in-tree/solution.cpp) |
+| 968 | [Binary Tree Cameras](../solutions/0968-binary-tree-cameras/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | [C++](../solutions/0968-binary-tree-cameras/solution.cpp) |
 | 3093 | [Longest Common Suffix Queries](../solutions/3093-longest-common-suffix-queries/README.md) | `Hard` | $\mathcal{O}(\sum |W_c| + \sum |W_q|)$ | $\mathcal{O}(\sum |W_c| \cdot \Sigma)$ | [C++](../solutions/3093-longest-common-suffix-queries/solution.cpp) |
 | 3559 | [Number of Ways to Assign Edge Weights II](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/README.md) | `Hard` | $\mathcal{O}((N + Q) \log N)$ | $\mathcal{O}(N \log N)$ | [C++](../solutions/3559-number-of-ways-to-assign-edge-weights-ii/solution.cpp) |
 
