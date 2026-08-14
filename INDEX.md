@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **190** | 3 | 1 | 186 |
+| **191** | 3 | 1 | 187 |
 
 ---
 
@@ -170,6 +170,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0920 | [Number of Music Playlists](solutions/0920-number-of-music-playlists/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \text{goal})$ | $\mathcal{O}(N)$ | [C++](solutions/0920-number-of-music-playlists/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 0924 | [Minimize Malware Spread](solutions/0924-minimize-malware-spread/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](solutions/0924-minimize-malware-spread/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 0927 | [Three Equal Parts](solutions/0927-three-equal-parts/README.md) | `Hard` | [Math](topics/math-and-geometry.md) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](solutions/0927-three-equal-parts/solution.cpp) | [Notes](topics/math-and-geometry.md#solved-problems) |
+| 0928 | [Minimize Malware Spread II](solutions/0928-minimize-malware-spread-ii/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](solutions/0928-minimize-malware-spread-ii/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
