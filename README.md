@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **201** | 3 | 1 | 197 |
+| **202** | 3 | 1 | 198 |
 
 ---
 
@@ -34,7 +34,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Linked List** | Fast & Slow Pointers, Reversals, Dummy Nodes | 4 | [Explore Notes](topics/linked-list.md) |
 | **Trees & BST** | Traversals, LCA, BST properties, Segment Trees | 7 | [Explore Notes](topics/trees.md) |
 | **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 9 | [Explore Notes](topics/heaps-and-priority-queues.md) |
-| **Backtracking** | Permutations, Combinations, Subsets, Pruning | 9 | [Explore Notes](topics/backtracking.md) |
+| **Backtracking** | Permutations, Combinations, Subsets, Pruning | 10 | [Explore Notes](topics/backtracking.md) |
 | **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 14 | [Explore Notes](topics/graphs.md) |
 | **Dynamic Programming** | 1D/2D DP, State Compression, Memoization | 43 | [Explore Notes](topics/dynamic-programming.md) |
 | **Greedy** | Activity Selection, Jump Game, Huffman Coding | 13 | [Explore Notes](topics/greedy.md) |
