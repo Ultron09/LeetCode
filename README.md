@@ -17,7 +17,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **174** | 3 | 1 | 170 |
+| **175** | 3 | 1 | 171 |
 
 ---
 
@@ -34,7 +34,7 @@ Welcome to the **LeetCode Solutions & Algorithm Knowledge Base**. This repositor
 | **Trees & BST** | DFS/BFS Traversals, Lowest Common Ancestor, Tree DP | 5 | [Explore Notes](topics/trees.md) |
 | **Heaps / Priority Queue**| Top-K Elements, Two Heaps Pattern, Merge K Lists | 9 | [Explore Notes](topics/heaps-and-priority-queues.md) |
 | **Backtracking** | Permutations, Combinations, Subsets, Pruning | 9 | [Explore Notes](topics/backtracking.md) |
-| **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 9 | [Explore Notes](topics/graphs.md) |
+| **Graphs** | BFS/DFS, Dijkstra, Topo Sort, Union-Find, Bellman-Ford | 10 | [Explore Notes](topics/graphs.md) |
 | **Dynamic Programming** | 1D/2D DP, Knapsack, LCS/LIS, Interval DP, Bitmask DP | 35 | [Explore Notes](topics/dynamic-programming.md) |
 | **Greedy** | Activity Selection, Jump Game, Huffman Coding | 11 | [Explore Notes](topics/greedy.md) |
 | **Intervals** | Merging Intervals, Insert Intervals, Overlap Checks | 4 | [Explore Notes](topics/intervals.md) |
