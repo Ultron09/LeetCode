@@ -17,7 +17,7 @@
 using namespace std;
 
 class Solution {
-public:
+public: 
     int minDeletionSize(vector<string>& strs) {
         int n = strs.size();
         if (n == 0) return 0;
