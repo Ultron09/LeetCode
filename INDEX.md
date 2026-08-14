@@ -6,7 +6,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 | :---: | :---: | :---: | :---: |
-| **176** | 3 | 1 | 172 |
+| **177** | 3 | 1 | 173 |
 
 ---
 
@@ -156,6 +156,7 @@ Comprehensive index of all solved LeetCode problems, categorized by topic, diffi
 | 0862 | [Shortest Subarray with Sum at Least K](solutions/0862-shortest-subarray-with-sum-at-least-k/README.md) | `Hard` | [Stack & Queue](topics/stack-and-queue.md) | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](solutions/0862-shortest-subarray-with-sum-at-least-k/solution.cpp) | [Notes](topics/stack-and-queue.md#solved-problems) |
 | 0864 | [Shortest Path to Get All Keys](solutions/0864-shortest-path-to-get-all-keys/README.md) | `Hard` | [Graphs](topics/graphs.md) | $\mathcal{O}(M \times N \times 2^K)$ | $\mathcal{O}(M \times N \times 2^K)$ | [C++](solutions/0864-shortest-path-to-get-all-keys/solution.cpp) | [Notes](topics/graphs.md#solved-problems) |
 | 0871 | [Minimum Number of Refueling Stops](solutions/0871-minimum-number-of-refueling-stops/README.md) | `Hard` | [Greedy](topics/greedy.md) | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](solutions/0871-minimum-number-of-refueling-stops/solution.cpp) | [Notes](topics/greedy.md#solved-problems) |
+| 0878 | [Nth Magical Number](solutions/0878-nth-magical-number/README.md) | `Hard` | [Binary Search](topics/binary-search.md) | $\mathcal{O}(\log(N \cdot \min(A, B)))$ | $\mathcal{O}(1)$ | [C++](solutions/0878-nth-magical-number/solution.cpp) | [Notes](topics/binary-search.md#solved-problems) |
 | 1301 | [Number of Paths with Max Score](solutions/1301-number-of-paths-with-max-score/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N^2)$ | $\mathcal{O}(N^2)$ | [C++](solutions/1301-number-of-paths-with-max-score/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1320 | [Minimum Distance to Type a Word Using Two Fingers](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot \Sigma)$ | $\mathcal{O}(\Sigma)$ | [C++](solutions/1320-minimum-distance-to-type-a-word-using-two-fingers/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
 | 1340 | [Jump Game V](solutions/1340-jump-game-v/README.md) | `Hard` | [Dynamic Programming](topics/dynamic-programming.md) | $\mathcal{O}(N \cdot D)$ | $\mathcal{O}(N)$ | [C++](solutions/1340-jump-game-v/solution.cpp) | [Notes](topics/dynamic-programming.md#solved-problems) |
