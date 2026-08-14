@@ -180,13 +180,12 @@ When maximizing the number of scheduled jobs with durations $d_i$ and deadlines 
 | 517 | [Super Washing Machines](../solutions/0517-super-washing-machines/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | [C++](../solutions/0517-super-washing-machines/solution.cpp) |
 | 630 | [Course Schedule III](../solutions/0630-course-schedule-iii/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0630-course-schedule-iii/solution.cpp) |
 | 871 | [Minimum Number of Refueling Stops](../solutions/0871-minimum-number-of-refueling-stops/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(N)$ | [C++](../solutions/0871-minimum-number-of-refueling-stops/solution.cpp) |
+| 936 | [Stamping The Sequence](../solutions/0936-stamping-the-sequence/README.md) | `Hard` | $\mathcal{O}(N^2)$ | $\mathcal{O}(N)$ | [C++](../solutions/0936-stamping-the-sequence/solution.cpp) |
+| 968 | [Binary Tree Cameras](../solutions/0968-binary-tree-cameras/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | [C++](../solutions/0968-binary-tree-cameras/solution.cpp) |
 | 1665 | [Minimum Initial Energy to Finish Tasks](../solutions/1665-minimum-initial-energy-to-finish-tasks/README.md) | `Hard` | $\mathcal{O}(N \log N)$ | $\mathcal{O}(1)$ | [C++](../solutions/1665-minimum-initial-energy-to-finish-tasks/solution.cpp) |
 | 1840 | [Maximum Building Height](../solutions/1840-maximum-building-height/README.md) | `Hard` | $\mathcal{O}(R \log R)$ | $\mathcal{O}(R)$ | [C++](../solutions/1840-maximum-building-height/solution.cpp) |
 | 3348 | [Smallest Divisible Digit Product II](../solutions/3348-smallest-divisible-digit-product-ii/README.md) | `Hard` | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | [C++](../solutions/3348-smallest-divisible-digit-product-ii/solution.cpp) |
 | 3474 | [Lexicographically Smallest Generated String](../solutions/3474-lexicographically-smallest-generated-string/README.md) | `Hard` | $\mathcal{O}(N \cdot M)$ | $\mathcal{O}(N + M)$ | [C++](../solutions/3474-lexicographically-smallest-generated-string/solution.cpp) |
-
-
-
 
 
 
